@@ -1,0 +1,28 @@
+/* START :: FORM CSS */
+
+@import '../../../../form/main.scss';
+
+/* END :: FORM CSS */
+
+akwaaba-form-wizard {
+    &>.content {}
+    &>.content>.header,
+    &>.content>header {
+        @apply border-gray-100 border-b-2 p-2;
+        @apply text-xl text-gray-500 text-left font-semibold capitalize;
+    }
+    &>.content>.main>form,
+    &>.content>main>form {}
+    &>.content>.main>form>[active-page="true"],
+    &>.content>main>form>[active-page="true"] {
+        @apply block;
+    }
+    &>.content>.main>form>[active-page="false"],
+    &>.content>main>form>[active-page="false"] {
+        @apply hidden;
+    }
+    &>.content>.footer,
+    &>.content>footer {
+        @apply border-gray-100 border-t-2 p-2 flex justify-end;
+    }
+}

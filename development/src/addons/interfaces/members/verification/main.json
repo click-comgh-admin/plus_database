@@ -1,0 +1,130 @@
+{
+    "member": {
+        "id": 5,
+        "clientId": 4,
+        "firstname": "Matthew - 1",
+        "middlename": "Grantham - 2",
+        "surname": "Crawley - 3",
+        "gender": 1,
+        "profilePicture": "http://192.168.173.1/AMG/plus_db/file_bucket/files/member/profile/5/14afe0ce0aad1b74199de832ba8e3283.jpg",
+        "phone": "9309309320932",
+        "email": "a@b.c",
+        "dateOfBirth": "2020-10-04",
+        "religion": 4,
+        "nationality": "United States",
+        "countryOfResidence": "Ghana",
+        "stateProvince": "",
+        "region": 1,
+        "district": 1,
+        "constituency": 1,
+        "electoralArea": 9,
+        "community": "Mystic Falls",
+        "hometown": "Virginia",
+        "houseNoDigitalAddress": "jkjkjkj",
+        "digitalAddress": "New Orleans",
+        "level": 0,
+        "status": 1,
+        "accountType": 1,
+        "memberType": 1,
+        "date": "2020-02-14T14:29:42Z",
+        "last_login": "2022-12-20T16:38:49Z",
+        "referenceId": "dsd",
+        "branchId": 1,
+        "editable": true,
+        "profileResume": "http://192.168.173.1/AMG/plus_db/file_bucket/files/member/resume/5/05672745b258c4339d874ce6b4a1ca97_APRDk4D.png",
+        "profileIdentification": null,
+        "archived": false,
+        "branchInfo": {
+            "id": 1,
+            "name": "Main Branch",
+            "accountId": 0,
+            "createdBy": 1,
+            "creationDate": "2022-03-21T17:40:40Z",
+            "updatedBy": 3,
+            "updateDate": "2022-04-26T11:43:35.580177Z"
+        },
+        "categoryInfo": {
+            "id": 1,
+            "clientId": 0,
+            "category": "Registered Member",
+            "createdBy": 0,
+            "updatedBy": 0,
+            "updateDate": "2022-03-21T20:10:54Z",
+            "date": "2022-03-21T20:10:51Z"
+        },
+        "countryInfo": [{
+            "id": 76,
+            "name": "Ghana",
+            "short": "GH",
+            "code": "+233"
+        }],
+        "regionInfo": {
+            "id": 1,
+            "location": "Ashanti"
+        },
+        "districtInfo": {
+            "id": 1,
+            "regionId": {
+                "id": 1,
+                "location": "Ashanti"
+            },
+            "location": "Adansi North District"
+        },
+        "constituencyInfo": {
+            "id": 1,
+            "regionId": {
+                "id": 1,
+                "location": "Ashanti"
+            },
+            "districtId": {
+                "id": 1,
+                "regionId": {
+                    "id": 1,
+                    "location": "Ashanti"
+                },
+                "location": "Adansi North District"
+            },
+            "location": "Adansi-Asokwa"
+        },
+        "electoralareaInfo": {
+            "id": 9,
+            "regionId": {
+                "id": 1,
+                "location": "Ashanti"
+            },
+            "districtId": {
+                "id": 1,
+                "regionId": {
+                    "id": 1,
+                    "location": "Ashanti"
+                },
+                "location": "Adansi North District"
+            },
+            "location": "nooo"
+        }
+    },
+    "verification": true,
+    "verificationInfo": {
+        "id": 31,
+        "memberId": 5,
+        "verifiedBy": {
+            "id": 3,
+            "firstname": "Johnas",
+            "surname": "Moses",
+            "gender": 1,
+            "profilePicture": "http://192.168.173.1/AMG/plus_db/file_bucket/files/clients/profile-picture/profile.jpg",
+            "dateOfBirth": "2000-03-02",
+            "phone": "0209078891",
+            "email": "a@b.c",
+            "role": 1,
+            "accountId": 4,
+            "branchId": 1,
+            "level": 1,
+            "status": 1,
+            "lastUpdatedBy": 3,
+            "date": "2020-08-16T10:04:32Z",
+            "last_login": "2022-11-30T21:31:11Z"
+        },
+        "date": "2021-01-26T16:38:46Z"
+    }
+}

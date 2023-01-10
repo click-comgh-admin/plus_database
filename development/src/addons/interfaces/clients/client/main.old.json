@@ -1,0 +1,33 @@
+{
+    "id": 4,
+    "name": "Original Group",
+    "accountType": 1,
+    "country": "Ghana",
+    "stateProvince": "George County",
+    "applicantFirstname": "Test",
+    "applicantSurname": "Group",
+    "applicantGender": 1,
+    "applicantPhone": "1111111111",
+    "applicantEmail": "a@b.c",
+    "applicantDesignationRole": 1,
+    "region": 1,
+    "district": 1,
+    "constituency": 1,
+    "community": "Com",
+    "subscriptionDuration": "2",
+    "subscriptionDate": "2018-01-01 22:38:59",
+    "subscriptionFee": "200",
+    "logo": "http://192.168.173.1/AMG/plus_db/file_bucket/files/clients/logo/4/6c9fe6e0f349c0b25ef2dfa192612b4d.jpg",
+    "status": 1,
+    "archive": 0,
+    "accountCategory": 1,
+    "creationDate": "2020-01-01T22:38:59Z",
+    "updatedBy": 0,
+    "updateDate": "2022-03-24T12:17:35Z",
+    "countryInfo": [{
+        "id": 76,
+        "name": "Ghana",
+        "short": "GH",
+        "code": "+233"
+    }]
+}

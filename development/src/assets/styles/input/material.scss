@@ -1,0 +1,67 @@
+.form-input-container {
+    @apply mt-7;
+}
+
+.form-input-container:first-child {
+    @apply mt-0;
+}
+
+mwc-textfield,
+mwc-textarea,
+mwc-select {
+    @apply mt-1 block w-full border-none bg-white;
+}
+
+mwc-textarea {
+    @apply h-40;
+}
+
+mwc-switch {
+    @apply mt-1 block border-none bg-white;
+    --mdc-switch-selected-handle-color: var(--theme-default-color);
+    --mdc-switch-selected-track-color: #c75e17;
+    --mdc-switch-unselected-handle-color: gray;
+    --mdc-switch-unselected-track-color: rgb(212, 211, 211);
+    --mdc-switch-unselected-icon-color: rgb(78, 76, 76);
+}
+
+mwc-textfield,
+mwc-textarea,
+mwc-switch,
+mwc-select {
+    --mdc-theme-primary: var(--theme-default-color);
+    &.success {
+        --mdc-theme-primary: var(--theme-success-color);
+    }
+    &.info {
+        --mdc-theme-primary: var(--theme-info-color);
+    }
+    &.warning {
+        --mdc-theme-primary: var(--theme-warning-color);
+    }
+    &.danger {
+        --mdc-theme-primary: var(--theme-danger-color);
+    }
+    &.primary {
+        --mdc-theme-primary: var(--theme-primary-color);
+    }
+}
+
+
+/*
+--mdc-text-field-filled-border-radius	
+--mdc-text-field-idle-line-color	
+--mdc-text-field-hover-line-color	
+--mdc-text-field-disabled-line-color	
+--mdc-text-field-outlined-idle-border-color	
+--mdc-text-field-outlined-hover-border-color	
+--mdc-text-field-outlined-disabled-border-color	
+--mdc-text-field-fill-color	
+--mdc-text-field-disabled-fill-color	
+--mdc-text-field-ink-color	
+--mdc-text-field-label-ink-color	
+--mdc-text-field-disabled-ink-color
+--mdc-theme-primary	
+--mdc-theme-error	
+--mdc-typography-subtitle1-<PROPERTY>
+*/

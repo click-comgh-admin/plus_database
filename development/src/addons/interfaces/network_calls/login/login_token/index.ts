@@ -1,0 +1,1 @@
+export type LoginTokenType_I = "user_tokenLogin" | "client_tokenLogin";

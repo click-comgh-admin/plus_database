@@ -1,0 +1,69 @@
+mwc-tab-bar {
+    &.gray {
+        @apply bg-gray-600 fill-current text-akwaaba-orange-dark;
+    }
+    &.success {
+        @apply bg-green-600 fill-current text-white;
+    }
+    &.info {
+        @apply bg-blue-400 fill-current text-white;
+    }
+    &.warning {
+        @apply bg-akwaaba-orange-default fill-current text-white;
+    }
+    &.danger {
+        @apply bg-red-600 fill-current text-white;
+    }
+    &.primary {
+        @apply bg-blue-600 fill-current text-white;
+    }
+    /*--mdc-theme-primary: red;
+  --mdc-text-transform: none;
+  --mdc-tab-color-default: green;
+  --mdc-tab-text-label-color-default: green;
+  --mdc-tab-stacked-height: 100px;*/
+}
+
+mwc-tab-bar {
+    --mdc-tab-horizontal-padding: 0.75rem;
+    --mdc-theme-primary: var(--theme-default-color);
+    --mdc-tab-color-default: var(--theme-default-color);
+    --mdc-tab-text-label-color-default: var(--theme-default-color);
+    --mdc-theme-on-primary: white;
+    &.gray {
+        --mdc-theme-primary: var(--theme-gray-color);
+        --mdc-tab-color-default: var(--theme-gray-color);
+        --mdc-tab-text-label-color-default: var(--theme-gray-color);
+        --mdc-theme-on-primary: rgb(17, 24, 39);
+    }
+    &.success {
+        --mdc-theme-primary: var(--theme-success-color);
+        --mdc-tab-color-default: var(--theme-success-color);
+        --mdc-tab-text-label-color-default: var(--theme-success-color);
+        --mdc-theme-on-primary: white;
+    }
+    &.info {
+        --mdc-theme-primary: var(--theme-info-color);
+        --mdc-tab-color-default: var(--theme-info-color);
+        --mdc-tab-text-label-color-default: var(--theme-info-color);
+        --mdc-theme-on-primary: white;
+    }
+    &.warning {
+        --mdc-theme-primary: var(--theme-warning-color);
+        --mdc-tab-color-default: var(--theme-warning-color);
+        --mdc-tab-text-label-color-default: var(--theme-warning-color);
+        --mdc-theme-on-primary: white;
+    }
+    &.danger {
+        --mdc-theme-primary: var(--theme-danger-color);
+        --mdc-tab-color-default: var(--theme-danger-color);
+        --mdc-tab-text-label-color-default: var(--theme-danger-color);
+        --mdc-theme-on-primary: white;
+    }
+    &.primary {
+        --mdc-theme-primary: var(--theme-primary-color);
+        --mdc-tab-color-default: var(--theme-primary-color);
+        --mdc-tab-text-label-color-default: var(--theme-primary-color);
+        --mdc-theme-on-primary: white;
+    }
+}

@@ -1,0 +1,27 @@
+side-bar>nav {
+    @apply w-64 hidden;
+}
+
+@screen sm {
+    side-bar>nav {
+        /* @apply; */
+    }
+}
+
+@screen md {
+    side-bar>nav {
+        @apply block;
+    }
+}
+
+@screen lg {
+    side-bar>nav {}
+}
+
+@screen xl {
+    side-bar>nav {}
+}
+
+@screen 2xl {
+    side-bar>nav {}
+}

@@ -1,0 +1,17 @@
+{
+    "id": 1,
+    "prefix": "Chests",
+    "memberCategoryId": {
+        "id": 1,
+        "clientId": 0,
+        "category": "Registered Member",
+        "createdBy": 0,
+        "updatedBy": 0,
+        "updateDate": "2022-03-21T20:10:54Z",
+        "date": "2022-03-21T20:10:51Z"
+    },
+    "createdBy": 3,
+    "creationDate": "2022-09-10T13:13:35.816134Z",
+    "updatedBy": 3,
+    "updateDate": "2022-09-10T13:13:35.867007Z"
+}

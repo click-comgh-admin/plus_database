@@ -1,0 +1,28 @@
+{
+    "scheduledMeetings": 19,
+    "scheduledEvents": 4,
+    "subscription_amount": 0.0,
+    "branch": {
+        "id": 1,
+        "name": "Main Branch"
+    },
+    "on_going": {
+        "meeting_id": 0,
+        "meeting_name": "",
+        "attendees": 0,
+        "absentees": 0,
+        "males": 0,
+        "females": 0,
+        "late": 0
+    },
+    "previous": {
+        "meeting_id": 22,
+        "meeting_name": "..First Schedule.kl",
+        "attendees": 3,
+        "absentees": 10,
+        "males": 0,
+        "females": 0,
+        "late": 0
+    },
+    "expiration_date": "2025-12-31T00:00:00Z"
+}

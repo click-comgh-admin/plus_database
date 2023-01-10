@@ -1,0 +1,46 @@
+[{
+    "type": {
+        "id": 1,
+        "name": "Main"
+    },
+    "statistics": {
+        "all_members": 128,
+        "all_males": 112,
+        "all_females": 13,
+        "all_organizations": 49,
+        "all_admins": 25,
+        "all_archived": 0,
+        "current_branch": {
+            "all_members": 122,
+            "all_males": 108,
+            "all_females": 13,
+            "all_organizations": 49,
+            "all_admins": 10,
+            "all_archived": 0,
+            "branch": {
+                "id": 1,
+                "name": "Main Branch"
+            }
+        },
+        "subscription_amount": 0.0
+    },
+    "expiration_date": null
+}, {
+    "type": {
+        "id": 2,
+        "name": "Branch"
+    },
+    "statistics": {
+        "all_members": 0,
+        "all_males": 0,
+        "all_females": 0,
+        "all_organizations": 0,
+        "all_admins": 1,
+        "all_archived": 0,
+        "branch": {
+            "id": 45,
+            "name": "Family Group"
+        }
+    },
+    "expiration_date": null
+}]

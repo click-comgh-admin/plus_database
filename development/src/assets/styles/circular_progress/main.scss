@@ -1,0 +1,40 @@
+mwc-circular-progress {
+    --mdc-circular-progress-track-color: white;
+    --mdc-theme-primary: var(--theme-default-color);
+    &.gray {
+        --mdc-theme-primary: var(--theme-gray-color);
+        --mdc-circular-progress-track-color: rgb(17, 24, 39);
+    }
+    &.success {
+        --mdc-theme-primary: var(--theme-success-color);
+        --mdc-circular-progress-track-color: white;
+    }
+    &.info {
+        --mdc-theme-primary: var(--theme-info-color);
+        --mdc-circular-progress-track-color: white;
+    }
+    &.warning {
+        --mdc-theme-primary: var(--theme-warning-color);
+        --mdc-circular-progress-track-color: white;
+    }
+    &.danger {
+        --mdc-theme-primary: var(--theme-danger-color);
+        --mdc-circular-progress-track-color: white;
+    }
+    &.primary {
+        --mdc-theme-primary: var(--theme-primary-color);
+        --mdc-circular-progress-track-color: white;
+    }
+}
+
+div[pageLoadingIndicator="on"] {
+    &>img {
+        margin-top: 50vh;
+        @apply w-12 h-12 flex justify-center !important;
+    }
+    @apply flex justify-center !important;
+}
+
+div[pageLoadingIndicator="off"] {
+    @apply hidden !important;
+}

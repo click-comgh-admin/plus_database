@@ -1,0 +1,16 @@
+{
+    "id": 3,
+    "regionId": {
+        "id": 2,
+        "location": "Brong Ahafo"
+    },
+    "districtId": {
+        "id": 29,
+        "regionId": {
+            "id": 2,
+            "location": "Brong Ahafo"
+        },
+        "location": "Asunafo North Municipal District"
+    },
+    "location": "Asunafo North.."
+}

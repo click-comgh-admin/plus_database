@@ -1,0 +1,20 @@
+.gradient {
+    &.gray {
+        @apply shadow-md bg-gradient-to-br from-gray-300 to-gray-600 fill-current;
+    }
+    &.red {
+        @apply shadow-md bg-gradient-to-br from-red-300 to-red-600 fill-current;
+    }
+    &.blue {
+        @apply shadow-md bg-gradient-to-br from-blue-300 to-blue-600 fill-current;
+    }
+    &.green {
+        @apply shadow-md bg-gradient-to-br from-green-300 to-green-600 fill-current;
+    }
+    &.yellow {
+        @apply shadow-md bg-gradient-to-br from-yellow-300 to-yellow-600 fill-current;
+    }
+    &.akwaaba {
+        @apply shadow-md bg-gradient-to-br from-akwaaba-orange-light to-akwaaba-orange-dark fill-current;
+    }
+}

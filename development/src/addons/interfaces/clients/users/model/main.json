@@ -1,0 +1,18 @@
+{
+    "id": 3,
+    "firstname": "Johnas",
+    "surname": "Moses",
+    "gender": 1,
+    "profilePicture": "http://192.168.173.1/AMG/plus_db/file_bucket/files/clients/profile-picture/profile.jpg",
+    "dateOfBirth": "2000-03-02",
+    "phone": "0209078891",
+    "email": "a@b.c",
+    "role": 1,
+    "accountId": 4,
+    "branchId": 1,
+    "level": 1,
+    "status": 1,
+    "lastUpdatedBy": 3,
+    "date": "2020-08-16T10:04:32Z",
+    "last_login": "2022-11-17T17:15:17Z"
+}

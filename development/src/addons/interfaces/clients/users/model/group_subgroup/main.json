@@ -1,0 +1,140 @@
+{
+    "id": 14,
+    "clientId": 4,
+    "userId": 3,
+    "group": [{
+            "id": 1,
+            "clientId": 4,
+            "group": "Group Supers",
+            "branchId": 1,
+            "memberCategoryId": 1,
+            "createdBy": 3,
+            "updatedBy": 3,
+            "updateDate": "2020-01-24T11:53:57Z",
+            "date": "2019-12-09T09:00:36Z"
+        },
+        {
+            "id": 3,
+            "clientId": 4,
+            "group": "Hoper Grouper",
+            "branchId": 1,
+            "memberCategoryId": 1,
+            "createdBy": 3,
+            "updatedBy": 3,
+            "updateDate": "2020-03-09T09:37:12Z",
+            "date": "2020-01-23T21:42:35Z"
+        },
+        {
+            "id": 24,
+            "clientId": 4,
+            "group": "New M Group",
+            "branchId": 1,
+            "memberCategoryId": 1,
+            "createdBy": 3,
+            "updatedBy": 3,
+            "updateDate": "2021-07-27T04:11:45Z",
+            "date": "2021-07-27T04:11:45Z"
+        },
+        {
+            "id": 26,
+            "clientId": 4,
+            "group": "Hearts Top",
+            "branchId": 1,
+            "memberCategoryId": 1,
+            "createdBy": 3,
+            "updatedBy": 3,
+            "updateDate": "2022-11-18T11:15:11Z",
+            "date": "2022-04-18T19:09:30Z"
+        }
+    ],
+    "subgroup": [{
+            "id": 1,
+            "clientId": 4,
+            "groupId": {
+                "id": 1,
+                "clientId": 4,
+                "group": "Group Supers",
+                "branchId": 1,
+                "memberCategoryId": 1,
+                "createdBy": 3,
+                "updatedBy": 3,
+                "updateDate": "2020-01-24T11:53:57Z",
+                "date": "2019-12-09T09:00:36Z"
+            },
+            "branchId": 1,
+            "memberCategoryId": 1,
+            "subgroup": "Sub Group One",
+            "createdBy": 3,
+            "updatedBy": 3,
+            "updateDate": "2020-01-24T12:23:46Z",
+            "date": "2020-01-12T18:04:38Z"
+        },
+        {
+            "id": 2,
+            "clientId": 4,
+            "groupId": {
+                "id": 1,
+                "clientId": 4,
+                "group": "Group Supers",
+                "branchId": 1,
+                "memberCategoryId": 1,
+                "createdBy": 3,
+                "updatedBy": 3,
+                "updateDate": "2020-01-24T11:53:57Z",
+                "date": "2019-12-09T09:00:36Z"
+            },
+            "branchId": 1,
+            "memberCategoryId": 1,
+            "subgroup": "Sub Group Two",
+            "createdBy": 3,
+            "updatedBy": 3,
+            "updateDate": "2020-01-24T12:25:07Z",
+            "date": "2020-01-12T18:04:38Z"
+        },
+        {
+            "id": 5,
+            "clientId": 4,
+            "groupId": {
+                "id": 3,
+                "clientId": 4,
+                "group": "Hoper Grouper",
+                "branchId": 1,
+                "memberCategoryId": 1,
+                "createdBy": 3,
+                "updatedBy": 3,
+                "updateDate": "2020-03-09T09:37:12Z",
+                "date": "2020-01-23T21:42:35Z"
+            },
+            "branchId": 1,
+            "memberCategoryId": 1,
+            "subgroup": "Hopred",
+            "createdBy": 3,
+            "updatedBy": 3,
+            "updateDate": "2020-01-24T12:21:19Z",
+            "date": "2020-01-24T11:25:50Z"
+        },
+        {
+            "id": 23,
+            "clientId": 4,
+            "groupId": {
+                "id": 24,
+                "clientId": 4,
+                "group": "New M Group",
+                "branchId": 1,
+                "memberCategoryId": 1,
+                "createdBy": 3,
+                "updatedBy": 3,
+                "updateDate": "2021-07-27T04:11:45Z",
+                "date": "2021-07-27T04:11:45Z"
+            },
+            "branchId": 1,
+            "memberCategoryId": 1,
+            "subgroup": "M-sg",
+            "createdBy": 3,
+            "updatedBy": 3,
+            "updateDate": "2021-07-27T04:11:46Z",
+            "date": "2021-07-27T04:11:46Z"
+        }
+    ],
+    "date": "2022-06-13T22:35:05Z"
+}

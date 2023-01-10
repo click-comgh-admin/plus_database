@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+mwc-dialog {
+    z-index: 50 !important;
+}

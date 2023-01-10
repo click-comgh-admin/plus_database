@@ -1,0 +1,31 @@
+.form-input-container {
+    @apply mt-7;
+}
+
+.form-input-container:first-child {
+    @apply mt-0;
+}
+
+input.form-input,
+mwc-textfield.form-input {
+    @apply mt-1 block w-full border-none bg-white px-3 h-11 rounded-xl shadow-lg;
+}
+
+mwc-textarea.form-input {
+    @apply mt-1 block w-full border-none bg-white px-3 rounded-xl shadow-lg;
+}
+
+input.form-input:focus,
+mwc-textfield.form-input:focus,
+mwc-textarea.form-input:focus {
+    @apply ring-0;
+}
+
+input.form-input:hover,
+input.form-input:focus,
+mwc-textfield.form-input:hover,
+mwc-textfield.form-input:focus,
+mwc-textarea.form-input:hover,
+mwc-textarea.form-input:focus {
+    @apply bg-blue-100;
+}

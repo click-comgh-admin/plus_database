@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "es6",
+        "jsx": "react",
+        "allowJs": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "paths": {
+            "@@addons/*": ["./src/addons/*"],
+            "@@assets/*": ["./src/assets/*"],
+            "@@views/*": ["./src/view/*"],
+            "@@classes/*": ["./src/addons/classes/*"],
+            "@@constants/*": ["./src/addons/constants/*"],
+            "@@database/*": ["./src/addons/database/*"],
+            "@@functions/*": ["./src/addons/functions/*"],
+            "@@interfaces/*": ["./src/addons/interfaces/*"],
+            "@@mobx-providers/*": ["./src/addons/mobx-providers/*"],
+            "@@network/*": ["./src/addons/network/*"],
+            "@@service-worker/*": ["./src/addons/service-worker/*"],
+            "@@widgets/*": ["./src/addons/widgets/*"],
+        }
+    },
+	"exclude": [
+		"node_modules",
+		"**/node_modules/*",
+	],
+}

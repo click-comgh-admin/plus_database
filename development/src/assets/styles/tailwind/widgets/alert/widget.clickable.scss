@@ -1,0 +1,106 @@
+clickable-card {
+    >.clickable-box {
+        @apply flex flex-col w-full;
+    }
+    >.clickable-box>.clickable-container {
+        @apply flex mb-4 shadow !relative;
+    }
+    >.clickable-box>.clickable-container>aside {
+        @apply w-12 h-12 absolute;
+    }
+    >.clickable-box>.clickable-container>aside>.padded {
+        @apply p-2;
+    }
+    >.clickable-box>.clickable-container>aside>.padded>mwc-icon,
+    >.clickable-box>.clickable-container>aside>.padded>.icon {
+        @apply text-white fill-current text-3xl;
+    }
+    >.clickable-box>.clickable-container>.content {
+        @apply w-full text-gray-800 items-center p-4;
+    }
+    >.clickable-box>.clickable-container>.content>header,
+    >.clickable-box>.clickable-container>.content>.header {
+        @apply text-lg font-bold pb-3 ml-11;
+    }
+    >.clickable-box>.clickable-container>.content>main,
+    >.clickable-box>.clickable-container>.content>.main {
+        @apply leading-tight whitespace-pre-line;
+    }
+    >.clickable-box>.clickable-container>.content>footer,
+    >.clickable-box>.clickable-container>.content>.footer {
+        @apply mt-3;
+    }
+}
+
+clickable-card>.clickable-box {
+    >.clickable-container {
+        >.content>header,
+        >.content>.header {
+            @apply !text-akwaaba-orange-dark;
+        }
+        @apply bg-white;
+    }
+    >.clickable-container>aside {
+        @apply bg-akwaaba-orange-light;
+    }
+    >.clickable-container.default {
+        >.content>header,
+        >.content>.header {
+            @apply !text-gray-600;
+        }
+        @apply bg-white;
+    }
+    >.clickable-container>aside.default {
+        @apply bg-gray-400;
+    }
+    >.clickable-container.success {
+        >.content>header,
+        >.content>.header {
+            @apply !text-green-600;
+        }
+        @apply bg-white;
+    }
+    >.clickable-container>aside.success {
+        @apply bg-green-400;
+    }
+    >.clickable-container.info {
+        >.content>header,
+        >.content>.header {
+            @apply !text-blue-400;
+        }
+        @apply bg-white;
+    }
+    >.clickable-container>aside.info {
+        @apply bg-blue-200;
+    }
+    >.clickable-container.warning {
+        >.content>header,
+        >.content>.header {
+            @apply !text-yellow-600;
+        }
+        @apply bg-white;
+    }
+    >.clickable-container>aside.warning {
+        @apply bg-yellow-400;
+    }
+    >.clickable-container.danger {
+        >.content>header,
+        >.content>.header {
+            @apply !text-red-600;
+        }
+        @apply bg-white;
+    }
+    >.clickable-container>aside.danger {
+        @apply bg-red-400;
+    }
+    >.clickable-container.primary {
+        >.content>header,
+        >.content>.header {
+            @apply !text-blue-700;
+        }
+        @apply bg-white;
+    }
+    >.clickable-container>aside.primary {
+        @apply bg-blue-500;
+    }
+}

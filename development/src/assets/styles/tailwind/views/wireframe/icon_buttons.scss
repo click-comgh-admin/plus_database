@@ -1,0 +1,16 @@
+mwc-icon-button {
+    /* flex */
+    @apply inline-block justify-center items-center content-center shadow-md rounded-full;
+}
+
+mwc-icon-button:hover {
+    @apply shadow-lg;
+}
+
+mwc-icon-button.inactive {
+    @apply bg-white fill-current text-gray-500;
+}
+
+mwc-icon-button.active {
+    @apply shadow-md bg-gradient-to-br from-akwaaba-orange-light to-akwaaba-orange-dark fill-current text-white;
+}

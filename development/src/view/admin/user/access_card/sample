@@ -1,0 +1,49 @@
+<div class="divide-y divide-gray-200 border-gray-200 dark:divide-gray-700 dark:border-gray-700 rounded-lg border">
+    <button class="flex w-full items-center justify-between first:rounded-t-lg last:rounded-b-lg py-5 px-5 text-left font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-800 dark:focus:ring-gray-800"
+        type="button">
+        <h2 class="">What is Flowbite?</h2>
+        <span class="fa fa-"></span>
+    </button>
+    <div class="py-5 px-5 last:rounded-b-lg dark:bg-gray-900 first:rounded-t-lg" hidden="">
+        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
+        <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="https://flowbite.com/docs/getting-started/introduction/" class="text-blue-600 hover:underline dark:text-blue-500">get started</a> and start developing websites even faster with components on top of
+            Tailwind CSS.</p>
+    </div>
+    <button class="flex w-full items-center justify-between first:rounded-t-lg last:rounded-b-lg py-5 px-5 text-left font-medium text-gray-500 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-800 dark:focus:ring-gray-800 bg-gray-100 dark:bg-gray-800 dark:text-white"
+        type="button">
+        <h2 class="">Is there a Figma file available?</h2>
+        <span class="fa fa-"></span>
+    </button>
+    <div class="py-5 px-5 last:rounded-b-lg dark:bg-gray-900 first:rounded-t-lg">
+        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
+        <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 hover:underline dark:text-blue-500">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+    </div>
+    <button class="flex w-full items-center justify-between first:rounded-t-lg last:rounded-b-lg py-5 px-5 text-left font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-800 dark:focus:ring-gray-800"
+        type="button">
+        <h2 class="">What are the differences between Flowbite and Tailwind UI?</h2>
+        <span class="fa fa-"></span>
+    </button>
+    <div class="py-5 px-5 last:rounded-b-lg dark:bg-gray-900 first:rounded-t-lg" hidden="">
+        <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers
+            sections of pages.</p>
+        <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
+        <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+        <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400">
+            <li><a href="https://flowbite.com/pro/" class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a></li>
+            <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="w-fit">
+    <button class="text-white bg-blue-700 border border-transparent hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 disabled:hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 dark:disabled:hover:bg-blue-600 group flex h-min w-fit items-center justify-center p-0.5 text-center font-medium focus:z-10 rounded-lg"
+        type="button">
+        <span class="flex items-center rounded-md text-sm px-4 py-2">Dark tooltip</span>
+    </button>
+</div>
+<div tabindex="-1" class="absolute inline-block rounded-lg py-2 px-3 text-sm font-medium shadow-sm transition-opacity duration-300 invisib le op acity-0 bg-gray-900 text-white dark:bg-gray-700" id=":r2p:" role="tooltip" style="position: absolute; top: 275px; left: 228.438px;">
+    <div class="relative z-20">Tooltip content</div>
+    <div class="absolute z-10 h-2 w-2 rotate-45 bg-gray-900 dark:bg-gray-700" style="bottom: -4px; left: 60px;">&nbsp;</div>
+</div>

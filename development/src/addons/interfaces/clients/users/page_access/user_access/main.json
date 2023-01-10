@@ -1,0 +1,24 @@
+{
+    "id": 968,
+    "clientId": 4,
+    "userId": 3,
+    "pageId": {
+        "id": 1,
+        "page": "Visitors",
+        "moduleId": 5,
+        "moduleInfo": {
+            "id": 5,
+            "module": "Database Manager",
+            "description": "The Database Manager is highly secure and easy to access your staff or membership data on any internet device and anywhere just by a click of a button.  \r\nWe believe your data is your property and support your right to privacy and transparency. We are registered with the Data Protection Commission of Ghana and we adhere to data protection best practices.\r\n\r\nOur Membership Database comes with the following features and more:\r\n1. Option to create branches, membership types, groups, and subgroups \r",
+            "logo": "http://192.168.173.1/AMG/plus_db/file_bucket/files/clients/profile-picture/profile.jpg",
+            "assigned_fee": 0,
+            "date_created": "2022-10-06T21:50:31.172180Z",
+            "default": 1
+        }
+    },
+    "isUnlimited": {
+        "id": 0,
+        "name": "Restricted"
+    },
+    "date": "2022-06-19T12:20:17Z"
+}

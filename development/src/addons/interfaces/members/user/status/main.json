@@ -1,0 +1,63 @@
+{
+    "id": 51,
+    "disability": true,
+    "maritalStatus": {
+        "id": 2,
+        "name": "Single",
+        "memberId": 0
+    },
+    "occupationalStatus": {
+        "id": 2,
+        "name": "Public/ Private Employee",
+        "memberId": 0
+    },
+    "professionStatus": {
+        "id": 1,
+        "name": "Pari",
+        "memberId": 206
+    },
+    "educationalStatus": {
+        "id": 2,
+        "name": "Primary",
+        "memberId": 0
+    },
+    "religion": "1",
+    "languages": "",
+    "memberId": {
+        "id": 90,
+        "clientId": 4,
+        "firstname": "dss",
+        "middlename": "",
+        "surname": "kld",
+        "gender": 1,
+        "profilePicture": "http://192.168.173.1/AMG/plus_db/file_bucket/files/members/profile-picture/profile.png",
+        "phone": "4343434343",
+        "email": "ddss@fsdddf.fdffd",
+        "dateOfBirth": "2021-01-01",
+        "religion": 1,
+        "nationality": "Afghanistan",
+        "countryOfResidence": "French",
+        "stateProvince": "fddfddf",
+        "region": 0,
+        "district": 0,
+        "constituency": 0,
+        "electoralArea": 0,
+        "community": "",
+        "hometown": "",
+        "houseNoDigitalAddress": "",
+        "digitalAddress": "",
+        "level": 1,
+        "status": 1,
+        "accountType": 1,
+        "memberType": 1,
+        "date": "2021-09-16T18:56:17Z",
+        "last_login": "2022-03-22T23:01:05Z",
+        "referenceId": "",
+        "branchId": 1,
+        "editable": true,
+        "profileResume": "null",
+        "profileIdentification": "null",
+        "archived": false
+    },
+    "date": "2021-09-16T18:56:17Z"
+}

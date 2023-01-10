@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    @apply overflow-y-scroll;
+    @apply bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50;
+}
+
+
+/* START :: SCROLL-BAR CSS */
+
+[scrollbar="app-scrollbar"]::-webkit-scrollbar {
+    width: 4px;
+    cursor: pointer;
+    /*background-color: rgba(229, 231, 235, var(--bg-opacity));*/
+}
+
+[scrollbar="app-scrollbar"]::-webkit-scrollbar-track {
+    background-color: rgba(229, 231, 235, var(--bg-opacity));
+    cursor: pointer;
+    /*background: red;*/
+}
+
+[scrollbar="app-scrollbar"]::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background-color: #a0aec0;
+    /*outline: 1px solid slategrey;*/
+}
+
+
+/* END :: SCROLL-BAR CSS */
+
+mwc-dialog {
+    z-index: 50 !important;
+}
+
+.main-content,
+.main-app-content {
+    /*@apply bg-green-900 !important; */
+    @apply ml-0 mr-0 p-4 !important;
+}
+
+datatables-new {
+    >[mdc-data-table="data-table"] {
+        @apply w-full !important;
+    }
+}
+
+dt-pagination .mdc-button,
+dt-pagination .mdc-icon-button {
+    padding: 0 !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.main-app-content {
+    @apply overflow-y-auto h-auto;
+}
+
+.main-app-content>.main-container,
+.main-app-content>[display-app-content="here"]>.main-container,
+.special-card {
+    @apply rounded-2xl bg-white p-6 mb-3;
+}
+
+.main-app-content>.main-container:last-child,
+.main-app-content>[display-app-content="here"]>.main-container:last-child {
+    @apply mb-52;
+}
+
+@screen md {
+    .main-content,
+    .main-app-content {
+        @apply ml-64 !important;
+        >[mdc-data-table="data-table"] {
+            @apply block ml-64 !important;
+        }
+    }
+    .main-app-content {
+        @apply overflow-y-scroll h-screen;
+    }
+}
+
+@screen xl {
+    .main-content,
+    .main-app-content {
+        @apply ml-64 mr-72 !important;
+    }
+}

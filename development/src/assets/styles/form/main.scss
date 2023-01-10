@@ -1,0 +1,74 @@
+.form-container header>label,
+.form-container header>.label,
+.form-container .header>label,
+.form-container .header>.label {
+    @apply block mt-3 text-2xl text-gray-700 text-left font-semibold;
+    >.icon {
+        @apply inline text-akwaaba-orange-default h-6 w-6;
+    }
+    >h1,
+    >.h1 {
+        @apply text-2xl font-bold text-akwaaba-orange-light;
+    }
+    >h3,
+    >.h3 {
+        @apply text-sm font-semibold text-akwaaba-orange-light mb-4;
+    }
+}
+
+.form-container .form {
+    @apply mt-10;
+}
+
+.form-container header,
+.form-container header,
+.form-container .header,
+.form-container .header {
+    &.success .icon {
+        @apply text-green-700 !important;
+    }
+    &.success h1,
+    &.success .h1 {
+        @apply text-green-600 !important;
+    }
+    &.success h3,
+    &.success .h3,
+    &.info h3,
+    &.info .h3,
+    &.warning h3,
+    &.warning .h3,
+    &.danger h3,
+    &.danger .h3,
+    &.primary h3,
+    &.primary .h3 {
+        @apply text-gray-600 !important;
+    }
+    &.info .icon {
+        @apply text-blue-400 !important;
+    }
+    &.info h1,
+    &.info .h1 {
+        @apply text-blue-300 !important;
+    }
+    &.warning .icon {
+        @apply text-yellow-700 !important;
+    }
+    &.warning h1,
+    &.warning .h1 {
+        @apply text-yellow-600 !important;
+    }
+    &.danger .icon {
+        @apply text-red-700 !important;
+    }
+    &.danger h1,
+    &.danger .h1 {
+        @apply text-red-600 !important;
+    }
+    &.primary .icon {
+        @apply text-blue-700 !important;
+    }
+    &.primary h1,
+    &.primary .h1 {
+        @apply text-blue-600 !important;
+    }
+}

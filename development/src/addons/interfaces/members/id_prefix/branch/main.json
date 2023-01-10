@@ -1,0 +1,17 @@
+{
+    "id": 1,
+    "prefix": "Hearts",
+    "branchId": {
+        "id": 1,
+        "name": "Main Branch",
+        "accountId": 0,
+        "createdBy": 1,
+        "creationDate": "2022-03-21T17:40:40Z",
+        "updatedBy": 3,
+        "updateDate": "2022-04-26T11:43:35.580177Z"
+    },
+    "createdBy": 3,
+    "creationDate": "2022-09-10T12:48:19.435204Z",
+    "updatedBy": 3,
+    "updateDate": "2022-09-10T12:48:19.488908Z"
+}

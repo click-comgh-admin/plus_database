@@ -1,0 +1,410 @@
+.app-container-,
+.app-container--fluid,
+.app-container--mega,
+.app-container--2xl,
+.app-container--xl,
+.app-container--lg,
+.app-container--md,
+.app-container--sm {
+    @apply w-full px-3 mx-auto;
+}
+
+.app-container--row {
+    @apply flex flex-wrap px-6 py-0;
+    margin-top: calc(-1 * theme(padding.6));
+    margin-right: calc(-0.5 * theme(padding.6));
+    margin-left: calc(-0.5 * theme(padding.6));
+}
+
+.app-container--row>* {
+    @apply box-border flex-shrink-0 w-full max-w-full mt-6;
+    padding-right: calc(theme(padding.6) * 0.5);
+    padding-left: calc(theme(padding.6) * 0.5);
+}
+
+@screen sm {
+    .app-container--sm,
+    .app-container- {
+        @apply max-w-screen-sm;
+    }
+    .app-container--col-sm {
+        flex: 1 0 0%;
+    }
+    .app-container--col-sm-auto {
+        @apply w-auto;
+        flex: 0 0 auto;
+    }
+    .app-container--col-sm-1 {
+        flex: 0 0 auto;
+        @apply w-1/12;
+    }
+    .app-container--col-sm-2 {
+        flex: 0 0 auto;
+        @apply w-1/6;
+    }
+    .app-container--col-sm-3 {
+        flex: 0 0 auto;
+        @apply w-1/4;
+    }
+    .app-container--col-sm-4 {
+        flex: 0 0 auto;
+        @apply w-1/3;
+    }
+    .app-container--col-sm-5 {
+        flex: 0 0 auto;
+        @apply w-5/12;
+    }
+    .app-container--col-sm-6 {
+        flex: 0 0 auto;
+        @apply w-2/4;
+    }
+    .app-container--col-sm-7 {
+        flex: 0 0 auto;
+        @apply w-7/12;
+    }
+    .app-container--col-sm-8 {
+        flex: 0 0 auto;
+        @apply w-8/12;
+    }
+    .app-container--col-sm-9 {
+        flex: 0 0 auto;
+        @apply w-9/12;
+    }
+    .app-container--col-sm-10 {
+        flex: 0 0 auto;
+        @apply w-10/12;
+    }
+    .app-container--col-sm-11 {
+        flex: 0 0 auto;
+        @apply w-11/12;
+    }
+    .app-container--col-sm-12 {
+        flex: 0 0 auto;
+        @apply w-full;
+    }
+}
+
+@screen md {
+    .app-container--md,
+    .app-container--sm,
+    .app-container- {
+        @apply max-w-screen-md;
+    }
+    .app-container--col-md {
+        flex: 1 0 0%;
+    }
+    .app-container--col-md-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .app-container--col-md-1 {
+        flex: 0 0 auto;
+        @apply w-1/12;
+    }
+    .app-container--col-md-2 {
+        flex: 0 0 auto;
+        @apply w-1/6;
+    }
+    .app-container--col-md-3 {
+        flex: 0 0 auto;
+        @apply w-1/4;
+    }
+    .app-container--col-md-4 {
+        flex: 0 0 auto;
+        @apply w-1/3;
+    }
+    .app-container--col-md-5 {
+        flex: 0 0 auto;
+        @apply w-5/12;
+    }
+    .app-container--col-md-6 {
+        flex: 0 0 auto;
+        @apply w-2/4;
+    }
+    .app-container--col-md-7 {
+        flex: 0 0 auto;
+        @apply w-7/12;
+    }
+    .app-container--col-md-8 {
+        flex: 0 0 auto;
+        @apply w-8/12;
+    }
+    .app-container--col-md-9 {
+        flex: 0 0 auto;
+        @apply w-9/12;
+    }
+    .app-container--col-md-10 {
+        flex: 0 0 auto;
+        @apply w-10/12;
+    }
+    .app-container--col-md-11 {
+        flex: 0 0 auto;
+        @apply w-11/12;
+    }
+    .app-container--col-md-12 {
+        flex: 0 0 auto;
+        @apply w-full;
+    }
+}
+
+@screen lg {
+    .app-container--lg,
+    .app-container--md,
+    .app-container--sm,
+    .app-container- {
+        @apply max-w-screen-lg;
+    }
+    .app-container--col-lg {
+        flex: 1 0 0%;
+    }
+    .app-container--col-lg-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .app-container--col-lg-1 {
+        flex: 0 0 auto;
+        @apply w-1/12;
+    }
+    .app-container--col-lg-2 {
+        flex: 0 0 auto;
+        @apply w-1/6;
+    }
+    .app-container--col-lg-3 {
+        flex: 0 0 auto;
+        @apply w-1/4;
+    }
+    .app-container--col-lg-4 {
+        flex: 0 0 auto;
+        @apply w-1/3;
+    }
+    .app-container--col-lg-5 {
+        flex: 0 0 auto;
+        @apply w-5/12;
+    }
+    .app-container--col-lg-6 {
+        flex: 0 0 auto;
+        @apply w-2/4;
+    }
+    .app-container--col-lg-7 {
+        flex: 0 0 auto;
+        @apply w-7/12;
+    }
+    .app-container--col-lg-8 {
+        flex: 0 0 auto;
+        @apply w-8/12;
+    }
+    .app-container--col-lg-9 {
+        flex: 0 0 auto;
+        @apply w-9/12;
+    }
+    .app-container--col-lg-10 {
+        flex: 0 0 auto;
+        @apply w-10/12;
+    }
+    .app-container--col-lg-11 {
+        flex: 0 0 auto;
+        @apply w-11/12;
+    }
+    .app-container--col-lg-12 {
+        flex: 0 0 auto;
+        @apply w-full;
+    }
+}
+
+@screen xl {
+    .app-container--xl,
+    .app-container--lg,
+    .app-container--md,
+    .app-container--sm,
+    .app-container- {
+        @apply max-w-screen-xl;
+    }
+    .app-container--col-xl {
+        flex: 1 0 0%;
+    }
+    .app-container--col-xl-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .app-container--col-xl-1 {
+        flex: 0 0 auto;
+        @apply w-1/12;
+    }
+    .app-container--col-xl-2 {
+        flex: 0 0 auto;
+        @apply w-1/6;
+    }
+    .app-container--col-xl-3 {
+        flex: 0 0 auto;
+        @apply w-1/4;
+    }
+    .app-container--col-xl-4 {
+        flex: 0 0 auto;
+        @apply w-1/3;
+    }
+    .app-container--col-xl-5 {
+        flex: 0 0 auto;
+        @apply w-5/12;
+    }
+    .app-container--col-xl-6 {
+        flex: 0 0 auto;
+        @apply w-2/4;
+    }
+    .app-container--col-xl-7 {
+        flex: 0 0 auto;
+        @apply w-7/12;
+    }
+    .app-container--col-xl-8 {
+        flex: 0 0 auto;
+        @apply w-8/12;
+    }
+    .app-container--col-xl-9 {
+        flex: 0 0 auto;
+        @apply w-9/12;
+    }
+    .app-container--col-xl-10 {
+        flex: 0 0 auto;
+        @apply w-10/12;
+    }
+    .app-container--col-xl-11 {
+        flex: 0 0 auto;
+        @apply w-11/12;
+    }
+    .app-container--col-xl-12 {
+        flex: 0 0 auto;
+        @apply w-full;
+    }
+}
+
+@screen 2xl {
+    .app-container--2xl,
+    .app-container--xl,
+    .app-container--lg,
+    .app-container--md,
+    .app-container--sm,
+    .app-container- {
+        @apply max-w-screen-2xl;
+    }
+    .app-container--col-2xl {
+        flex: 1 0 0%;
+    }
+    .app-container--col-2xl-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .app-container--col-2xl-1 {
+        flex: 0 0 auto;
+        @apply w-1/12;
+    }
+    .app-container--col-2xl-2 {
+        flex: 0 0 auto;
+        @apply w-1/6;
+    }
+    .app-container--col-2xl-3 {
+        flex: 0 0 auto;
+        @apply w-1/4;
+    }
+    .app-container--col-2xl-4 {
+        flex: 0 0 auto;
+        @apply w-1/3;
+    }
+    .app-container--col-2xl-5 {
+        flex: 0 0 auto;
+        @apply w-5/12;
+    }
+    .app-container--col-2xl-6 {
+        flex: 0 0 auto;
+        @apply w-2/4;
+    }
+    .app-container--col-2xl-7 {
+        flex: 0 0 auto;
+        @apply w-7/12;
+    }
+    .app-container--col-2xl-8 {
+        flex: 0 0 auto;
+        @apply w-8/12;
+    }
+    .app-container--col-2xl-9 {
+        flex: 0 0 auto;
+        @apply w-9/12;
+    }
+    .app-container--col-2xl-10 {
+        flex: 0 0 auto;
+        @apply w-10/12;
+    }
+    .app-container--col-2xl-11 {
+        flex: 0 0 auto;
+        @apply w-11/12;
+    }
+    .app-container--col-2xl-12 {
+        flex: 0 0 auto;
+        @apply w-full;
+    }
+}
+
+@screen mega {
+    .app-container--mega,
+    .app-container--2xl,
+    .app-container--xl,
+    .app-container--lg,
+    .app-container--md,
+    .app-container--sm,
+    .app-container- {
+        @apply max-w-screen-mega;
+    }
+    .app-container--col-mega {
+        flex: 1 0 0%;
+    }
+    .app-container--col-mega-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .app-container--col-mega-1 {
+        flex: 0 0 auto;
+        @apply w-1/12;
+    }
+    .app-container--col-mega-2 {
+        flex: 0 0 auto;
+        @apply w-1/6;
+    }
+    .app-container--col-mega-3 {
+        flex: 0 0 auto;
+        @apply w-1/4;
+    }
+    .app-container--col-mega-4 {
+        flex: 0 0 auto;
+        @apply w-1/3;
+    }
+    .app-container--col-mega-5 {
+        flex: 0 0 auto;
+        @apply w-5/12;
+    }
+    .app-container--col-mega-6 {
+        flex: 0 0 auto;
+        @apply w-2/4;
+    }
+    .app-container--col-mega-7 {
+        flex: 0 0 auto;
+        @apply w-7/12;
+    }
+    .app-container--col-mega-8 {
+        flex: 0 0 auto;
+        @apply w-8/12;
+    }
+    .app-container--col-mega-9 {
+        flex: 0 0 auto;
+        @apply w-9/12;
+    }
+    .app-container--col-mega-10 {
+        flex: 0 0 auto;
+        @apply w-10/12;
+    }
+    .app-container--col-mega-11 {
+        flex: 0 0 auto;
+        @apply w-11/12;
+    }
+    .app-container--col-mega-12 {
+        flex: 0 0 auto;
+        @apply w-full;
+    }
+}

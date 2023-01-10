@@ -1,0 +1,13 @@
+/* START :: DATATABLE BUTTON CSS */
+
+@import '../../button/datatables.scss';
+
+/* END :: DATATABLE BUTTON CSS */
+
+td,
+th {
+    @apply whitespace-pre-line !important;
+    >a {
+        @apply text-akwaaba-orange-default;
+    }
+}

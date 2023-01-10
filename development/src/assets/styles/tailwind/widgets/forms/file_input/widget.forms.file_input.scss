@@ -1,0 +1,5 @@
+file-input>.form-input {
+    @apply !w-full !border !border-gray-400 !rounded-md;
+    @apply !py-3 !pl-3;
+    min-height: theme(height.3) !important;
+}

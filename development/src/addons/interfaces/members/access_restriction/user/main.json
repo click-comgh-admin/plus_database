@@ -1,0 +1,107 @@
+{
+    "id": 1,
+    "clientId": 4,
+    "clientInfo": {
+        "id": 4,
+        "name": "Original Group",
+        "accountType": 1,
+        "country": "Ghana",
+        "stateProvince": "George County",
+        "applicantFirstname": "Test",
+        "applicantSurname": "Group",
+        "applicantGender": 1,
+        "applicantPhone": "1111111111",
+        "applicantEmail": "a@b.c",
+        "applicantDesignationRole": 1,
+        "region": 1,
+        "district": 1,
+        "constituency": 1,
+        "community": "Com",
+        "subscriptionDuration": "2",
+        "subscriptionDate": "2018-01-01 22:38:59",
+        "subscriptionFee": "200",
+        "logo": "http://192.168.173.1/AMG/plus_db/file_bucket/files/clients/logo/4/6c9fe6e0f349c0b25ef2dfa192612b4d.jpg",
+        "status": 1,
+        "archive": 0,
+        "accountCategory": {
+            "id": 1,
+            "clientId": 0,
+            "category": "Non-Profit",
+            "createdBy": 0,
+            "updatedBy": 0,
+            "updateDate": null,
+            "date": null
+        },
+        "website": "",
+        "creationDate": "2020-01-01T22:38:59Z",
+        "updatedBy": 0,
+        "updateDate": "2022-03-24T12:17:35Z",
+        "subscriptionInfo": {
+            "id": 4,
+            "client": "Another Demo Organization",
+            "client_id": "4",
+            "subscription_id": "ASL20220004",
+            "subscribed_modules": {
+                "Module 1": {
+                    "module name": "Fee Manager",
+                    "expires_on": "12-12-2022"
+                },
+                "Module 2": {
+                    "module name": "Database Manager",
+                    "expires_on": "12-12-2022"
+                },
+                "Module 3": {
+                    "module name": "School Manager",
+                    "expires_on": "12-12-2022"
+                }
+            },
+            "date_created": "2022-10-21"
+        },
+        "countryInfo": [{
+            "id": 76,
+            "name": "Ghana",
+            "short": "GH",
+            "code": "+233"
+        }]
+    },
+    "memberId": 11,
+    "memberInfo": {
+        "id": 11,
+        "clientId": 4,
+        "firstname": "Hope",
+        "middlename": "",
+        "surname": "Test-User",
+        "gender": 2,
+        "profilePicture": "http://192.168.173.1/AMG/plus_db/file_bucket/files/member/profile/11/7f20c450915edf68019a4b9f66c87789.jpg",
+        "phone": "1222211212",
+        "email": "1@2.3s",
+        "dateOfBirth": "2020-10-04",
+        "religion": 4,
+        "nationality": "United States",
+        "countryOfResidence": "Ghana",
+        "stateProvince": "",
+        "region": 1,
+        "district": 1,
+        "constituency": 1,
+        "electoralArea": 9,
+        "community": "Mystic Falls",
+        "hometown": "Virginia",
+        "houseNoDigitalAddress": "jkjkjkj",
+        "digitalAddress": "New Orleans",
+        "level": 0,
+        "status": 1,
+        "accountType": 1,
+        "memberType": 1,
+        "date": "2020-02-14T14:29:42Z",
+        "last_login": "2022-10-30T21:23:44Z",
+        "referenceId": "",
+        "branchId": 1,
+        "editable": true
+    },
+    "restrictionId": {
+        "id": 1,
+        "restriction": "Allow user to view all users, contacts and locations",
+        "date": "2022-10-20T11:26:39Z"
+    },
+    "date": "2022-10-20T12:36:00.092240Z"
+}
