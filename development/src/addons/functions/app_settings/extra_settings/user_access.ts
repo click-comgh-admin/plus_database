@@ -15,11 +15,19 @@ export const AppSettingsExtraUserAccess = (pageInfo: ASES_PageInfo, isHome: bool
     pageId = pageInfo.pageId,
     viewType = pageInfo.viewType;
 
+  if (pageId) {
+    console.log({ pageId, viewType, "ASES?.user_access": ASES?.user_access });
+  }
+  
+
   if (isHome) {
     return true;
   }
   let hasAccess = false;
   ASES?.user_access.forEach(ua => {
+    if (pageId) {
+      console.log({"ua.pageId.id": ua.pageId.id, "pageId": pageId});
+    }
     if (ua.pageId.id === pageId) {
       if (ua.isUnlimited.name in ASES_isUnlimited) {
         switch (ua.isUnlimited.name) {

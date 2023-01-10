@@ -8,7 +8,7 @@ export interface ExtraAppSettings_I {
 }
 
 export function ExtraAppSettings_S(data: any): ExtraAppSettings_I {
-  console.log({"ExtraAppSettings_S-data":data});
+  // console.log({"ExtraAppSettings_S-data":data});
   const user_access: any[] = 'user_access' in data? data['user_access']: [];
   const extraAppSettings_S: ExtraAppSettings_I = {
     user_access: user_access.map(ua => cupamConvert.toClientUserPageAccessModel(JSON.stringify(ua))),

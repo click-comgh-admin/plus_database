@@ -8,7 +8,7 @@ export const getTime = (time: Date) => {
 }
 
 export const getLocalTime = (time: Date, options?: Intl.DateTimeFormatOptions) => {
-  console.log({time});
+  // console.log({time});
   
   return time === undefined? "-": time.toLocaleTimeString('en-US', options);
 }

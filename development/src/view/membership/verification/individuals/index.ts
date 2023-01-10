@@ -36,7 +36,6 @@ import { GET_ClientBranches } from '@@addons/network/clients/branches';
 import { SelectInputProcessedAjaxResponse_I, SelectInputProcessedAjaxUrlParam_I } from '@@addons/interfaces/form/select-input';
 import { QueryOptions } from 'select2';
 import { MembershipUserModel, Convert as MuMconvert } from '@@addons/interfaces/members/user/model/index2';
-import { MembershipOrganizationUserModel, Convert as MouMconvert } from '@@addons/interfaces/members/user/organization_model';
 import { UserLoginInfo_I } from '@@addons/interfaces/network_calls/login';
 import { MembershipVerificationModel, Convert as mvmConvert } from '@@addons/interfaces/members/verification';
 import { getDate } from '@@addons/functions/date_time/date';
@@ -149,7 +148,7 @@ export class PdbMembershipIndividualVerification extends LitElement {
       if (getAppSettingsExtraSettings()?.expiration_date.expired) {
         return html`<account-expired-component></account-expired-component>`;
       }
-      if (!AppSettingsExtraUserAccess({ pageId: PAGE__IDS.access, viewType: "View" }, false)) {
+      if (!AppSettingsExtraUserAccess({ pageId: PAGE__IDS.access, viewType: "Both" }, false)) {
         return html`<no-page-entry-component></no-page-entry-component>`;
       }
     }
@@ -366,7 +365,7 @@ export class PdbMembershipIndividualVerification extends LitElement {
 
     let _members: MembershipMixedUserModel[] = [];
 
-    if (this._selectedMembersCalled === false) {
+    if (this._selectedMembersCalled === false && memberIds?.length > 0) {
       this._selectedMembersCalled = true;
       const _networkResponse = await GET_MembershipUserIds<any>(memberIds);
 

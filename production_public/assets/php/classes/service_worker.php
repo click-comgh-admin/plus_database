@@ -174,7 +174,7 @@ class View
     {
         $URLS = [
             // '/',
-            // '/akwaaba-forms/',
+            '/login',
             // # MUST ALWAYS BE[2] index
             // '/akwaaba-forms/stop/sorry-you-are-offline',
             // '/akwaaba-forms/login/',

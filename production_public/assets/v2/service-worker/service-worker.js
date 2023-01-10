@@ -1,5 +1,5 @@
-const STATIC_CACHE_NAME = 'akwaaba-database-site-base-static-v0.008.05';
-const DYNAMIC_CACHE_NAME = 'akwaaba-database-site-dynamic-requests-v0.008.05';
+const STATIC_CACHE_NAME = 'akwaaba-database-site-base-static-v1.001.01';
+const DYNAMIC_CACHE_NAME = 'akwaaba-database-site-dynamic-requests-v1.001.01';
 const ASSETS = []; // DYNAMICALLY GENERATED IN PHP VIEW
 const UNCACHEABLE_URLS = []; // DYNAMICALLY GENERATED IN PHP VIEW
 
@@ -14,7 +14,7 @@ const LIMIT_CACHE_SIZE = (name, size) => {
     });
 }
 self.addEventListener('install', event => {
-    console.log('sw installed');
+    // console.log('sw installed');
     // event.waitUntil(
     //     caches.open(STATIC_CACHE_NAME).then(cache => {
     //         console.log('caching shell assets', cache);
@@ -29,8 +29,8 @@ self.addEventListener('install', event => {
 
     const filesUpdate = cache => {
         const stack = [];
-        console.log('caching shell assets', cache);
-        console.log({ "ASSETS": ASSETS });
+        // console.log('caching shell assets', cache);
+        // console.log({ "ASSETS": ASSETS });
         ASSETS.forEach(file => stack.push(
             cache.add(file).catch(_ => console.error(`can't load ${file} to cache`))
         ));
@@ -38,6 +38,7 @@ self.addEventListener('install', event => {
     };
 
     event.waitUntil(caches.open(STATIC_CACHE_NAME).then(filesUpdate));
+    self.skipWaiting();
 });
 
 
@@ -64,10 +65,10 @@ self.addEventListener('activate', event => {
 
 //fetch event
 self.addEventListener('fetch', event => {
-    console.log('fetch event', event);
+    // console.log('fetch event', event);
     // UNCACHEABLE_URLS.forEach(url => {}); NOT WORKING
 
-    if ((event.request.url.indexOf("api.") < 0) && (event.request.url.indexOf("db-api-v2.") < 0)) {
+    if ((event.request.url.indexOf("api.") < 0) && (event.request.url.indexOf("db-api-v2.") < 0) && (event.request.url.indexOf("/api/") < 0)) {
         if (event.request.url.indexOf("/login") > -1) {
             null;
         } else {
@@ -106,11 +107,11 @@ self.addEventListener('message', event => {
     // console.log('message event', event);
     const response = event.data,
         channel = new BroadcastChannel("SERVICE_WORKER_MESSENGER");
-    console.log('response response', response);
+    // console.log('response response', response);
 
 
     if (response.type === SERVICE_WORKER_TYPES.networkStatus) {
-        console.log('message event networkStatus', event);
+        // console.log('message event networkStatus', event);
         let response = false;
         if (navigator.onLine === false) {
             response = false;
@@ -124,6 +125,6 @@ self.addEventListener('message', event => {
     }
 
     if (response.type === SERVICE_WORKER_TYPES.postAction) {
-        console.log('message event postAction', event);
+        // console.log('message event postAction', event);
     }
 });

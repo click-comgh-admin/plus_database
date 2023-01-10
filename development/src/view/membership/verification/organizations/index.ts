@@ -148,7 +148,7 @@ export class PdbMembershipOrganizationVerification extends LitElement {
       if (getAppSettingsExtraSettings()?.expiration_date.expired) {
         return html`<account-expired-component></account-expired-component>`;
       }
-      if (!AppSettingsExtraUserAccess({ pageId: PAGE__IDS.access, viewType: "View" }, false)) {
+      if (!AppSettingsExtraUserAccess({ pageId: PAGE__IDS.access, viewType: "Both" }, false)) {
         return html`<no-page-entry-component></no-page-entry-component>`;
       }
     }
@@ -365,7 +365,7 @@ export class PdbMembershipOrganizationVerification extends LitElement {
 
     let _members: MembershipMixedUserModel[] = [];
 
-    if (this._selectedMembersCalled === false) {
+    if (this._selectedMembersCalled === false && memberIds?.length > 0) {
       this._selectedMembersCalled = true;
       const _networkResponse = await GET_MembershipUserIds<any>(memberIds);
 
