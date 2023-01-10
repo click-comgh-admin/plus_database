@@ -1,0 +1,5 @@
+--- Add fetch_from($get_string, $callback, $debug = false) to api curl class
+--- check assets/php/settings/base_url/client_base_url.php for changes 
+--- update defs.php page
+--- update title tag in assets/php... head.php page
+--- add system_version.php to client-membership /get endpoints

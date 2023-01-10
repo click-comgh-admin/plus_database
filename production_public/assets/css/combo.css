@@ -1,0 +1,36 @@
+@import url('select2.min.css');
+@import url('bvselect.min.css');
+@import url('animate.min.css');
+@import url('full-calender.min.css');
+@import url('perfect-scrollbar.min.css');
+@import url('sweetalert2.min.css');
+@import url('click_com_wizard.min.css');
+@import url('font-awesome.min.css');
+@import url('gradient_bg.min.css');
+@import url('datatables.min.css');
+@import url('datepicker.min.css');
+@import url('date_time_picker-default.min.css');
+@import url('dtp.min.css');
+@import url('datetime.min.css');
+@import url('complement.min.css');
+@import url('croppr.min.css');
+@import url('magnific-popup.min.css');
+@import url('email.min.css');
+@import url('textarea.min.css');
+@import url('tooltip.min.css');
+@import url('popupwindow.min.css');
+[select-show] {
+    display: none;
+}
+
+[force-show] {
+    display: block !important;
+}
+
+[pagin_table] {
+    width: 100% !important;
+}
+
+[enable-fullscreen] {
+    overflow-y: scroll;
+}

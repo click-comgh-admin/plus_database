@@ -1,0 +1,105 @@
+/* START :: TAILWIND CSS */
+.dt-buttons {
+  padding-bottom: 1rem !important;
+}
+
+.dt-buttons > .dt-button > span {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+  margin-left: 0.25rem !important;
+}
+
+.dataTables_paginate .paginate_button, .dt-buttons > .dt-button {
+  --tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1)!important;
+  --tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)!important;
+  --tw-bg-opacity:1!important;
+  --tw-text-opacity:1!important;
+  background-color: rgb(209 89 0/var(--tw-bg-opacity)) !important;
+  border-radius: 0.75rem !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow) !important;
+  color: rgb(255 255 255/var(--tw-text-opacity)) !important;
+  padding: 0.25rem 0.5rem !important;
+  text-align: center !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+  transition-duration: 0.5s !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.dt-buttons > .dt-button.buttons-pdf:before {
+  content: "\f1c1";
+  font-family: Font Awesome\ 6 Free;
+}
+
+.dt-buttons > .dt-button.buttons-excel:before {
+  content: "\f1c3";
+  font-family: Font Awesome\ 6 Free;
+}
+
+.dt-buttons > .dt-button.buttons-copy:before {
+  content: "\f0c5";
+  font-family: Font Awesome\ 6 Free;
+}
+
+.dt-buttons > .dt-button.buttons-csv:before {
+  content: "\f1c9";
+  font-family: Font Awesome\ 6 Free;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  --tw-text-opacity:1!important;
+  background-image: none !important;
+  color: rgb(255 255 255/var(--tw-text-opacity)) !important;
+  height: 35px !important;
+  min-width: 35px !important;
+}
+
+.dt-buttons > .dt-button:hover {
+  --tw-scale-x:1.05!important;
+  --tw-scale-y:1.05!important;
+  --tw-shadow:inset 0 2px 4px 0 rgba(0,0,0,.05)!important;
+  --tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color)!important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow) !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+
+.dt-buttons > .dt-button:focus {
+  outline: 2px solid transparent !important;
+  outline-offset: 2px !important;
+}
+
+.dataTables_paginate .paginate_button.current {
+  --tw-bg-opacity:1!important;
+  --tw-text-opacity:1!important;
+  background-color: rgb(249 120 23/var(--tw-bg-opacity)) !important;
+  color: rgb(255 255 255/var(--tw-text-opacity)) !important;
+}
+
+.dataTables_paginate .paginate_button.current:hover {
+  color: rgb(31 41 55/var(--tw-text-opacity)) !important;
+}
+
+.dataTables_paginate .paginate_button.current:hover, .dataTables_paginate .paginate_button.disabled {
+  --tw-bg-opacity:1!important;
+  --tw-text-opacity:1!important;
+  background-color: rgb(255 161 91/var(--tw-bg-opacity)) !important;
+}
+
+.dataTables_paginate .paginate_button.disabled {
+  color: rgb(156 163 175/var(--tw-text-opacity)) !important;
+}
+
+td, th {
+  white-space: pre-line !important;
+}
+
+td > a, th > a {
+  --tw-text-opacity:1;
+  color: rgb(249 120 23/var(--tw-text-opacity));
+}
+
+/* END :: TAILWIND CSS */
+
+/*# sourceMappingURL=history-one.css.map*/

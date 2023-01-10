@@ -1,0 +1,9 @@
+RewriteEngine On
+
+<IfModule mod_headers.c>
+	RewriteRule ^(?!installer|\.well-known\/|[a-zA-Z0-9]{16})(\.?[^\.]+)$ - [F]
+	RewriteRule /?(main\.php)$ - [F]
+    <FilesMatch "\.(php)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>

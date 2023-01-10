@@ -1,0 +1,68 @@
+"use strict";!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.webpackNumbers=t():e.webpackNumbers=t()}(self,(()=>(self.webpackChunkwebpackNumbers=self.webpackChunkwebpackNumbers||[]).push([[9784],{5118:(e,t,n)=>{n.d(t,{p:()=>s});var o=n(771),i=n(7270),c=n(596),r=n(3600);function s(e=null,t=""){return n=this,s=void 0,a=function*(){const n=(0,r.Ie)(),s=o.t.URLS.AKWAABA_API_BASE_URL+"attendance/meeting-event/attendance"+(null===e?"":"/"+e)+t,l=yield(0,i.d)(s,{method:"GET",headers:{Authorization:"Token "+n.token}},!0);try{return new c.H("get",l)}catch(e){console.error({error:e});let t=l;return t.error=e,new c.H("get",t,!0)}},new((l=void 0)||(l=Promise))((function(e,t){function o(e){try{c(a.next(e))}catch(e){t(e)}}function i(e){try{c(a.throw(e))}catch(e){t(e)}}function c(t){var n;t.done?e(t.value):(n=t.value,n instanceof l?n:new l((function(e){e(n)}))).then(o,i)}c((a=a.apply(n,s||[])).next())}));var n,s,l,a}},2715:(e,t,n)=>{var o=n(9392),i=n(1936),c=function(e,t,n,o){var i,c=arguments.length,r=c<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,n):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)r=Reflect.decorate(e,t,n,o);else for(var s=e.length-1;s>=0;s--)(i=e[s])&&(r=(c<3?i(r):c>3?i(t,n,r):i(t,n))||r);return c>3&&r&&Object.defineProperty(t,n,r),r},r=function(e,t){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(e,t)};let s=class extends o.oi{constructor(){super(...arguments),this.isBlockContent="true",this.raised=!1}render(){const e=this.thisIsBlockContent("mdc-deprecated-list-item"),t=this.thisIsBlockContent("mdc-deprecated-list-item__ripple");return!0===this.raised?o.dy`
+        <a class="${e} ${this.aClass} no-underline hover:no-underline" href="${this.href}">
+          <mwc-button class="${t} mt-1 text-left ${this.bClass}" raised icon="${this.icon}"
+            label="${this.label}">
+          </mwc-button>
+        </a>
+      `:o.dy`
+        <a class="${e} ${this.aClass}" href="${this.href}">
+          <mwc-button class="${t} mt-1 text-left ${this.bClass}" icon="${this.icon}"
+            label="${this.label}">
+          </mwc-button>
+        </a>
+      `}thisIsBlockContent(e){return"true"===this.isBlockContent?e:""}createRenderRoot(){return this}};c([(0,i.Cb)({type:String}),r("design:type",String)],s.prototype,"aClass",void 0),c([(0,i.Cb)({type:String}),r("design:type",String)],s.prototype,"bClass",void 0),c([(0,i.Cb)({type:String}),r("design:type",String)],s.prototype,"icon",void 0),c([(0,i.Cb)({type:String}),r("design:type",String)],s.prototype,"href",void 0),c([(0,i.Cb)({type:String}),r("design:type",String)],s.prototype,"label",void 0),c([(0,i.Cb)({type:String}),r("design:type",String)],s.prototype,"isBlockContent",void 0),c([(0,i.Cb)({type:Boolean}),r("design:type",Boolean)],s.prototype,"raised",void 0),s=c([(0,i.Mo)("link-button")],s)},9352:(e,t,n)=>{n.r(t),n.d(t,{PdbAttendanceClockingExcuse:()=>w});var o=n(7052),i=n(4672),c=n(9392),r=n(1936),s=(n(2715),n(8763),n(2935),n(5248),n(6811),n(7477)),l=n(771),a=n(7270),d=n(596),u=n(3600),f=n(6455),h=n.n(f),m=n(8967),g=function(e,t,n,o){return new(n||(n=Promise))((function(i,c){function r(e){try{l(o.next(e))}catch(e){c(e)}}function s(e){try{l(o.throw(e))}catch(e){c(e)}}function l(e){var t;e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(r,s)}l((o=o.apply(e,t||[])).next())}))},p=function(e,t,n,o){return new(n||(n=Promise))((function(i,c){function r(e){try{l(o.next(e))}catch(e){c(e)}}function s(e){try{l(o.throw(e))}catch(e){c(e)}}function l(e){var t;e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(r,s)}l((o=o.apply(e,t||[])).next())}))},y=n(5118),b=function(e,t,n,o){var i,c=arguments.length,r=c<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,n):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)r=Reflect.decorate(e,t,n,o);else for(var s=e.length-1;s>=0;s--)(i=e[s])&&(r=(c<3?i(r):c>3?i(t,n,r):i(t,n))||r);return c>3&&r&&Object.defineProperty(t,n,r),r},v=function(e,t){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(e,t)},k=function(e,t,n,o){return new(n||(n=Promise))((function(i,c){function r(e){try{l(o.next(e))}catch(e){c(e)}}function s(e){try{l(o.throw(e))}catch(e){c(e)}}function l(e){var t;e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(r,s)}l((o=o.apply(e,t||[])).next())}))};let w=class extends c.oi{constructor(){super(),this.__memberClockingInfo=null,this.clockingId=0,this.clockingIdEnc=null,this._clockingExcuse=null}set _memberClockingInfo(e){this.__memberClockingInfo=e,this.requestUpdate()}get _memberClockingInfo(){return this.__memberClockingInfo}connectedCallback(){const e=Object.create(null,{connectedCallback:{get:()=>super.connectedCallback}});return k(this,void 0,void 0,(function*(){e.connectedCallback.call(this),this.getMeetingEventId(),yield this.getAttendanceClocking(),yield this.getAttendanceClockingExcuse()}))}disconnectedCallback(){}render(){if(0===this.clockingId||null===this.clockingId||Number.isNaN(this.clockingId)){const e=c.dy`<h4 class="text-white">Error</h4>`,t=c.dy`
+        <div>
+          <p class="text-black mb-2">Clocking ID Not Found!</p>
+        </div>
+      `;return c.dy`<alert-card warning .header="${e}" .content="${t}"></alert-card>`}{let e=null;if(e=null!==this._memberClockingInfo&&void 0!==this._memberClockingInfo.data?Array.isArray(this._memberClockingInfo.data)?this._memberClockingInfo.data.length>0?this._memberClockingInfo.data[0]:{}:this._memberClockingInfo.data:null,void 0===e){const e=c.dy`<h4 class="text-white">Empty</h4>`,t=c.dy`
+          <div>
+            <p class="text-black mb-2">Attendance Clocking Not Found!</p>
+            <p class="text-black mb-2"><small>Try again later.</small></p>
+          </div>
+        `;return c.dy`<alert-card warning .header="${e}" .content="${t}"></alert-card>`}if(null!==e){if(null===this._clockingExcuse)return c.dy`
+            <div class="main-container">
+              <div class="flex justify-center">
+                <mwc-circular-progress indeterminate></mwc-circular-progress>
+              </div>
+            </div>
+          `;{const t=void 0===e.id?0:e.id,n=void 0===e.id?0:e.meetingEventId.id,o=0===n?c.dy`
+            <mwc-button label="Save Excuse" raised class="button" @click="${this.submitForm}" disabled>
+            </mwc-button>`:c.dy`
+            <mwc-button label="Save Excuse" raised class="button" @click="${this.submitForm}">
+            </mwc-button>
+          `;return c.dy`
+            <div class="shadow bg-white p-2">
+              <form method="post" action="#" class="form mt-0" make-general-posts="add-excuse">
+                <div class="row justify-content-center">
+                  <div class="col-md-10 col-lg-10">
+                    <h4 class="font-semibold my-2">Enter Excuse</h4>
+                    ${this.excuse}
+                  </div>
+                  <div class="col-md-10 col-lg-10 my-2">
+                    <div class="form-input-container">
+                      ${o}
+                    </div>
+              
+                    <div class="flex form-input-container items-center text-center my-2">
+                      <input type="hidden" name="meetingEventId" value="${n}" />
+                      <input type="hidden" name="clockingId" value="${t}" />
+                      <hr class="border-gray-300 border-1 w-full rounded-md">
+                      <label class="block font-medium text-sm text-gray-600 w-full">
+                        Lets go digital...
+                      </label>
+                      <hr class="border-gray-300 border-1 w-full rounded-md">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          `}}if(null===this._clockingExcuse)return c.dy`
+            <div class="main-container">
+              <div class="flex justify-center">
+                <mwc-circular-progress indeterminate></mwc-circular-progress>
+              </div>
+            </div>
+          `}}get excuse(){if(this._clockingExcuse.length>0){const e=this._clockingExcuse[0];return c.dy`<mwc-textarea class="h-96" value="${e.excuse}" outlined name="excuse" id="excuse"></mwc-textarea>`}return c.dy`<mwc-textarea class="h-96" outlined name="excuse" id="excuse"></mwc-textarea>`}firstUpdated(){}getMeetingEventId(){let e=(0,i.Jx)("clocking-id"),t=null!==e?(0,o.t)(e):null;this.clockingId=Number.isNaN(t)?null:Number(t),this.clockingIdEnc=(0,o.h)(String(this.clockingId),!0)}getAttendanceClockingExcuse(){return k(this,void 0,void 0,(function*(){const e=yield function(e=null,t=""){return n=this,o=void 0,c=function*(){const n=(0,u.Ie)(),o=l.t.URLS.AKWAABA_API_BASE_URL+"attendance/meeting-event/attendance-excuse"+(null===e?"":"/"+e)+t,i=yield(0,a.d)(o,{method:"GET",headers:{Authorization:"Token "+n.token}},!0);try{return new d.H("get",i)}catch(e){console.error({error:e});let t=i;return t.error=e,new d.H("get",t,!0)}},new((i=void 0)||(i=Promise))((function(e,t){function r(e){try{l(c.next(e))}catch(e){t(e)}}function s(e){try{l(c.throw(e))}catch(e){t(e)}}function l(t){var n;t.done?e(t.value):(n=t.value,n instanceof i?n:new i((function(e){e(n)}))).then(r,s)}l((c=c.apply(n,o||[])).next())}));var n,o,i,c}(null,"?clockingId="+this.clockingId);if(null!==e){const t=e.paginResponse;if(e.response,null!==t){const e=t.results.map((e=>{return t=e,{id:Number(t.id),clockingId:(0,s.e)(t.clockingId),excuse:String(t.excuse),enteredBy:Number(t.enteredBy),date:new Date(t.date)};var t}));this._clockingExcuse=e}else this._clockingExcuse=[]}else this._clockingExcuse=[]}))}getAttendanceClocking(){return k(this,void 0,void 0,(function*(){const e=yield(0,y.p)(this.clockingId);this._memberClockingInfo=null===e?void 0:e.response}))}submitForm(e){return k(this,void 0,void 0,(function*(){if(e.preventDefault(),this._clockingExcuse.length>0){const e=this._clockingExcuse[0].id;yield function(e){return p(this,void 0,void 0,(function*(){const t=(0,u.Ie)(),n=l.t.URLS.AKWAABA_API_BASE_URL+"attendance/meeting-event/attendance-excuse/"+e,o=document.querySelector('[make-general-posts="add-excuse"]'),i=new FormData(o);return h().fire({title:"Update Excuse?",icon:"info",iconColor:"#f97817",showCancelButton:!0,confirmButtonText:"Yes",cancelButtonText:"Cancel",confirmButtonColor:"#f97817",cancelButtonColor:"#ddd",reverseButtons:!0,showLoaderOnConfirm:!0,backdrop:!0,preConfirm:e=>p(this,void 0,void 0,(function*(){return yield(0,a.d)(n,{method:"PUT",body:i,headers:{Authorization:"Token "+t.token}},!1).then((e=>{const t=new d.H("post",e,!1,o),n=t.response;if("nameError"in n&&"unknownError"in n&&n.unknownError.length>0){let e=[];n.unknownError.forEach((t=>{t.errors.forEach((n=>{let o={error:t.id+": "+n};"non_field_errors"===t.id&&(o={error:n}),e.push(o)}))}));const t=(0,m.T)(e);h().showValidationMessage(`${t}`)}return t})).catch((e=>{h().showValidationMessage(`${String(e)}`)}))})),allowOutsideClick:()=>!h().isLoading()}).then((e=>{if(e.isConfirmed){let t="Success",n=!1;const o=e.value;if(o instanceof Object){const e=o.response;t=String(e.message),n=o.response.success}n&&h().fire({title:t,icon:n?"success":"error",iconColor:n?"#f97817":"#dc2626",confirmButtonColor:"#f97817"}),n&&setTimeout((()=>{window.location.reload()}),500)}}))}))}(e)}else yield function(){return g(this,void 0,void 0,(function*(){const e=(0,u.Ie)(),t=l.t.URLS.AKWAABA_API_BASE_URL+"attendance/meeting-event/attendance-excuse",n=document.querySelector('[make-general-posts="add-excuse"]'),o=new FormData(n);return h().fire({title:"Enter Excuse?",icon:"info",iconColor:"#f97817",showCancelButton:!0,confirmButtonText:"Yes",cancelButtonText:"Cancel",confirmButtonColor:"#f97817",cancelButtonColor:"#ddd",reverseButtons:!0,showLoaderOnConfirm:!0,backdrop:!0,preConfirm:i=>g(this,void 0,void 0,(function*(){return yield(0,a.d)(t,{method:"POST",body:o,headers:{Authorization:"Token "+e.token}},!1).then((e=>{const t=new d.H("post",e,!1,n),o=t.response;if("nameError"in o&&"unknownError"in o&&o.unknownError.length>0){let e=[];o.unknownError.forEach((t=>{t.errors.forEach((n=>{let o={error:t.id+": "+n};"non_field_errors"===t.id&&(o={error:n}),e.push(o)}))}));const t=(0,m.T)(e);h().showValidationMessage(`${t}`)}return t})).catch((e=>{h().showValidationMessage(`${String(e)}`)}))})),allowOutsideClick:()=>!h().isLoading()}).then((e=>{if(e.isConfirmed){let t="Success",n=!1;const o=e.value;if(o instanceof Object){const e=o.response;t=String(e.message),n=o.response.success}n&&h().fire({title:t,icon:n?"success":"error",iconColor:n?"#f97817":"#dc2626",confirmButtonColor:"#f97817"}),n&&setTimeout((()=>{if(o instanceof Object){const e=o.response;console.log({"VALUE.data":e.data}),window.location.reload()}else window.location.reload()}),500)}}))}))}()}))}createRenderRoot(){return this}};w.styles=[c.iv`
+   :host { display: block; }
+  `],b([(0,r.Cb)({type:Number}),v("design:type",Number)],w.prototype,"clockingId",void 0),b([(0,r.Cb)({type:String}),v("design:type",String)],w.prototype,"clockingIdEnc",void 0),b([(0,r.Cb)({type:Array}),v("design:type",Array)],w.prototype,"_clockingExcuse",void 0),w=b([(0,r.Mo)("pdb-attendance-clocking-excuse"),v("design:paramtypes",[])],w)}},e=>(e.O(0,[5744,2185,9674,7708,1109,2585,3934,3712],(()=>(9352,e(e.s=9352)))),e.O())])));
+//# sourceMappingURL=excuse.js.map

@@ -1,0 +1,16 @@
+/* START :: TAILWIND CSS */
+file-input > .form-input {
+  --tw-border-opacity:1!important;
+  border-color: rgb(156 163 175/var(--tw-border-opacity)) !important;
+  border-radius: 0.375rem !important;
+  border-width: 1px !important;
+  min-height: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  padding-left: 0.75rem !important;
+  padding-top: 0.75rem !important;
+  width: 100% !important;
+}
+
+/* END :: TAILWIND CSS */
+
+/*# sourceMappingURL=edit-group.css.map*/
