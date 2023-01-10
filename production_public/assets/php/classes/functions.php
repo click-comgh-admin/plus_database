@@ -316,8 +316,8 @@ function changeAppByLink(string $base_url, string $page)
 {
     global $UserLoginInfo_I;
     $token = $UserLoginInfo_I->token;
-    $permissionKey = base64_encode($token);
-    $accountsAccessPageKey = base64_encode($page);
+    $permissionKey = base64_encode($token ?? "");
+    $accountsAccessPageKey = base64_encode($page ?? "");
 
     $URL = $base_url . 'app-reroute?permission-key='. $permissionKey . '&access-page-key=' . $accountsAccessPageKey;
     // print_r(['$URL' => $URL]);
