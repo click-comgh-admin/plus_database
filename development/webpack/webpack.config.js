@@ -43,7 +43,7 @@ module.exports = [{
         }),
         new BundleTracker({
             filename: '../production_public/assets/v2/webpack-stats.json',
-            publicPath: 'https://clock.akwaabasoftware.com/',
+            publicPath: 'https://database.akwaabasoftware.com/',
         }),
     ],
     externals: {
