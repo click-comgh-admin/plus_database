@@ -2,5 +2,5 @@
       <pdb-admin-user-form class=""></pdb-admin-user-form>
     `}firstUpdated(){}createRenderRoot(){return this}};u.styles=[o.iv`
    :host { display: block; }
-  `],s([(0,c.Cb)({type:Array}),l("design:type",Array)],u.prototype,"_activeBranchId",void 0),s([(0,c.Cb)({type:Boolean}),l("design:type",Boolean)],u.prototype,"_hasSetup",void 0),u=s([(0,c.Mo)("pdb-admin-user-add-form"),l("design:paramtypes",[])],u)}},e=>(e.O(0,[2185,5744,9674,8820,1828,316,836,5291,6236,6069,7751,3806,7250,3712],(()=>(369,e(e.s=369)))),e.O())])));
+  `],s([(0,c.Cb)({type:Array}),l("design:type",Array)],u.prototype,"_activeBranchId",void 0),s([(0,c.Cb)({type:Boolean}),l("design:type",Boolean)],u.prototype,"_hasSetup",void 0),u=s([(0,c.Mo)("pdb-admin-user-add-form"),l("design:paramtypes",[])],u)}},e=>(e.O(0,[2185,5744,9674,8820,1828,316,836,5291,6236,6069,7751,2091,8544,3712],(()=>(369,e(e.s=369)))),e.O())])));
 //# sourceMappingURL=add.js.map

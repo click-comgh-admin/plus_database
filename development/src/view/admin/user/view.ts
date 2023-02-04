@@ -64,6 +64,9 @@ export class PdbAdminUserOne extends LitElement {
   private memberProfileEditBaseUrl: string = "/admin/user/update-account?user-id=";
 
   @property({ type: String })
+  private memberProfilePhotoEditBaseUrl: string = "/admin/user/update-photo?user-id=";
+
+  @property({ type: String })
   private memberGroupSubgroupAddBaseUrl: string = "/admin/user/add-group-subgroup?user-id=";
 
   @property({ type: String })
@@ -179,16 +182,18 @@ export class PdbAdminUserOne extends LitElement {
     }
 
     if ((this.userId === 0) || (this.userId === null) || (Number.isNaN(this.userId))) {
-      const header = html`<h4 class="text-white">Error</h4>`;
-      const content = html`
-        <div>
-          <p class="text-black mb-2">User Not Found!</p>
-          <p class="text-black mb-2"><small>Follow the link back to users page.</small></p>
-          <link-button isblockcontent="false" aClass="" raised bClass="button warning mr-2" href="/admin/user/accounts"
-            label="Client Users Page"></link-button>
-        </div>
-      `;
-      return html`<alert-card warning .header="${header}" .content="${content}"></alert-card>`;
+      if (this.page_type === "not-mine") {
+        const header = html`<h4 class="text-white">Error</h4>`;
+        const content = html`
+          <div>
+            <p class="text-black mb-2">User Not Found!</p>
+            <p class="text-black mb-2"><small>Follow the link back to users page.</small></p>
+            <link-button isblockcontent="false" aClass="" raised bClass="button warning mr-2" href="/admin/user/accounts"
+              label="Client Users Page"></link-button>
+          </div>
+        `;
+        return html`<alert-card warning .header="${header}" .content="${content}"></alert-card>`;
+      }
     } else {
 
       if (this.clientUser === null) {
@@ -253,7 +258,7 @@ export class PdbAdminUserOne extends LitElement {
               </div>
               <div class="p-3 border-t-2 flex justify-end">
                 <link-button isblockcontent="false" aClass="" raised bClass="button warning mr-2"
-                  href="/account/accounts?edit=photo&user=${ID}" label="Edit">
+                  href="${this.memberProfilePhotoEditBaseUrl}${ID}" label="Edit">
                 </link-button>
               </div>
             </div>

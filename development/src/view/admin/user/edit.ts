@@ -149,7 +149,7 @@ export class PdbAdminUserEditForm extends LitElement {
           <div class="main-container">
             <div class="flex justify-center">
               <h4 class="text-red-600 text-lg">
-                <span class="font-bold">Schedule </span>: undefined error</h4>
+                <span class="font-bold">Error </span>: undefined error</h4>
             </div>
           </div>
         `;

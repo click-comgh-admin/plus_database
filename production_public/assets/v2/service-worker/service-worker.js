@@ -1,5 +1,5 @@
-const STATIC_CACHE_NAME = 'akwaaba-database-site-base-static-v1.001.01';
-const DYNAMIC_CACHE_NAME = 'akwaaba-database-site-dynamic-requests-v1.001.01';
+const STATIC_CACHE_NAME = 'akwaaba-database-site-base-static-v1.001.03';
+const DYNAMIC_CACHE_NAME = 'akwaaba-database-site-dynamic-requests-v1.001.03';
 const ASSETS = []; // DYNAMICALLY GENERATED IN PHP VIEW
 const UNCACHEABLE_URLS = []; // DYNAMICALLY GENERATED IN PHP VIEW
 
@@ -67,7 +67,14 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
     // console.log('fetch event', event);
     // UNCACHEABLE_URLS.forEach(url => {}); NOT WORKING
-
+    let allowCache = true;
+    for (const uUrl of UNCACHEABLE_URLS) {
+        if (event.request.url.indexOf(uUrl) === 0) {
+            allowCache = false;
+        }
+    }
+    if (!allowCache) return;
+    if (!(event.request.url.indexOf('http://') === 0)) return;
     if ((event.request.url.indexOf("api.") < 0) && (event.request.url.indexOf("db-api-v2.") < 0) && (event.request.url.indexOf("/api/") < 0)) {
         if (event.request.url.indexOf("/login") > -1) {
             null;

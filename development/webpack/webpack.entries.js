@@ -264,6 +264,10 @@ module.exports = {
         import: './src/view/admin/user/edit.ts',
         dependOn: 'shared',
     },
+    "admin/user/edit_photo": {
+        import: './src/view/admin/user/edit_photo.ts',
+        dependOn: 'shared',
+    },
     "admin/user/add_group_subgroup": {
         import: './src/view/admin/user/add_group_subgroup.ts',
         dependOn: 'shared',
