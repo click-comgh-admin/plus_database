@@ -14,6 +14,7 @@ import '@@addons/widgets/profile_photo';
 import '@material/mwc-tab';
 import '@material/mwc-tab-bar';
 import '@material/mwc-icon-button';
+import '@material/mwc-circular-progress';
 import { ClientUserAccess_I, ClientUserAccess_S } from '@@addons/interfaces/clients/users/access';
 import { GET_ClientUserAccess } from '@@addons/network/clients/users/access';
 import { getUserLoginInfoCookie } from '@@addons/functions/login';
@@ -195,6 +196,9 @@ export class PdbAdminUserOne extends LitElement {
         return html`<alert-card warning .header="${header}" .content="${content}"></alert-card>`;
       }
     } else {
+
+      // console.log({"this.clientUser": this.clientUser, "this.userId": this.userId});
+      
 
       if (this.clientUser === null) {
         return html`

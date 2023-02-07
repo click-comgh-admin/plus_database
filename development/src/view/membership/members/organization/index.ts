@@ -124,15 +124,15 @@ export class PdbMembershipMemberOrganizations extends LitElement {
     }
     return html`
       <span class="flex flex-row md:flex-col w-100"></span>
-      <div class="block my-1">
+      <div class="block my-1 shadow bg-white p-2">
         <mwc-button icon="open_with" label="Filters" raised class="primary mt-1"
           filter-section-context="btn" @click="${this.filterBox.toggleFilterFields}">
         </mwc-button>
       </div>
-      <div class="block my-1">
+      <div class="block my-1 shadow bg-white p-2">
         ${this.filterForm}
       </div>
-      <div class="block my-1">
+      <div class="block my-1 shadow bg-white p-2">
         ${this.downloadBtns}
         ${this.table}
       </div>

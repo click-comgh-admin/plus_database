@@ -48,15 +48,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-12 col-lg-12">
-                                <div class="main-card mb-3 card shadow">
-                                    <div class="card-body px-2">
-                                        <pdb-membership-member-organizations></pdb-membership-member-organizations>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <pdb-membership-member-organizations></pdb-membership-member-organizations>
                     </div>
                     <?php require_once '../../assets/php/page_components/footer/footer.php'; ?>
                 </div>

@@ -1,14 +1,14 @@
 "use strict";!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.webpackNumbers=t():e.webpackNumbers=t()}(self,(()=>(self.webpackChunkwebpackNumbers=self.webpackChunkwebpackNumbers||[]).push([[9114],{8932:(e,t,o)=>{o.r(t),o.d(t,{PdbMembershipMemberOrganizations:()=>N});var i,n,r,s=o(9392),l=o(1936),c=o(5248),a=(o(1239),o(9261),o(3313),o(6883),o(6811),o(5866),o(2715),o(2004)),d=(o(8281),o(7052)),u=o(771),p=o(3600),m=o(4672),b=o(2368),f=(o(3629),o(2145)),h=(o(4657),o(3683),o(1302)),y=o(9981),g=o(9665),v=o(7684),_=o(428),w=o(1594),x=o(2892),S=o(9605),k=o(8276),B=o(596),$=function(e,t,o,i){var n,r=arguments.length,s=r<3?t:null===i?i=Object.getOwnPropertyDescriptor(t,o):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(e,t,o,i);else for(var l=e.length-1;l>=0;l--)(n=e[l])&&(s=(r<3?n(s):r>3?n(t,o,s):n(t,o))||s);return r>3&&s&&Object.defineProperty(t,o,s),s},C=function(e,t){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(e,t)},I=function(e,t,o,i){return new(o||(o=Promise))((function(n,r){function s(e){try{c(i.next(e))}catch(e){r(e)}}function l(e){try{c(i.throw(e))}catch(e){r(e)}}function c(e){var t;e.done?n(e.value):(t=e.value,t instanceof o?t:new o((function(e){e(t)}))).then(s,l)}c((i=i.apply(e,t||[])).next())}))};let N=class extends s.oi{constructor(){super(),this.memberProfileBaseUrl="/member/organization/member-profile?view=",this._activeBranchId=null,this._groups=[],this._subgroups=[],this.downloadingFile=!1,this._memberType=1,this._hasSetup=!1,this.__members=null}set _members(e){this.__members=e,this.requestUpdate()}get _members(){return this.__members}connectedCallback(){const e=Object.create(null,{connectedCallback:{get:()=>super.connectedCallback}});return I(this,void 0,void 0,(function*(){e.connectedCallback.call(this),(0,g.f)().then((()=>this._hasSetup=!0));const t=(0,a.hk)();this._activeBranchId=null===t?null:[t],this.filterBox=new b.L({selectors:{container:this.filterSectionContextContainer,form:this.filterSectionContextForm,filterSectionContextBtn:this.filterSectionContextBtn}}),yield this.getGroups(),yield this.getSubGroups()}))}disconnectedCallback(){}render(){var e;if(this._hasSetup){if(null===(e=(0,f.H)())||void 0===e?void 0:e.expiration_date.expired)return s.dy`<account-expired-component></account-expired-component>`;if(!(0,h.H)({pageId:y.W.view,viewType:"View"},!1))return s.dy`<no-page-entry-component></no-page-entry-component>`}return s.dy`
       <span class="flex flex-row md:flex-col w-100"></span>
-      <div class="block my-1">
+      <div class="block my-1 shadow bg-white p-2">
         <mwc-button icon="open_with" label="Filters" raised class="primary mt-1"
           filter-section-context="btn" @click="${this.filterBox.toggleFilterFields}">
         </mwc-button>
       </div>
-      <div class="block my-1">
+      <div class="block my-1 shadow bg-white p-2">
         ${this.filterForm}
       </div>
-      <div class="block my-1">
+      <div class="block my-1 shadow bg-white p-2">
         ${this.downloadBtns}
         ${this.table}
       </div>

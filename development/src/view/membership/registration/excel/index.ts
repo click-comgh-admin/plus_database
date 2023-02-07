@@ -49,7 +49,7 @@ export class MembershipRegistrationExcel extends LitElement {
       }
     }
     return html`
-      <a href="${CONSTANTS.URLS.PDB_CLIENT}assets/v2/samples/new%20Excel%20Registration.xlsx">
+      <a href="${CONSTANTS.URLS.PDB_CLIENT}assets/v2/samples/new_excel_registration.xlsx">
         <mwc-button icon="download" label="Download Template" class="success" raised></mwc-button>
       </a>
       <membership-registration-excel-create CLIENT_ID="${this.clientId}"></membership-registration-excel-create>

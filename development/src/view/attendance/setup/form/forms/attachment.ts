@@ -235,7 +235,7 @@ export class AttendanceSetupFormAttachment extends LitElement {
         return html`
           <tr class="mdc-data-table__row">
             <th class="mdc-data-table__cell whitespace-pre-line" scope="row">
-              <a href="${CONSTANTS.URLS.FILE_BUCKET_BASE_URL}files${item.attachment}" target="_blank">Open File ${i + 1}</a>
+              <a href="${item.attachment}" target="_blank">Open File ${i + 1}</a>
             </th>
             <td class="mdc-data-table__cell mdc-data-table__cell--numeric !py-1" scope="row">
               <mwc-icon-button class="ml-1 danger" icon="delete_forever" delete-this-item="${item.id}" @click="${this.deleteQuestionnaireMeetingAttendanceAttachment}"></mwc-icon-button>

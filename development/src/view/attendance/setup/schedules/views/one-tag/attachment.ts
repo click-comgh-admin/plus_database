@@ -123,7 +123,7 @@ export class AttendanceSetupViewOneAttachment extends LitElement {
         return html`
           <tr class="mdc-data-table__row">
             <th class="mdc-data-table__cell whitespace-pre-line" scope="row">
-              <a href="${CONSTANTS.URLS.FILE_BUCKET_BASE_URL}files${item.attachment}" target="_blank">Open File ${_index + 1}</a>
+              <a href="${item.attachment}" target="_blank">Open File ${_index + 1}</a>
               ${(_index + 1) == __lists.length ? "..." : ""}
             </th>
           </tr>

@@ -48,34 +48,7 @@
                                 </div>
                             </div>
                         </div>
-                        <?php
-                            if ($account_status['is_active'] === false) {
-                                require_once '../assets/php/page_components/account_inactive.php';
-                                require_once '../assets/php/page_components/footer/close.php';
-                                die();
-                            }
-                            $_appPage = 0;
-                            foreach ($appPages as $key => $page) {
-                                if ((string)strtolower($page['pdpc_page']) === "registration") {
-                                    $_appPage = $page['pdpc_id'];
-                                }
-                            }
-                            if (in_array($_appPage, $my_access_levels) === false) {
-                                require_once BASE_DIRECTORY.'/assets/php/page_components/no_page_access.php';
-                                require_once BASE_DIRECTORY.'/assets/php/page_components/footer/close.php';
-                                die();
-                            }
-                        ?>
-                        
-                        <div class="row justify-content-center">
-                            <div class="col-md-12 col-lg-12">
-                                <div class="main-card mb-3 card shadow">
-                                    <div class="card-body px-2">
-                                        <pdb-membership-individual-verification></pdb-membership-individual-verification>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <pdb-membership-individual-verification></pdb-membership-individual-verification>
                     </div>
                     <?php require_once '../assets/php/page_components/footer/footer.php'; ?>
                 </div>
