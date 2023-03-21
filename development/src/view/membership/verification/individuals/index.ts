@@ -38,6 +38,7 @@ import { QueryOptions } from 'select2';
 import { MembershipUserModel, Convert as MuMconvert } from '@@addons/interfaces/members/user/model/index2';
 import { UserLoginInfo_I } from '@@addons/interfaces/network_calls/login';
 import { MembershipVerificationModel, Convert as mvmConvert } from '@@addons/interfaces/members/verification';
+import { MembershipAutoVerificationModel, Convert as mavmConvert } from '@@addons/interfaces/members/verification/auto';
 import { getDate } from '@@addons/functions/date_time/date';
 import { getLocalTime } from '@@addons/functions/date_time/time';
 import { POST_MemberVerification } from '@@addons/network/members/membership/verification/post';
@@ -47,6 +48,8 @@ import { DELETE_MemberVerificationBulk } from '@@addons/network/members/membersh
 import { GET_MembershipUserIds } from '@@addons/network/members/membership/users/members';
 import { MembershipMixedUserModel, Convert as mmumConvert } from '@@addons/interfaces/members/user/mixed';
 import { until } from 'lit/directives/until.js';
+import { POST_MemberVerificationAuto } from '@@addons/network/members/membership/verification/auto_verification_set';
+import { GET_MemberVerificationAuto } from '@@addons/network/members/membership/verification/auto_verification_get';
 
 
 type filterSelectType = { id: number | ""; name: string; isSelected: "true" | "false"; selected: boolean; };
@@ -77,6 +80,9 @@ export class PdbMembershipIndividualVerification extends LitElement {
 
   @property({ type: Array })
   public _branches: ClientBranchModel[] = [];
+
+  @property({ type: Array })
+  public _autoVerifications: MembershipAutoVerificationModel[] = [];
 
   @property({ type: Number })
   private startSearchPage: number = 0;
@@ -131,6 +137,7 @@ export class PdbMembershipIndividualVerification extends LitElement {
       }
     });
 
+    await this.getAutoVerification();
     await this.getBranches();
     await this.getGroups();
     await this.getSubGroups();
@@ -576,6 +583,15 @@ export class PdbMembershipIndividualVerification extends LitElement {
           <mwc-button class="danger" raised verification_info_all="deactivate"
             @click="${this.deactivateMultipleMemberAction}">Deactivate All Selected</mwc-button>
         </div>
+        <div
+          class="rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800 flex-col p-2 border-b-2 mb-2">
+          <label class="flex justify-between items-center">
+            <b>AUTO VERIFY: </b>
+            <input id="auto_verification" name="auto_verification" type="checkbox"
+              class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              @change="${this.check_auto_verification}" ?checked="${this._autoVerifications.length > 0? true: false}" auto-verification-id="${this._autoVerifications.length > 0? this._autoVerifications[0].id: 0}" />
+          </label>
+        </div>
       </div>
     `;
   }
@@ -883,6 +899,25 @@ export class PdbMembershipIndividualVerification extends LitElement {
     this._branches = new_data;
   }
 
+  private async getAutoVerification() {
+    const _networkResponse = await GET_MemberVerificationAuto<MembershipAutoVerificationModel>();
+    let __autos: MembershipAutoVerificationModel[] = [];
+
+    if (_networkResponse !== null) {
+      if ((_networkResponse.response.success === true)) {
+        // @ts-ignore
+        const DATA: MembershipAutoVerificationModel[] = _networkResponse.response.data.map((data: any) => {
+          return mavmConvert.toMembershipAutoVerificationModel(JSON.stringify(data));
+        });
+        // console.log({DATA});
+        __autos = DATA;
+      }
+    }
+    const new_data: Array<MembershipAutoVerificationModel> = [];
+    new_data.push(...this._autoVerifications, ...__autos);
+    this._autoVerifications = new_data;
+  }
+
   private async getGroups() {
     const _networkResponse = await GET_MemberGroupingsGroups<any>();
     let __groups: GroupModel[] = [];
@@ -940,6 +975,25 @@ export class PdbMembershipIndividualVerification extends LitElement {
     if (!Number.isNaN(memberID) && Number(memberID) !== 0) {
       await POST_MemberVerification(Number(memberID));
     }
+  }
+
+  private async check_auto_verification(e: any) {
+    e.preventDefault();
+
+    document.querySelectorAll('[id="auto_verification"][name="auto_verification"]').forEach((input: HTMLInputElement) => {
+      if (input.checked) {
+        document.querySelectorAll('[id="auto_verification"][name="auto_verification"]').forEach((_input_: HTMLInputElement) => {
+          _input_.checked = true;
+          POST_MemberVerificationAuto();
+        })
+      } else {
+        document.querySelectorAll('[id="auto_verification"][name="auto_verification"]').forEach((_input_: HTMLInputElement) => {
+          _input_.checked = false;
+          const autoVerificationId = Number(_input_.getAttribute('auto-verification-id'))
+          POST_MemberVerificationAuto(autoVerificationId);
+        })
+      }
+    })
   }
 
   private async check_all_verification(e: any) {

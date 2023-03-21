@@ -81,16 +81,6 @@
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\6258.css.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/6258.css.map"
     },
-    "../../production_public/assets/v2/prod-files/css/6542.css": {
-      "name": "../../production_public/assets/v2/prod-files/css/6542.css",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\6542.css",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/6542.css"
-    },
-    "../../production_public/assets/v2/prod-files/css/6542.css.map": {
-      "name": "../../production_public/assets/v2/prod-files/css/6542.css.map",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\6542.css.map",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/6542.css.map"
-    },
     "../../production_public/assets/v2/prod-files/css/6553.css": {
       "name": "../../production_public/assets/v2/prod-files/css/6553.css",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\6553.css",
@@ -110,6 +100,16 @@
       "name": "../../production_public/assets/v2/prod-files/css/7751.css.map",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\7751.css.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/7751.css.map"
+    },
+    "../../production_public/assets/v2/prod-files/css/8255.css": {
+      "name": "../../production_public/assets/v2/prod-files/css/8255.css",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\8255.css",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/8255.css"
+    },
+    "../../production_public/assets/v2/prod-files/css/8255.css.map": {
+      "name": "../../production_public/assets/v2/prod-files/css/8255.css.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\8255.css.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/8255.css.map"
     },
     "../../production_public/assets/v2/prod-files/css/8718.css": {
       "name": "../../production_public/assets/v2/prod-files/css/8718.css",
@@ -301,6 +301,16 @@
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\membership\\groupings\\bulk_assignment\\subgroups\\add.css.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/membership/groupings/bulk_assignment/subgroups/add.css.map"
     },
+    "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/add-bulk.css": {
+      "name": "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/add-bulk.css",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\membership\\groupings\\group_subgroup\\groups\\add-bulk.css",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/add-bulk.css"
+    },
+    "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/add-bulk.css.map": {
+      "name": "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/add-bulk.css.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\membership\\groupings\\group_subgroup\\groups\\add-bulk.css.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/add-bulk.css.map"
+    },
     "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/add.css": {
       "name": "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/add.css",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\membership\\groupings\\group_subgroup\\groups\\add.css",
@@ -320,6 +330,16 @@
       "name": "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/edit.css.map",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\membership\\groupings\\group_subgroup\\groups\\edit.css.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/edit.css.map"
+    },
+    "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/subgroups/add-bulk.css": {
+      "name": "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/subgroups/add-bulk.css",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\membership\\groupings\\group_subgroup\\subgroups\\add-bulk.css",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/subgroups/add-bulk.css"
+    },
+    "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/subgroups/add-bulk.css.map": {
+      "name": "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/subgroups/add-bulk.css.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\membership\\groupings\\group_subgroup\\subgroups\\add-bulk.css.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/subgroups/add-bulk.css.map"
     },
     "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/subgroups/add.css": {
       "name": "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/subgroups/add.css",
@@ -481,6 +501,16 @@
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\membership\\registration\\excel.css.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/membership/registration/excel.css.map"
     },
+    "../../production_public/assets/v2/prod-files/css/membership/registration/organization-excel.css": {
+      "name": "../../production_public/assets/v2/prod-files/css/membership/registration/organization-excel.css",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\membership\\registration\\organization-excel.css",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/membership/registration/organization-excel.css"
+    },
+    "../../production_public/assets/v2/prod-files/css/membership/registration/organization-excel.css.map": {
+      "name": "../../production_public/assets/v2/prod-files/css/membership/registration/organization-excel.css.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\membership\\registration\\organization-excel.css.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/membership/registration/organization-excel.css.map"
+    },
     "../../production_public/assets/v2/prod-files/css/redirect.css": {
       "name": "../../production_public/assets/v2/prod-files/css/redirect.css",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\redirect.css",
@@ -490,16 +520,6 @@
       "name": "../../production_public/assets/v2/prod-files/css/redirect.css.map",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\css\\redirect.css.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/css/redirect.css.map"
-    },
-    "../../production_public/assets/v2/prod-files/js/1038.js": {
-      "name": "../../production_public/assets/v2/prod-files/js/1038.js",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\1038.js",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/1038.js"
-    },
-    "../../production_public/assets/v2/prod-files/js/1038.js.map": {
-      "name": "../../production_public/assets/v2/prod-files/js/1038.js.map",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\1038.js.map",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/1038.js.map"
     },
     "../../production_public/assets/v2/prod-files/js/2091.js": {
       "name": "../../production_public/assets/v2/prod-files/js/2091.js",
@@ -511,45 +531,20 @@
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2091.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2091.js.map"
     },
-    "../../production_public/assets/v2/prod-files/js/2584.js": {
-      "name": "../../production_public/assets/v2/prod-files/js/2584.js",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2584.js",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2584.js"
+    "../../production_public/assets/v2/prod-files/js/2743.js": {
+      "name": "../../production_public/assets/v2/prod-files/js/2743.js",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2743.js",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2743.js"
     },
-    "../../production_public/assets/v2/prod-files/js/2584.js.LICENSE.txt": {
-      "name": "../../production_public/assets/v2/prod-files/js/2584.js.LICENSE.txt",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2584.js.LICENSE.txt",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2584.js.LICENSE.txt"
+    "../../production_public/assets/v2/prod-files/js/2743.js.LICENSE.txt": {
+      "name": "../../production_public/assets/v2/prod-files/js/2743.js.LICENSE.txt",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2743.js.LICENSE.txt",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2743.js.LICENSE.txt"
     },
-    "../../production_public/assets/v2/prod-files/js/2584.js.map": {
-      "name": "../../production_public/assets/v2/prod-files/js/2584.js.map",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2584.js.map",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2584.js.map"
-    },
-    "../../production_public/assets/v2/prod-files/js/2731.js": {
-      "name": "../../production_public/assets/v2/prod-files/js/2731.js",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2731.js",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2731.js"
-    },
-    "../../production_public/assets/v2/prod-files/js/2731.js.map": {
-      "name": "../../production_public/assets/v2/prod-files/js/2731.js.map",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2731.js.map",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2731.js.map"
-    },
-    "../../production_public/assets/v2/prod-files/js/2924.js": {
-      "name": "../../production_public/assets/v2/prod-files/js/2924.js",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2924.js",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2924.js"
-    },
-    "../../production_public/assets/v2/prod-files/js/2924.js.LICENSE.txt": {
-      "name": "../../production_public/assets/v2/prod-files/js/2924.js.LICENSE.txt",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2924.js.LICENSE.txt",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2924.js.LICENSE.txt"
-    },
-    "../../production_public/assets/v2/prod-files/js/2924.js.map": {
-      "name": "../../production_public/assets/v2/prod-files/js/2924.js.map",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2924.js.map",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2924.js.map"
+    "../../production_public/assets/v2/prod-files/js/2743.js.map": {
+      "name": "../../production_public/assets/v2/prod-files/js/2743.js.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\2743.js.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/2743.js.map"
     },
     "../../production_public/assets/v2/prod-files/js/316.js": {
       "name": "../../production_public/assets/v2/prod-files/js/316.js",
@@ -586,6 +581,31 @@
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\380.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/380.js.map"
     },
+    "../../production_public/assets/v2/prod-files/js/4154.js": {
+      "name": "../../production_public/assets/v2/prod-files/js/4154.js",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\4154.js",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/4154.js"
+    },
+    "../../production_public/assets/v2/prod-files/js/4154.js.LICENSE.txt": {
+      "name": "../../production_public/assets/v2/prod-files/js/4154.js.LICENSE.txt",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\4154.js.LICENSE.txt",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/4154.js.LICENSE.txt"
+    },
+    "../../production_public/assets/v2/prod-files/js/4154.js.map": {
+      "name": "../../production_public/assets/v2/prod-files/js/4154.js.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\4154.js.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/4154.js.map"
+    },
+    "../../production_public/assets/v2/prod-files/js/4291.js": {
+      "name": "../../production_public/assets/v2/prod-files/js/4291.js",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\4291.js",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/4291.js"
+    },
+    "../../production_public/assets/v2/prod-files/js/4291.js.map": {
+      "name": "../../production_public/assets/v2/prod-files/js/4291.js.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\4291.js.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/4291.js.map"
+    },
     "../../production_public/assets/v2/prod-files/js/4431.js": {
       "name": "../../production_public/assets/v2/prod-files/js/4431.js",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\4431.js",
@@ -620,6 +640,16 @@
       "name": "../../production_public/assets/v2/prod-files/js/4710.js.map",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\4710.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/4710.js.map"
+    },
+    "../../production_public/assets/v2/prod-files/js/4808.js": {
+      "name": "../../production_public/assets/v2/prod-files/js/4808.js",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\4808.js",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/4808.js"
+    },
+    "../../production_public/assets/v2/prod-files/js/4808.js.map": {
+      "name": "../../production_public/assets/v2/prod-files/js/4808.js.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\4808.js.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/4808.js.map"
     },
     "../../production_public/assets/v2/prod-files/js/4958.js": {
       "name": "../../production_public/assets/v2/prod-files/js/4958.js",
@@ -656,6 +686,16 @@
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\5536.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/5536.js.map"
     },
+    "../../production_public/assets/v2/prod-files/js/5665.js": {
+      "name": "../../production_public/assets/v2/prod-files/js/5665.js",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\5665.js",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/5665.js"
+    },
+    "../../production_public/assets/v2/prod-files/js/5665.js.map": {
+      "name": "../../production_public/assets/v2/prod-files/js/5665.js.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\5665.js.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/5665.js.map"
+    },
     "../../production_public/assets/v2/prod-files/js/6069.js": {
       "name": "../../production_public/assets/v2/prod-files/js/6069.js",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\6069.js",
@@ -675,21 +715,6 @@
       "name": "../../production_public/assets/v2/prod-files/js/6084.js.map",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\6084.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/6084.js.map"
-    },
-    "../../production_public/assets/v2/prod-files/js/6542.js": {
-      "name": "../../production_public/assets/v2/prod-files/js/6542.js",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\6542.js",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/6542.js"
-    },
-    "../../production_public/assets/v2/prod-files/js/6542.js.LICENSE.txt": {
-      "name": "../../production_public/assets/v2/prod-files/js/6542.js.LICENSE.txt",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\6542.js.LICENSE.txt",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/6542.js.LICENSE.txt"
-    },
-    "../../production_public/assets/v2/prod-files/js/6542.js.map": {
-      "name": "../../production_public/assets/v2/prod-files/js/6542.js.map",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\6542.js.map",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/6542.js.map"
     },
     "../../production_public/assets/v2/prod-files/js/7147.js": {
       "name": "../../production_public/assets/v2/prod-files/js/7147.js",
@@ -721,6 +746,16 @@
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\7520.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/7520.js.map"
     },
+    "../../production_public/assets/v2/prod-files/js/8255.js": {
+      "name": "../../production_public/assets/v2/prod-files/js/8255.js",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\8255.js",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/8255.js"
+    },
+    "../../production_public/assets/v2/prod-files/js/8255.js.map": {
+      "name": "../../production_public/assets/v2/prod-files/js/8255.js.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\8255.js.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/8255.js.map"
+    },
     "../../production_public/assets/v2/prod-files/js/836.js": {
       "name": "../../production_public/assets/v2/prod-files/js/836.js",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\836.js",
@@ -735,16 +770,6 @@
       "name": "../../production_public/assets/v2/prod-files/js/836.js.map",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\836.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/836.js.map"
-    },
-    "../../production_public/assets/v2/prod-files/js/8491.js": {
-      "name": "../../production_public/assets/v2/prod-files/js/8491.js",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\8491.js",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/8491.js"
-    },
-    "../../production_public/assets/v2/prod-files/js/8491.js.map": {
-      "name": "../../production_public/assets/v2/prod-files/js/8491.js.map",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\8491.js.map",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/8491.js.map"
     },
     "../../production_public/assets/v2/prod-files/js/8544.js": {
       "name": "../../production_public/assets/v2/prod-files/js/8544.js",
@@ -800,6 +825,16 @@
       "name": "../../production_public/assets/v2/prod-files/js/9198.js.map",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\9198.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/9198.js.map"
+    },
+    "../../production_public/assets/v2/prod-files/js/9341.js": {
+      "name": "../../production_public/assets/v2/prod-files/js/9341.js",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\9341.js",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/9341.js"
+    },
+    "../../production_public/assets/v2/prod-files/js/9341.js.map": {
+      "name": "../../production_public/assets/v2/prod-files/js/9341.js.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\9341.js.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/9341.js.map"
     },
     "../../production_public/assets/v2/prod-files/js/admin/user/add_group_subgroup.js": {
       "name": "../../production_public/assets/v2/prod-files/js/admin/user/add_group_subgroup.js",
@@ -1186,6 +1221,21 @@
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\groupings\\group_subgroup\\groups.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups.js.map"
     },
+    "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add-bulk.js": {
+      "name": "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add-bulk.js",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\groupings\\group_subgroup\\groups\\add-bulk.js",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add-bulk.js"
+    },
+    "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add-bulk.js.LICENSE.txt": {
+      "name": "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add-bulk.js.LICENSE.txt",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\groupings\\group_subgroup\\groups\\add-bulk.js.LICENSE.txt",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add-bulk.js.LICENSE.txt"
+    },
+    "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add-bulk.js.map": {
+      "name": "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add-bulk.js.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\groupings\\group_subgroup\\groups\\add-bulk.js.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add-bulk.js.map"
+    },
     "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add.js": {
       "name": "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add.js",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\groupings\\group_subgroup\\groups\\add.js",
@@ -1225,6 +1275,21 @@
       "name": "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups.js.map",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\groupings\\group_subgroup\\subgroups.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups.js.map"
+    },
+    "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add-bulk.js": {
+      "name": "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add-bulk.js",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\groupings\\group_subgroup\\subgroups\\add-bulk.js",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add-bulk.js"
+    },
+    "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add-bulk.js.LICENSE.txt": {
+      "name": "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add-bulk.js.LICENSE.txt",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\groupings\\group_subgroup\\subgroups\\add-bulk.js.LICENSE.txt",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add-bulk.js.LICENSE.txt"
+    },
+    "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add-bulk.js.map": {
+      "name": "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add-bulk.js.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\groupings\\group_subgroup\\subgroups\\add-bulk.js.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add-bulk.js.map"
     },
     "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add.js": {
       "name": "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add.js",
@@ -1521,15 +1586,25 @@
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\registration\\excel.js",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/registration/excel.js"
     },
-    "../../production_public/assets/v2/prod-files/js/membership/registration/excel.js.LICENSE.txt": {
-      "name": "../../production_public/assets/v2/prod-files/js/membership/registration/excel.js.LICENSE.txt",
-      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\registration\\excel.js.LICENSE.txt",
-      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/registration/excel.js.LICENSE.txt"
-    },
     "../../production_public/assets/v2/prod-files/js/membership/registration/excel.js.map": {
       "name": "../../production_public/assets/v2/prod-files/js/membership/registration/excel.js.map",
       "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\registration\\excel.js.map",
       "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/registration/excel.js.map"
+    },
+    "../../production_public/assets/v2/prod-files/js/membership/registration/organization-excel.js": {
+      "name": "../../production_public/assets/v2/prod-files/js/membership/registration/organization-excel.js",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\registration\\organization-excel.js",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/registration/organization-excel.js"
+    },
+    "../../production_public/assets/v2/prod-files/js/membership/registration/organization-excel.js.LICENSE.txt": {
+      "name": "../../production_public/assets/v2/prod-files/js/membership/registration/organization-excel.js.LICENSE.txt",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\registration\\organization-excel.js.LICENSE.txt",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/registration/organization-excel.js.LICENSE.txt"
+    },
+    "../../production_public/assets/v2/prod-files/js/membership/registration/organization-excel.js.map": {
+      "name": "../../production_public/assets/v2/prod-files/js/membership/registration/organization-excel.js.map",
+      "path": "C:\\xampp\\htdocs\\AMG\\plus_db\\client_dashboards\\version_one\\plus_database\\production_public\\assets\\v2\\prod-files\\js\\membership\\registration\\organization-excel.js.map",
+      "publicPath": "https://database.akwaabasoftware.com/../../production_public/assets/v2/prod-files/js/membership/registration/organization-excel.js.map"
     },
     "../../production_public/assets/v2/prod-files/js/membership/verification/individuals.js": {
       "name": "../../production_public/assets/v2/prod-files/js/membership/verification/individuals.js",
@@ -1783,7 +1858,7 @@
       "../../production_public/assets/v2/prod-files/js/836.js",
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6258.css",
-      "../../production_public/assets/v2/prod-files/js/2924.js",
+      "../../production_public/assets/v2/prod-files/js/2743.js",
       "../../production_public/assets/v2/prod-files/js/6084.js",
       "../../production_public/assets/v2/prod-files/css/client/register.css",
       "../../production_public/assets/v2/prod-files/js/client/register.js"
@@ -2182,6 +2257,23 @@
       "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/add.css",
       "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add.js"
     ],
+    "membership/groupings/group_subgroup/groups/add-bulk": [
+      "../../production_public/assets/v2/prod-files/js/vendors.buffer.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.material.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.sweetalert2.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.jquery.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.select2.js",
+      "../../production_public/assets/v2/prod-files/js/316.js",
+      "../../production_public/assets/v2/prod-files/js/836.js",
+      "../../production_public/assets/v2/prod-files/js/5291.js",
+      "../../production_public/assets/v2/prod-files/css/6236.css",
+      "../../production_public/assets/v2/prod-files/js/6069.js",
+      "../../production_public/assets/v2/prod-files/css/6553.css",
+      "../../production_public/assets/v2/prod-files/js/3629.js",
+      "../../production_public/assets/v2/prod-files/css/6258.css",
+      "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/groups/add-bulk.css",
+      "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/groups/add-bulk.js"
+    ],
     "membership/groupings/group_subgroup/groups/edit": [
       "../../production_public/assets/v2/prod-files/js/vendors.buffer.js",
       "../../production_public/assets/v2/prod-files/js/vendors.material.js",
@@ -2232,6 +2324,23 @@
       "../../production_public/assets/v2/prod-files/css/6258.css",
       "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/subgroups/add.css",
       "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add.js"
+    ],
+    "membership/groupings/group_subgroup/subgroups/add-bulk": [
+      "../../production_public/assets/v2/prod-files/js/vendors.buffer.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.material.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.sweetalert2.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.jquery.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.select2.js",
+      "../../production_public/assets/v2/prod-files/js/316.js",
+      "../../production_public/assets/v2/prod-files/js/836.js",
+      "../../production_public/assets/v2/prod-files/js/5291.js",
+      "../../production_public/assets/v2/prod-files/css/6236.css",
+      "../../production_public/assets/v2/prod-files/js/6069.js",
+      "../../production_public/assets/v2/prod-files/css/6553.css",
+      "../../production_public/assets/v2/prod-files/js/3629.js",
+      "../../production_public/assets/v2/prod-files/css/6258.css",
+      "../../production_public/assets/v2/prod-files/css/membership/groupings/group_subgroup/subgroups/add-bulk.css",
+      "../../production_public/assets/v2/prod-files/js/membership/groupings/group_subgroup/subgroups/add-bulk.js"
     ],
     "membership/groupings/group_subgroup/subgroups/edit": [
       "../../production_public/assets/v2/prod-files/js/vendors.buffer.js",
@@ -2341,6 +2450,7 @@
     "membership/members/all": [
       "../../production_public/assets/v2/prod-files/js/vendors.buffer.js",
       "../../production_public/assets/v2/prod-files/js/vendors.material.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.sweetalert2.js",
       "../../production_public/assets/v2/prod-files/js/vendors.jquery.js",
       "../../production_public/assets/v2/prod-files/js/vendors.select2.js",
       "../../production_public/assets/v2/prod-files/js/316.js",
@@ -2350,15 +2460,17 @@
       "../../production_public/assets/v2/prod-files/js/6069.js",
       "../../production_public/assets/v2/prod-files/css/6553.css",
       "../../production_public/assets/v2/prod-files/js/3629.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
+      "../../production_public/assets/v2/prod-files/js/2743.js",
       "../../production_public/assets/v2/prod-files/js/9198.js",
-      "../../production_public/assets/v2/prod-files/css/6542.css",
-      "../../production_public/assets/v2/prod-files/js/6542.js",
+      "../../production_public/assets/v2/prod-files/css/8255.css",
+      "../../production_public/assets/v2/prod-files/js/8255.js",
       "../../production_public/assets/v2/prod-files/js/membership/members/all.js"
     ],
     "membership/members/all-organizations": [
       "../../production_public/assets/v2/prod-files/js/vendors.buffer.js",
       "../../production_public/assets/v2/prod-files/js/vendors.material.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.sweetalert2.js",
       "../../production_public/assets/v2/prod-files/js/vendors.jquery.js",
       "../../production_public/assets/v2/prod-files/js/vendors.select2.js",
       "../../production_public/assets/v2/prod-files/js/316.js",
@@ -2368,9 +2480,10 @@
       "../../production_public/assets/v2/prod-files/js/6069.js",
       "../../production_public/assets/v2/prod-files/css/6553.css",
       "../../production_public/assets/v2/prod-files/js/3629.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
-      "../../production_public/assets/v2/prod-files/css/6542.css",
-      "../../production_public/assets/v2/prod-files/js/6542.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
+      "../../production_public/assets/v2/prod-files/js/2743.js",
+      "../../production_public/assets/v2/prod-files/css/8255.css",
+      "../../production_public/assets/v2/prod-files/js/8255.js",
       "../../production_public/assets/v2/prod-files/js/membership/members/all-organizations.js"
     ],
     "membership/members/edit/individual/bio-data": [
@@ -2382,7 +2495,7 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/7751.css",
       "../../production_public/assets/v2/prod-files/js/4431.js",
       "../../production_public/assets/v2/prod-files/css/membership/members/edit/individual/bio-data.css",
@@ -2397,11 +2510,11 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/7751.css",
-      "../../production_public/assets/v2/prod-files/js/2924.js",
+      "../../production_public/assets/v2/prod-files/js/2743.js",
       "../../production_public/assets/v2/prod-files/js/9198.js",
-      "../../production_public/assets/v2/prod-files/js/2731.js",
+      "../../production_public/assets/v2/prod-files/js/9341.js",
       "../../production_public/assets/v2/prod-files/css/membership/members/edit/individual/branch-category-status-location.css",
       "../../production_public/assets/v2/prod-files/js/membership/members/edit/individual/branch-category-status-location.js"
     ],
@@ -2414,7 +2527,7 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/7751.css",
       "../../production_public/assets/v2/prod-files/js/4431.js",
       "../../production_public/assets/v2/prod-files/js/4668.js",
@@ -2432,9 +2545,9 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/7751.css",
-      "../../production_public/assets/v2/prod-files/js/1038.js",
+      "../../production_public/assets/v2/prod-files/js/5665.js",
       "../../production_public/assets/v2/prod-files/css/380.css",
       "../../production_public/assets/v2/prod-files/js/380.js",
       "../../production_public/assets/v2/prod-files/js/membership/members/edit/individual/group-subgroup.js"
@@ -2448,7 +2561,7 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/7751.css",
       "../../production_public/assets/v2/prod-files/css/membership/members/edit/individual/photo.css",
       "../../production_public/assets/v2/prod-files/js/membership/members/edit/individual/photo.js"
@@ -2462,7 +2575,7 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/7751.css",
       "../../production_public/assets/v2/prod-files/js/4431.js",
       "../../production_public/assets/v2/prod-files/css/membership/members/edit/organization/bio-data.css",
@@ -2477,10 +2590,10 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/7751.css",
-      "../../production_public/assets/v2/prod-files/js/2924.js",
-      "../../production_public/assets/v2/prod-files/js/2731.js",
+      "../../production_public/assets/v2/prod-files/js/2743.js",
+      "../../production_public/assets/v2/prod-files/js/9341.js",
       "../../production_public/assets/v2/prod-files/css/membership/members/edit/organization/branch-category-status-location.css",
       "../../production_public/assets/v2/prod-files/js/membership/members/edit/organization/branch-category-status-location.js"
     ],
@@ -2493,7 +2606,7 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/7751.css",
       "../../production_public/assets/v2/prod-files/js/4431.js",
       "../../production_public/assets/v2/prod-files/js/4668.js",
@@ -2511,9 +2624,9 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/7751.css",
-      "../../production_public/assets/v2/prod-files/js/1038.js",
+      "../../production_public/assets/v2/prod-files/js/5665.js",
       "../../production_public/assets/v2/prod-files/css/380.css",
       "../../production_public/assets/v2/prod-files/js/380.js",
       "../../production_public/assets/v2/prod-files/js/membership/members/edit/organization/group-subgroup.js"
@@ -2527,7 +2640,7 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/7751.css",
       "../../production_public/assets/v2/prod-files/css/membership/members/edit/organization/photo.css",
       "../../production_public/assets/v2/prod-files/js/membership/members/edit/organization/photo.js"
@@ -2541,9 +2654,9 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/4816.css",
-      "../../production_public/assets/v2/prod-files/js/1038.js",
+      "../../production_public/assets/v2/prod-files/js/5665.js",
       "../../production_public/assets/v2/prod-files/js/9198.js",
       "../../production_public/assets/v2/prod-files/js/5536.js",
       "../../production_public/assets/v2/prod-files/css/membership/members/member.css",
@@ -2558,9 +2671,9 @@
       "../../production_public/assets/v2/prod-files/js/5291.js",
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/4816.css",
-      "../../production_public/assets/v2/prod-files/js/1038.js",
+      "../../production_public/assets/v2/prod-files/js/5665.js",
       "../../production_public/assets/v2/prod-files/js/5536.js",
       "../../production_public/assets/v2/prod-files/css/membership/members/member-organization.css",
       "../../production_public/assets/v2/prod-files/js/membership/members/member-organization.js"
@@ -2585,6 +2698,27 @@
       "../../production_public/assets/v2/prod-files/js/vendors.buffer.js",
       "../../production_public/assets/v2/prod-files/js/vendors.material.js",
       "../../production_public/assets/v2/prod-files/js/vendors.sweetalert2.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.jquery.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.select2.js",
+      "../../production_public/assets/v2/prod-files/js/316.js",
+      "../../production_public/assets/v2/prod-files/js/836.js",
+      "../../production_public/assets/v2/prod-files/js/5291.js",
+      "../../production_public/assets/v2/prod-files/css/6236.css",
+      "../../production_public/assets/v2/prod-files/js/6069.js",
+      "../../production_public/assets/v2/prod-files/css/214.css",
+      "../../production_public/assets/v2/prod-files/css/6258.css",
+      "../../production_public/assets/v2/prod-files/css/3901.css",
+      "../../production_public/assets/v2/prod-files/js/2743.js",
+      "../../production_public/assets/v2/prod-files/js/4291.js",
+      "../../production_public/assets/v2/prod-files/css/membership/registration/excel.css",
+      "../../production_public/assets/v2/prod-files/js/membership/registration/excel.js"
+    ],
+    "membership/registration/organization-excel": [
+      "../../production_public/assets/v2/prod-files/js/vendors.buffer.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.material.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.sweetalert2.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.jquery.js",
+      "../../production_public/assets/v2/prod-files/js/vendors.select2.js",
       "../../production_public/assets/v2/prod-files/js/vendors.wicg-inert.js",
       "../../production_public/assets/v2/prod-files/js/316.js",
       "../../production_public/assets/v2/prod-files/js/836.js",
@@ -2592,9 +2726,12 @@
       "../../production_public/assets/v2/prod-files/css/6236.css",
       "../../production_public/assets/v2/prod-files/js/6069.js",
       "../../production_public/assets/v2/prod-files/css/214.css",
+      "../../production_public/assets/v2/prod-files/css/6258.css",
       "../../production_public/assets/v2/prod-files/css/3901.css",
-      "../../production_public/assets/v2/prod-files/css/membership/registration/excel.css",
-      "../../production_public/assets/v2/prod-files/js/membership/registration/excel.js"
+      "../../production_public/assets/v2/prod-files/js/2743.js",
+      "../../production_public/assets/v2/prod-files/js/4291.js",
+      "../../production_public/assets/v2/prod-files/css/membership/registration/organization-excel.css",
+      "../../production_public/assets/v2/prod-files/js/membership/registration/organization-excel.js"
     ],
     "membership/verification/individuals": [
       "../../production_public/assets/v2/prod-files/js/vendors.buffer.js",
@@ -2609,9 +2746,9 @@
       "../../production_public/assets/v2/prod-files/js/6069.js",
       "../../production_public/assets/v2/prod-files/css/6553.css",
       "../../production_public/assets/v2/prod-files/js/3629.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/1454.css",
-      "../../production_public/assets/v2/prod-files/js/2584.js",
+      "../../production_public/assets/v2/prod-files/js/4154.js",
       "../../production_public/assets/v2/prod-files/js/membership/verification/individuals.js"
     ],
     "membership/verification/organizations": [
@@ -2627,9 +2764,9 @@
       "../../production_public/assets/v2/prod-files/js/6069.js",
       "../../production_public/assets/v2/prod-files/css/6553.css",
       "../../production_public/assets/v2/prod-files/js/3629.js",
-      "../../production_public/assets/v2/prod-files/js/8491.js",
+      "../../production_public/assets/v2/prod-files/js/4808.js",
       "../../production_public/assets/v2/prod-files/css/1454.css",
-      "../../production_public/assets/v2/prod-files/js/2584.js",
+      "../../production_public/assets/v2/prod-files/js/4154.js",
       "../../production_public/assets/v2/prod-files/js/membership/verification/organizations.js"
     ],
     "redirect": [

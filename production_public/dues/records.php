@@ -35,22 +35,22 @@
                             </div>
                         </div>
                         <?php
-                            if ($account_status['is_active'] === false) {
-                                require_once '../assets/php/page_components/account_inactive.php';
-                                require_once '../assets/php/page_components/footer/close.php';
-                                die();
-                            }
-                            $_appPage = 0;
-                            foreach ($appPages as $key => $page) {
-                                if ((string)strtolower($page['pdpc_page']) === "dues") {
-                                    $_appPage = $page['pdpc_id'];
-                                }
-                            }
-                            if (in_array($_appPage, $my_access_levels) === false) {
-                                require_once BASE_DIRECTORY.'/assets/php/page_components/no_page_access.php';
-                                require_once BASE_DIRECTORY.'/assets/php/page_components/footer/close.php';
-                                die();
-                            }
+                            // if ($account_status['is_active'] === false) {
+                            //     require_once '../assets/php/page_components/account_inactive.php';
+                            //     require_once '../assets/php/page_components/footer/close.php';
+                            //     die();
+                            // }
+                            // $_appPage = 0;
+                            // foreach ($appPages as $key => $page) {
+                            //     if ((string)strtolower($page['pdpc_page']) === "dues") {
+                            //         $_appPage = $page['pdpc_id'];
+                            //     }
+                            // }
+                            // if (in_array($_appPage, $my_access_levels) === false) {
+                            //     require_once BASE_DIRECTORY.'/assets/php/page_components/no_page_access.php';
+                            //     require_once BASE_DIRECTORY.'/assets/php/page_components/footer/close.php';
+                            //     die();
+                            // }
                             define("dues_BaseUrl", CLIENT_BASE_URL."dues/");
                             $get_string = "payment_intervals";
                             $payment_intervals = $ccApi->dues($get_string, function($payment_intervals)

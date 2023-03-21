@@ -1,0 +1,23 @@
+{
+    "id": 2,
+    "clientId": 4,
+    "createdBy": {
+        "id": 3,
+        "firstname": "Johnas",
+        "surname": "Moses",
+        "gender": 1,
+        "profilePicture": "http://192.168.173.1/AMG/plus_db/file_bucket/files/clients/profile-picture/3/7d97481b1fe66f4b51db90da7e794d9f.jpg",
+        "dateOfBirth": "2000-03-02",
+        "phone": "0209078891",
+        "email": "a@b.c",
+        "role": 1,
+        "accountId": 4,
+        "branchId": 1,
+        "level": 1,
+        "status": 1,
+        "lastUpdatedBy": 3,
+        "date": "2020-08-16T10:04:32Z",
+        "last_login": "2023-03-08T22:52:44Z"
+    },
+    "date": "2023-03-02T20:25:39.961132Z"
+}

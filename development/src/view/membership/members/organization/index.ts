@@ -34,6 +34,17 @@ import { SubGroupModel, Convert as sgmConvert } from '@@addons/interfaces/member
 import { GET_MemberGroupingsGroups } from '@@addons/network/members/groupings/group';
 import { GET_MemberGroupingsSubGroups } from '@@addons/network/members/groupings/subgroup';
 import { GET_MembershipOrganizationUserDownload } from '@@addons/network/members/membership/users/organization/download';
+import "@@addons/widgets/accordion/main";
+import { LocationCountryModel, Convert as lcmConvert } from "@@addons/interfaces/location/country_model";
+import { LocationRegionModel, Convert as lrmConvert } from "@@addons/interfaces/location/region_model";
+import { LocationConstituencyModel, Convert as lcymConvert } from "@@addons/interfaces/location/constituency_model";
+import { LocationDistrictModel, Convert as ldmConvert } from "@@addons/interfaces/location/district_model";
+import { GET_LocationCountry } from "@@addons/network/location/country";
+import { GET_LocationRegion } from "@@addons/network/location/region";
+import { GET_LocationDistrictFilter } from "@@addons/network/location/district/filter";
+import { GET_LocationConstituencyFilter } from "@@addons/network/location/constituency/filter";
+import { DELETE_MembershipOrganizationUsersBulk } from '@@addons/network/members/membership/users/organization/delete_bulk';
+import { DELETE_MembershipOrganizationUsers } from '@@addons/network/members/membership/users/organization/delete';
 
 
 type filterSelectType = { id: number|""; name: string; isSelected: "true" | "false"; selected: boolean; };
@@ -64,6 +75,33 @@ export class PdbMembershipMemberOrganizations extends LitElement {
 
   @property({ type: Array })
   private _subgroups: SubGroupModel[] = [];
+
+  @property({ type: Boolean })
+  private regionCalled: boolean = false;
+
+  @property({ type: Number })
+  private selectedRegion: number = 0;
+
+  @property({ type: Number })
+  private selectedDistrict: number = 0;
+
+  @property({ type: Array })
+  private _countries: LocationCountryModel[] = [];
+
+  @property({ type: Array })
+  private _regions: LocationRegionModel[] = [];
+
+  @property({ type: Array })
+  private _districts: LocationDistrictModel[] = [];
+
+  @property({ type: Array })
+  private _constituencies: LocationConstituencyModel[] = [];
+
+  @property({ type: Object })
+  private _constituenciesMemo: {[identity: string]: LocationConstituencyModel[]} = {};
+
+  @property({ type: Object })
+  private _districtsMemo:{[identity: string]: LocationDistrictModel[]} = {};
 
   @property({ type: Boolean })
   private downloadingFile: boolean = false;
@@ -104,6 +142,7 @@ export class PdbMembershipMemberOrganizations extends LitElement {
     
     await this.getGroups();
     await this.getSubGroups();
+    await this.getLocationCountry();
   }
 
   disconnectedCallback() { }
@@ -134,7 +173,29 @@ export class PdbMembershipMemberOrganizations extends LitElement {
       </div>
       <div class="block my-1 shadow bg-white p-2">
         ${this.downloadBtns}
+        ${this.table_header}
         ${this.table}
+      </div>
+    `;
+  }
+
+  private get table_header() {
+    return html`
+      <div class="flex-col p-2 mb-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4 pb-5">
+        <div
+          class="rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800 flex-col p-2 border-b-2 mb-2">
+          <label class="flex justify-between items-center">
+            <b>CHECK ALL: </b>
+            <input id="member_deletion_info_all" name="member_deletion_info_all" type="checkbox"
+              class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              @change="${this.check_all_member_deletion}" />
+          </label>
+        </div>
+        <div
+          class="rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800 flex-col p-2 border-b-2 mb-2">
+          <mwc-button class="danger" raised member_deletion_info_all="delete"
+            @click="${this.deleteMultipleMemberAction}">Delete All Selected</mwc-button>
+        </div>
       </div>
     `;
   }
@@ -147,6 +208,13 @@ export class PdbMembershipMemberOrganizations extends LitElement {
         filterSectionContextBtn: this.filterSectionContextBtn,
       }
     });
+    document.onreadystatechange = (event)=> {
+      // console.log({ "document.readyState": document.readyState })
+      if (document.readyState == "complete") this.countryChanged(event);
+      if (document.readyState == "complete") this.regionChanged(event);
+      if (document.readyState == "complete") this.districtChanged(event);
+      if (document.readyState == "complete") this.constituencyChanged(event);
+    }  
   }
 
   private get downloadBtns() {
@@ -167,13 +235,21 @@ export class PdbMembershipMemberOrganizations extends LitElement {
       filterNameId_filter_identity = "filter_identity",
       filterNameId_memberType = "memberType",
       filterNameId_groupId = "groupId",
-      filterNameId_subgroupId = "subgroupId";
+      filterNameId_subgroupId = "subgroupId",
+      filterNameId_country = "filter_country",
+      filterNameId_region = "filter_region",
+      filterNameId_district = "filter_district",
+      filterNameId_constituency = "filter_constituency";
 
     let filterNameId_filter_nameVal:string = null,
       filterNameId_filter_identityVal: string = null,
       filterNameId_memberTypeVal: string = null,
       filterNameId_groupIdVal: string = null,
-      filterNameId_subgroupIdVal: string = null;
+      filterNameId_subgroupIdVal: string = null,
+      filterNameId_countryVal: number = null,
+      filterNameId_regionVal: number = null,
+      filterNameId_districtVal: number = null,
+      filterNameId_constituencyVal: number = null;
     
       for (const key in _urlQueryParams) {
         let value = String(_urlQueryParams[key]);
@@ -192,6 +268,18 @@ export class PdbMembershipMemberOrganizations extends LitElement {
         }
         if (key === filterNameId_subgroupId) {
           filterNameId_subgroupIdVal = value;
+        }
+        if (key === filterNameId_country) {
+          filterNameId_countryVal = Number(value);
+        }
+        if (key === filterNameId_region) {
+          filterNameId_regionVal = Number(value);
+        }
+        if (key === filterNameId_district) {
+          filterNameId_districtVal = Number(value);
+        }
+        if (key === filterNameId_constituency) {
+          filterNameId_constituencyVal = Number(value);
         }
       }
     
@@ -251,13 +339,100 @@ export class PdbMembershipMemberOrganizations extends LitElement {
           </select-input>
         </div>
       </div>`;
+    const countries: {
+      id: number; name: string; isSelected: "true" | "false";
+      selected: boolean;
+    }[] = this._countries.map((country) => {
+      return {
+        id: country.id, name: country.name,
+        isSelected: filterNameId_countryVal == country.id ? "true" : "false",
+        selected: filterNameId_countryVal == country.id,
+      }
+    });
+    const regions: {
+      id: number; name: string; isSelected: "true" | "false";
+      selected: boolean;
+    }[] = this._regions.map((region) => {
+      return {
+        id: region.id, name: region.location,
+        isSelected: filterNameId_regionVal == region.id ? "true" : "false",
+        selected: filterNameId_regionVal == region.id,
+      }
+    });
+    const districts: {
+      id: number; name: string; isSelected: "true" | "false";
+      selected: boolean;
+    }[] = this._districts.map((district) => {
+      return {
+        id: district.id, name: district.location,
+        isSelected: filterNameId_districtVal == district.id ? "true" : "false",
+        selected: filterNameId_districtVal == district.id,
+      }
+    });
+    const constituencies: {
+      id: number; name: string; isSelected: "true" | "false";
+      selected: boolean;
+    }[] = this._constituencies.map((constituency) => {
+      return {
+        id: constituency.id, name: constituency.location,
+        isSelected: filterNameId_constituencyVal == constituency.id ? "true" : "false",
+        selected: filterNameId_constituencyVal == constituency.id,
+      }
+    });
+    
+    const contents: Array<TemplateResult> = [
+      html`<app-accordion-item accordion_class_name="filter-areas" class="w-100"
+        .buttonHtml="${html`<b>Location Filter</b>`}"
+        .contentHtml="${html`
+          <div class="mt-1 mb-2 row">
+            <div class="col-xl-6 col-md-6">
+              <h4 class="font-semibold my-2">Select Country</h4>
+              <select-input name="${filterNameId_country}" id="${filterNameId_country}" label="Select Country" .options="${countries}"
+                outlined required>
+              </select-input>
+            </div>
+            <div class="col-xl-6 col-md-6" show_ghana_locations>
+              <h4 class="font-semibold my-2">Select Region</h4>
+              <select-input name="${filterNameId_region}" id="${filterNameId_region}" label="Select Region" .options="${regions}"
+                outlined required>
+              </select-input>
+            </div>
+            <div class="col-xl-6 col-md-6" show_ghana_locations>
+              <h4 class="font-semibold my-2">Select District</h4>
+              <select-input name="${filterNameId_district}" id="${filterNameId_district}" label="Select District" .options="${districts}"
+                outlined required>
+              </select-input>
+            </div>
+            <div class="col-xl-6 col-md-6" show_ghana_locations>
+              <h4 class="font-semibold my-2">Select Constituency</h4>
+              <select-input name="${filterNameId_constituency}" id="${filterNameId_constituency}" label="Select Constituency" .options="${constituencies}"
+                outlined required>
+              </select-input>
+            </div>
+          </div>`}">
+        </app-accordion-item>
+      `,
+      html`<app-accordion-item accordion_class_name="filter-areas" class="w-100"
+        .buttonHtml="${html`<b>Group Filter</b>`}"
+        .contentHtml="${html`<div class="mt-1 mb-2 row">
+            ${groupField} ${subGroupField}
+          </div>`}">
+        </app-accordion-item>
+      `,
+    ];
 
       returnHtml = html`<form method="get" class="form" make-general-posts="submit_filter_form" filter-section-context="container" hidden>
           <div class="container">
             <div class="row">
               ${nameField} ${identifyField} ${memberCategoryField}
-              <div class="col-md-12 my-2"><hr/></div>
-              ${groupField} ${subGroupField}
+              <div class="col-xl-12 col-md-10"></div>
+            </div>
+          </div>
+          <div class="container">
+            <app-accordion accordionName="filter-areas" .contents=${contents} class="w-100"></app-accordion>
+          </div>
+          <div class="container">
+            <div class="row">
               <div class="col-xl-12 col-md-10">
                 <div class="form-input-container mt-1">
                   <mwc-button label="Clear" @click="${this.filterBox.clear_filter}"></mwc-button>
@@ -266,7 +441,6 @@ export class PdbMembershipMemberOrganizations extends LitElement {
               </div>
             </div>
           </div>
-        </div>
       </form>`
     return returnHtml;
   }
@@ -372,7 +546,11 @@ export class PdbMembershipMemberOrganizations extends LitElement {
       filterNameId_filter_identity = "filter_identity",
       filterNameId_memberType = "memberType",
       filterNameId_groupId = "groupId",
-      filterNameId_subgroupId = "subgroupId";
+      filterNameId_subgroupId = "subgroupId",
+      filterNameId_country = "filter_country",
+      filterNameId_region = "filter_region",
+      filterNameId_district = "filter_district",
+      filterNameId_constituency = "filter_constituency";
 
     let newObject:any = {};
     // for (const key in _urlQueryParams) {
@@ -388,12 +566,22 @@ export class PdbMembershipMemberOrganizations extends LitElement {
       let value = String(_urlQueryParams[key]);
       if ((key === filterNameId_filter_name) || (key === filterNameId_filter_identity)
         || (key === filterNameId_memberType) || (key === filterNameId_groupId)
-        || (key === filterNameId_subgroupId)) {
+        || (key === filterNameId_subgroupId) || (key === filterNameId_country)
+        || (key === filterNameId_region) || (key === filterNameId_district)
+        || (key === filterNameId_constituency)) {
         // console.log({value, });
         
         newObject[key] = value;
 
         if ((key === filterNameId_groupId) || (key === filterNameId_subgroupId)) {
+          // console.log({value, });
+          if (value === "0") {
+            newObject[key] = "";
+          }
+        }
+
+        if ((key === filterNameId_country) || (key === filterNameId_region)
+          || (key === filterNameId_district) || (key === filterNameId_constituency)) {
           // console.log({value, });
           if (value === "0") {
             newObject[key] = "";
@@ -473,14 +661,18 @@ export class PdbMembershipMemberOrganizations extends LitElement {
             member = mmumConvert.toMembershipMixedUserModel(JSON.stringify(member))
             // console.log({ data, type, member });
             const ID = base64Encode(String(member.id), true);
-            return `<div class="flex items-center whitespace-normal mb-0">
-                <user-profile-photo class="w-16 h-16 mr-1" rounded 'click-to-open'="" click-to-open="${__this.memberProfileBaseUrl}${ID}" type="member"
-                  url="${member.logo}" size="16"></user-profile-photo>
-                <p class="ml-1 mb-0">${member.organizationName}</p>
+              return `<div class="flex items-center whitespace-normal mb-0">
+                <input id="member_deletion_info" name="member_deletion_info" type="checkbox" value="${member.id}"
+                class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mr-3" />
+                <div class="flex items-center whitespace-normal mb-0">
+                  <user-profile-photo class="w-16 h-16 mr-1" rounded 'click-to-open'="" click-to-open="${__this.memberProfileBaseUrl}${ID}" type="member"
+                    url="${member.logo}" size="16"></user-profile-photo>
+                  <p class="ml-1 mb-0">${member.organizationName}</p>
+                </div>
               </div>
-              <span class="whitespace-normal shadow p-1">
+              <div class="whitespace-normal shadow p-1">
                 <i class="ml-1"><b>ID: </b> ${member.identification}</i>
-              </span>`;
+              </div>`;
           },
           orderable: true
         },
@@ -498,6 +690,11 @@ export class PdbMembershipMemberOrganizations extends LitElement {
             return `<div class="flex flex-col md:flex-row items-center whitespace-normal">
               <link-button isblockcontent="false" aClass="" raised bClass="button success mr-2"
                 href="${__this.memberProfileBaseUrl}${ID}" label="Open"></link-button>
+            </div>
+            <div class="flex flex-col md:flex-row whitespace-normal">
+              <p class="ml-1 mb-2">
+                <mwc-button class="danger" raised delete-member="${member.id}">Delete</mwc-button>
+              </p>
             </div>`;
           },
           orderable: true
@@ -518,8 +715,9 @@ export class PdbMembershipMemberOrganizations extends LitElement {
       "drawCallback": async function (e) {
         const aoData = e.aoData;
         // console.log({ aoData })
+        __this.deleteMemberBtns();
       },
-      "responsive": true,
+      "responsive": false,
       "dom": 'Blfrtip',
       buttons: [
         'selected',
@@ -558,6 +756,298 @@ export class PdbMembershipMemberOrganizations extends LitElement {
     this.downloadingFile = true;
     await GET_MembershipOrganizationUserDownload<any>(URL);
     this.downloadingFile = false;
+  }
+
+  private countryChanged(e: any) {
+    // console.log(e)
+    const countryNodes: NodeListOf<HTMLSelectElement> = document.querySelectorAll('select[name="country"]');
+    const _urlQueryParams = urlQueryParams(),
+      filterNameId_country = "filter_country",
+      filterNameId_region = "filter_region",
+      filterNameId_district = "filter_district",
+      filterNameId_constituency = "filter_constituency";
+    
+    let filterNameId_countryVal: number = null,
+      filterNameId_regionVal: number = null,
+      filterNameId_districtVal: number = null,
+      filterNameId_constituencyVal: number = null;
+    
+      for (const key in _urlQueryParams) {
+        let value = String(_urlQueryParams[key]);
+        value = value === "" ? null : value;
+  
+        if (key === filterNameId_country) {
+          filterNameId_countryVal = Number(value);
+        }
+        if (key === filterNameId_region) {
+          filterNameId_regionVal = Number(value);
+        }
+        if (key === filterNameId_district) {
+          filterNameId_districtVal = Number(value);
+        }
+        if (key === filterNameId_constituency) {
+          filterNameId_constituencyVal = Number(value);
+        }
+    }
+    if (String(filterNameId_countryVal) === "76") {
+      // console.log({"getLocationRegion": "getLocationRegion"})
+      this.getLocationRegion();
+
+      if (filterNameId_regionVal !== null) {
+        this.getLocationDistrict(filterNameId_regionVal);
+        if (filterNameId_districtVal !== null) {
+          this.getLocationConstituency(filterNameId_regionVal, filterNameId_districtVal);
+        }
+      }
+    }
+    countryNodes.forEach(countryNode => {
+      // console.log({ "countryNode": countryNode })
+      // console.log({ "countryNode.currentValue": countryNode.getAttribute("currentValue") })
+      countryNode.onchange = async (event) => {
+        // console.log({ event, "counrtyValue": countryNode, "counrtyValue.value": countryNode.value, })
+        const show_ghana_locations = this.querySelectorAll('[show_ghana_locations]'),
+          show_hide_class = "hidden";
+        if (countryNode.value === "76") {
+          if (this.regionCalled === false) await this.getLocationRegion();
+          this.regionCalled = true;
+          show_ghana_locations.forEach(node => {
+            // node.classList.remove(show_hide_class);
+          });
+        } else {
+          this._regions = [];
+          this._districts = [];
+          this._constituencies = [];
+          this.regionCalled = false;
+          show_ghana_locations.forEach(node => {
+            // node.classList.add(show_hide_class);
+          });
+        }
+      };
+    });
+  }
+
+  private async regionChanged(e: Event) {
+    const regionNodes: NodeListOf<HTMLSelectElement> = document.querySelectorAll('select[name="region"]');
+    regionNodes.forEach(regionNode => {
+      // console.log({ "regionNode": regionNode })
+      // console.log({ "regionNode.currentValue": regionNode.getAttribute("currentValue") })
+      regionNode.onchange = async (event) => {
+        // console.log({ event, "counrtyValue": regionNode, "counrtyValue.value": regionNode.value, })
+        const regionID = regionNode.value;
+        this.selectedRegion = Number.isNaN(regionID) ? 0 : Number(regionID);
+        // console.log({regionID, "this.selectedRegion": this.selectedRegion})
+        this.getLocationDistrict(this.selectedRegion);
+      };
+    });
+  }
+
+  private districtChanged(e: Event) {
+    const districtNodes: NodeListOf<HTMLSelectElement> = document.querySelectorAll('select[name="district"]');
+    districtNodes.forEach(districtNode => {
+      // console.log({ "districtNode": districtNode })
+      // console.log({ "districtNode.currentValue": districtNode.getAttribute("currentValue") })
+      districtNode.onchange = async (event) => {
+        // console.log({ event, "counrtyValue": districtNode, "counrtyValue.value": districtNode.value, })
+        const districtID = districtNode.value;
+        this.selectedDistrict = Number.isNaN(districtID)? 0: Number(districtID);
+        this.getLocationConstituency(this.selectedRegion, this.selectedDistrict);
+      };
+    });
+  }
+
+  private constituencyChanged(e: Event) {
+    // this.selectedRegion, this.selectedDistrict
+  }
+
+  private async getLocationCountry() {
+    const _networkResponse = await GET_LocationCountry<LocationCountryModel>(null, "?client=0");
+    // console.log({_networkResponse});
+    
+    let __countries: LocationCountryModel[] = [
+      {code: "-000", id: 0, name: "Select Country", short: "S-C"}
+    ];
+
+    if (_networkResponse === null) {
+      __countries.push({ id: 0, name: "**NOT FOUND**", code: "??", short: "N/A" });
+    } else {
+      if ((_networkResponse.response.success === true) && ('length' in _networkResponse.response.data)) {
+        const data: any[] = _networkResponse.response.data;
+
+        const DATA: LocationCountryModel[] = data.map(value => {
+          return lcmConvert.toCountryModel(JSON.stringify(value))
+        });
+        // console.log({DATA});
+        __countries = [...__countries, ...DATA];
+      }
+    }
+
+    const new_data: Array<LocationCountryModel> = [];
+    new_data.push(...this._countries, ...__countries);
+    this._countries = new_data;
+  }
+  
+  private async getLocationRegion() {
+    const _networkResponse = await GET_LocationRegion<LocationRegionModel>(null, "?client=0");
+    // console.log({_networkResponse});
+    
+    let __regions: LocationRegionModel[] = [
+      {id: 0, location: "Select Region"}
+    ];
+
+    if (_networkResponse === null) {
+      __regions.push({ id: 0, location: "**NOT FOUND**", });
+    } else {
+      if ((_networkResponse.response.success === true) && ('length' in _networkResponse.response.data)) {
+        const data: any[] = _networkResponse.response.data;
+
+        const DATA: LocationRegionModel[] = data.map(value => {
+          return lrmConvert.toLocationRegionModel(JSON.stringify(value))
+        });
+        console.log({DATA});
+        __regions = [...__regions, ...DATA];
+      }
+    }
+    const new_data: Array<LocationRegionModel> = [];
+    new_data.push(...this._regions, ...__regions);
+    this._regions = new_data;
+  }
+
+  private async getLocationDistrict(regionID: number) {
+    this._districts = [];
+    const identity = String(regionID),
+      _districtsMemo = this._districtsMemo;
+    // console.log({identity, _districtsMemo,})
+    if (identity in _districtsMemo) { // implementing memoization
+      // console.log({ "_districtsMemo[identity]": _districtsMemo[identity] })
+      
+      setTimeout(() => { // allow empty field to be set
+        const new_data: Array<LocationDistrictModel> = [];
+        new_data.push(...this._districts, ..._districtsMemo[identity]);
+        this._districts = new_data;
+      }, 100);
+    } else {
+      const _networkResponse = await GET_LocationDistrictFilter<LocationDistrictModel>(regionID);
+      // console.log({_networkResponse});
+      
+      let __districts: LocationDistrictModel[] = [
+        {id: 0, location: "Select District", regionId: null}
+      ];
+  
+      if (_networkResponse === null) {
+        __districts.push({ id: 0, location: "**NOT FOUND**", regionId: null });
+      } else {
+        if ((_networkResponse.response.success === true) && ('length' in _networkResponse.response.data)) {
+          const data: any[] = _networkResponse.response.data;
+  
+          const DATA: LocationDistrictModel[] = data.map(value => {
+            return ldmConvert.toLocationDistrictModel(JSON.stringify(value))
+          });
+          // console.log({DATA});
+          __districts = [...__districts, ...DATA];
+          this._districtsMemo[identity] = __districts;
+        }
+      }
+
+      const new_data: Array<LocationDistrictModel> = [];
+      new_data.push(...this._districts, ...__districts);
+      this._districts = new_data;
+    }
+  }
+
+  private async getLocationConstituency(regionID: number, districtID: number) {
+    this._constituencies = [];
+    const identity = `${regionID}_${districtID}`,
+      _constituenciesMemo = this._constituenciesMemo;
+    if (identity in _constituenciesMemo) { // implementing memoization      
+      setTimeout(() => { // allow empty field to be set
+        const new_data: Array<LocationConstituencyModel> = [];
+        new_data.push(...this._constituencies, ..._constituenciesMemo[identity]);
+        this._constituencies = new_data;
+      }, 100);
+    } else {
+
+      const _networkResponse = await GET_LocationConstituencyFilter<LocationConstituencyModel>(regionID, districtID);
+      // console.log({_networkResponse});
+      
+      let __constituencies: LocationConstituencyModel[] = [
+        {id: 0, location: "Select Constituency", regionId: null}
+      ];
+  
+      if (_networkResponse === null) {
+        __constituencies.push({ id: 0, location: "**NOT FOUND**", regionId: null });
+      } else {
+        if ((_networkResponse.response.success === true) && ('length' in _networkResponse.response.data)) {
+          const data: any[] = _networkResponse.response.data;
+  
+          const DATA: LocationConstituencyModel[] = data.map(value => {
+            return lcymConvert.toLocationConstituencyModel(JSON.stringify(value))
+          });
+          // console.log({DATA});
+          __constituencies = [...__constituencies, ...DATA];
+          this._constituenciesMemo[identity] = __constituencies;
+        }
+      }
+
+      const new_data: Array<LocationConstituencyModel> = [];
+      new_data.push(...this._constituencies, ...__constituencies);
+      this._constituencies = new_data;
+    }
+  }
+
+  private async check_all_member_deletion(e: any) {
+    e.preventDefault();
+
+    document.querySelectorAll('[id="member_deletion_info_all"][name="member_deletion_info_all"]').forEach((input: HTMLInputElement) => {
+      if (input.checked) {
+        document.querySelectorAll('[id="member_deletion_info"][name="member_deletion_info"]').forEach((_input_: HTMLInputElement) => {
+          _input_.checked = true;
+        })
+      } else {
+        document.querySelectorAll('[id="member_deletion_info"][name="member_deletion_info"]').forEach((_input_: HTMLInputElement) => {
+          _input_.checked = false;
+        })
+      }
+    })
+  }
+
+  private deleteMemberBtns() {
+    const selectorString = 'delete-member';
+    document.querySelectorAll('[' + selectorString + ']').forEach(delete_member => {
+      delete_member.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.deleteMemberAction(delete_member, selectorString, e);
+      });
+    });
+
+  }
+
+  private async deleteMemberAction(element: Element, selectorString: string, e: any) {
+    e.preventDefault();
+
+    const memberID = element.getAttribute(selectorString);
+
+    if (!Number.isNaN(memberID) && Number(memberID) !== 0) {
+      await DELETE_MembershipOrganizationUsers(Number(memberID));
+    }
+  }
+
+  private async deleteMultipleMemberAction(e: any) {
+    e.preventDefault();
+
+    let ids: Array<number> = [];
+
+    document.querySelectorAll('[id="member_deletion_info"][name="member_deletion_info"]').forEach((input: HTMLInputElement) => {
+      if (input.checked) {
+        if (!Number.isNaN(input.value)) {
+          const value = Number(input.value);
+          if (!ids.includes(value)) {
+            ids.push(value)
+          }
+        }
+      }
+    })
+
+    await DELETE_MembershipOrganizationUsersBulk(ids);
   }
 
   createRenderRoot() {

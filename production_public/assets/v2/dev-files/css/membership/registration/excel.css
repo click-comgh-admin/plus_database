@@ -12,5 +12,32 @@ file-input > .form-input {
 }
 
 /* END :: TAILWIND CSS */
+.app-accordion {
+  background-color: #eee;
+  border: none;
+  color: #444;
+  cursor: pointer;
+  outline: none;
+  padding: 18px;
+  text-align: left;
+  transition: 0.4s;
+  width: 100%;
+}
+
+.app-accordion-button {
+  margin-bottom: 2px;
+}
+
+.app-accordion-active, .app-accordion:hover {
+  background-color: #ccc;
+}
+
+.app-accordion-panel {
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  transition: max-height 0.2s ease-out;
+}
 
 /*# sourceMappingURL=excel.css.map*/

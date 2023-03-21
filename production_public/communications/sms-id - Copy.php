@@ -35,11 +35,11 @@
                             </div>
                         </div>
                         <?php
-                            if ($account_status['is_active'] === false) {
-                                require_once 'assets/php/page_components/account_inactive.php';
-                                require_once 'assets/php/page_components/footer/close.php';
-                                die();
-                            }
+                            // if ($account_status['is_active'] === false) {
+                            //     require_once 'assets/php/page_components/account_inactive.php';
+                            //     require_once 'assets/php/page_components/footer/close.php';
+                            //     die();
+                            // }
                             $account_sms_id = $ccApi->account_sms_id($all="id", $id=$account_id, function ($account_sms_ids) {
                                 return @$account_sms_ids[0];
                             });

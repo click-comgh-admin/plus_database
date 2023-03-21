@@ -35,17 +35,17 @@
                             </div>
                         </div>
                         <?php
-                            if ($account_status['is_active'] === false) {
-                                require_once '../assets/php/page_components/account_inactive.php';
-                                require_once '../assets/php/page_components/footer/close.php';
-                                die();
-                            }
-                            $_appPage = 0;
-                            foreach ($appPages as $key => $page) {
-                                if ((string)strtolower($page['pdpc_page']) === "membership data") {
-                                    $_appPage = $page['pdpc_id'];
-                                }
-                            }
+                            // if ($account_status['is_active'] === false) {
+                            //     require_once '../assets/php/page_components/account_inactive.php';
+                            //     require_once '../assets/php/page_components/footer/close.php';
+                            //     die();
+                            // }
+                            // $_appPage = 0;
+                            // foreach ($appPages as $key => $page) {
+                            //     if ((string)strtolower($page['pdpc_page']) === "membership data") {
+                            //         $_appPage = $page['pdpc_id'];
+                            //     }
+                            // }
                             define("Current_BaseUrl", CLIENT_BASE_URL."update-member-profile/");
                             define("Current_BaseDir", BASE_DIRECTORY."/update-member-profile/");                            
                         ?>

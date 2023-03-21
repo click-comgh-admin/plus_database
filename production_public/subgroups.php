@@ -41,22 +41,22 @@
                             </div>
                         </div>
                         <?php
-                                if ($account_status['is_active'] === false) {
-                                    require_once 'assets/php/page_components/account_inactive.php';
-                                    require_once 'assets/php/page_components/footer/close.php';
-                                    die();
-                                }
-                                $_appPage = 0;
-                                foreach ($appPages as $key => $page) {
-                                    if ((string)strtolower($page['pdpc_page']) === "membership data") {
-                                        $_appPage = $page['pdpc_id'];
-                                    }
-                                }
-                                if (in_array($_appPage, $my_access_levels) === false) {
-                                    require_once BASE_DIRECTORY.'/assets/php/page_components/no_page_access.php';
-                                    require_once BASE_DIRECTORY.'/assets/php/page_components/footer/close.php';
-                                    die();
-                                }
+                                // if ($account_status['is_active'] === false) {
+                                //     require_once 'assets/php/page_components/account_inactive.php';
+                                //     require_once 'assets/php/page_components/footer/close.php';
+                                //     die();
+                                // }
+                                // $_appPage = 0;
+                                // foreach ($appPages as $key => $page) {
+                                //     if ((string)strtolower($page['pdpc_page']) === "membership data") {
+                                //         $_appPage = $page['pdpc_id'];
+                                //     }
+                                // }
+                                // if (in_array($_appPage, $my_access_levels) === false) {
+                                //     require_once BASE_DIRECTORY.'/assets/php/page_components/no_page_access.php';
+                                //     require_once BASE_DIRECTORY.'/assets/php/page_components/footer/close.php';
+                                //     die();
+                                // }
 
                                 $subgroupList = $ccApi->groups($all=true, $account_id, $id=1, function($groups) use($ccApi, $account_id) {
                                     $subgroupList = [];

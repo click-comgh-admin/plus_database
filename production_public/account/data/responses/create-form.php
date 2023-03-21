@@ -37,11 +37,11 @@
                             </div>
                         </div>
                         <?php
-                            if ($account_status['is_active'] === false) {
-                                require_once '../assets/php/page_components/account_inactive.php';
-                                require_once '../assets/php/page_components/footer/close.php';
-                                die();
-                            }
+                            // if ($account_status['is_active'] === false) {
+                            //     require_once '../assets/php/page_components/account_inactive.php';
+                            //     require_once '../assets/php/page_components/footer/close.php';
+                            //     die();
+                            // }
                             define("customForms_BaseUrl", CLIENT_BASE_URL."custom-forms/");
                         ?>
                         <div class="row justify-content-center">

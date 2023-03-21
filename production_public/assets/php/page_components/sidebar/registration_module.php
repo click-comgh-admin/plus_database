@@ -18,6 +18,11 @@
             </a>
         </li>
         <li>
+            <a href="<?= CLIENT_BASE_URL; ?>excel-organization-registration" mm-active="excel-organization-registration">
+                <i class="metismenu-icon"></i> Organization Excel Registration
+            </a>
+        </li>
+        <li>
             <a href="<?= CLIENT_BASE_URL; ?>account-code" mm-active="account-code">
                 <i class="metismenu-icon">
                 </i>Public Registration <small class="small">(Code)</small>

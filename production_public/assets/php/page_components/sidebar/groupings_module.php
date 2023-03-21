@@ -74,6 +74,11 @@
                 <i class="metismenu-icon"></i> Create Group
             </a>
         </li>
+        <li>
+            <a href="<?= CLIENT_BASE_URL; ?>groupings/group/create-g-bulk" mm-active="create-g-bulk">
+                <i class="metismenu-icon"></i> Create Multiple Group(s)
+            </a>
+        </li>
     </ul>
 </li>
 <li>
@@ -110,6 +115,11 @@
         <li>
             <a href="<?= CLIENT_BASE_URL; ?>groupings/subgroup/create-sub-groups" mm-active="create-sub-groups">
                 <i class="metismenu-icon"></i> Create Sub-Group
+            </a>
+        </li>
+        <li>
+            <a href="<?= CLIENT_BASE_URL; ?>groupings/subgroup/create-sg-bulk" mm-active="create-sg-bulk">
+                <i class="metismenu-icon"></i> Create Multiple Sub-Group(s)
             </a>
         </li>
     </ul>

@@ -3,11 +3,9 @@ import { LitElement, html, css, TemplateResult } from 'lit';
 import { customElement, property, query, queryAll } from 'lit/decorators.js';
 import '@material/mwc-button';
 import '@material/mwc-circular-progress';
-import '@@addons/widgets/form/new/switch';
-import '@@addons/widgets/add_remove_widget';
-import '@@addons/widgets/form/new/file-select';
 import { urlQueryParams, urlQueryParamsGet } from '@@addons/functions/url_query_params';
 import { POST_MembershipRegisterExcel } from '@@addons/network/members/membership/registration/excel/post';
+import './instructions';
 
 @customElement("membership-registration-excel-create")
 export class MembershipRegistrationExcelCreate extends LitElement {
@@ -41,7 +39,11 @@ export class MembershipRegistrationExcelCreate extends LitElement {
   ];
 
   render() {
-    return html`${this.form}`;
+
+    return html`
+      <membership-registration-excel-instruction></membership-registration-excel-instruction>
+      ${this.form}
+    `;
   }
 
   private get form() {

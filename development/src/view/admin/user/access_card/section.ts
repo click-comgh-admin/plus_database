@@ -163,22 +163,22 @@ export class ClientUserAccessCardSection extends LitElement {
   }
   
   private get moduleId() { 
-    if (this.module_access?.length > 0) {
+    if (this.module_access !== null && this.module_access?.length > 0) {
       return this.module_access[0].moduleId;
     }
     return 0;
   }
   
   private get moduleName() { 
-    if (this.module_access?.length > 0) {
-      return this.module_access[0].moduleInfo.module;
+    if (this.module_access !== null && this.module_access?.length > 0) {
+      return this.module_access[0].moduleInfo?.module ?? "Not Found";
     }
     return `Not Found!`;
   }
   
   private get moduleContent() { 
-    if (this.module_access?.length > 0) {
-      return this.module_access[0].moduleInfo.description;
+    if (this.module_access !== null && this.module_access?.length > 0) {
+      return this.module_access[0].moduleInfo?.description ?? "Not Found";
     }
     return `Not Found!`;
   }

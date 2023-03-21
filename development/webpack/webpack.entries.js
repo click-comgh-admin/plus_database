@@ -32,6 +32,10 @@ module.exports = {
         import: './src/view/membership/registration/excel/index.ts',
         dependOn: 'shared',
     },
+    "membership/registration/organization-excel": {
+        import: './src/view/membership/registration/excel/organization.ts',
+        dependOn: 'shared',
+    },
     "membership/groupings/branches/all": {
         import: './src/view/membership/groupings/branches/index.ts',
         dependOn: 'shared',
@@ -98,6 +102,10 @@ module.exports = {
         import: './src/view/membership/groupings/group_subgroup/groups/add.ts',
         dependOn: 'shared',
     },
+    "membership/groupings/group_subgroup/groups/add-bulk": {
+        import: './src/view/membership/groupings/group_subgroup/groups/add-bulk.ts',
+        dependOn: 'shared',
+    },
     "membership/groupings/group_subgroup/groups/edit": {
         import: './src/view/membership/groupings/group_subgroup/groups/edit.ts',
         dependOn: 'shared',
@@ -108,6 +116,10 @@ module.exports = {
     },
     "membership/groupings/group_subgroup/subgroups/add": {
         import: './src/view/membership/groupings/group_subgroup/subgroups/add.ts',
+        dependOn: 'shared',
+    },
+    "membership/groupings/group_subgroup/subgroups/add-bulk": {
+        import: './src/view/membership/groupings/group_subgroup/subgroups/add-bulk.ts',
         dependOn: 'shared',
     },
     "membership/groupings/group_subgroup/subgroups/edit": {
