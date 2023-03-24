@@ -2,7 +2,7 @@ import '@@assets/styles/views/tailwind-output/accordion.scss';
 import { LitElement, html, css, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js'
 import './item';
-import { AppAccordionItem } from './item';
+// import { AppAccordionItem } from './item';
 
 
 @customElement("app-accordion")
@@ -41,14 +41,14 @@ export class Appaccordion extends LitElement {
   firstUpdated() {
     setTimeout(() => {
       if (document.readyState == "complete") this.toggler();
-    }, 1000);
+    }, 3000);
   }
 
   toggler() {
     // console.log({"`app-accordion-${this.accordionName}`": `app-accordion-${this.accordionName}`});
     
     var acc = document.getElementsByClassName(`app-accordion-${this.accordionName}`);
-    console.log({acc});
+    // console.log({acc});
     
     var i;
 
@@ -60,8 +60,8 @@ export class Appaccordion extends LitElement {
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-          // panel.style.maxHeight = "100%";
+          // panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.style.maxHeight = "100%";
         }
         // if (panel.style.display === "block") {
         //   panel.style.display = "none";

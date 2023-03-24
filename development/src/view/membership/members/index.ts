@@ -45,6 +45,8 @@ import { GET_OccupationStatus } from '@@addons/network/members/status/occupation
 import { GET_ProfessionStatus } from '@@addons/network/members/status/profession';
 import { GET_MembershipUserDownload } from '@@addons/network/members/membership/users/download';
 import "@@addons/widgets/accordion/main";
+import "@@addons/widgets/accordion/component/item";
+import "@@addons/widgets/accordion/component/main";
 import { LocationCountryModel, Convert as lcmConvert } from "@@addons/interfaces/location/country_model";
 import { LocationRegionModel, Convert as lrmConvert } from "@@addons/interfaces/location/region_model";
 import { LocationConstituencyModel, Convert as lcymConvert } from "@@addons/interfaces/location/constituency_model";
@@ -195,6 +197,8 @@ export class PdbMembershipMembers extends LitElement {
         return html`<no-page-entry-component></no-page-entry-component>`;
       }
     }
+    
+    
     return html`
       <span class="flex flex-row md:flex-col w-100"></span>
       <div class="block my-1 shadow bg-white p-2">
@@ -537,55 +541,6 @@ export class PdbMembershipMembers extends LitElement {
         selected: filterNameId_constituencyVal == constituency.id,
       }
     });
-    
-    const contents: Array<TemplateResult> = [
-      html`<app-accordion-item accordion_class_name="filter-areas" class="w-100"
-        .buttonHtml="${html`<b>Location Filter</b>`}"
-        .contentHtml="${html`
-          <div class="mt-1 mb-2 row">
-            <div class="col-xl-6 col-md-6">
-              <h4 class="font-semibold my-2">Select Country</h4>
-              <select-input name="${filterNameId_country}" id="${filterNameId_country}" label="Select Country" .options="${countries}"
-                outlined required>
-              </select-input>
-            </div>
-            <div class="col-xl-6 col-md-6" show_ghana_locations>
-              <h4 class="font-semibold my-2">Select Region</h4>
-              <select-input name="${filterNameId_region}" id="${filterNameId_region}" label="Select Region" .options="${regions}"
-                outlined required>
-              </select-input>
-            </div>
-            <div class="col-xl-6 col-md-6" show_ghana_locations>
-              <h4 class="font-semibold my-2">Select District</h4>
-              <select-input name="${filterNameId_district}" id="${filterNameId_district}" label="Select District" .options="${districts}"
-                outlined required>
-              </select-input>
-            </div>
-            <div class="col-xl-6 col-md-6" show_ghana_locations>
-              <h4 class="font-semibold my-2">Select Constituency</h4>
-              <select-input name="${filterNameId_constituency}" id="${filterNameId_constituency}" label="Select Constituency" .options="${constituencies}"
-                outlined required>
-              </select-input>
-            </div>
-          </div>`}">
-        </app-accordion-item>
-      `,
-      html`<app-accordion-item accordion_class_name="filter-areas" class="w-100"
-        .buttonHtml="${html`<b>Group Filter</b>`}"
-        .contentHtml="${html`<div class="mt-1 mb-2 row">
-            ${groupField} ${subGroupField}
-          </div>`}">
-        </app-accordion-item>
-      `,
-      html`<app-accordion-item accordion_class_name="filter-areas" class="w-100"
-        .buttonHtml="${html`<b>Status Filter</b>`}"
-        .contentHtml="${html`<div class="mt-1 mb-2 row">
-            ${maritalStatusField} ${occupationalStatusField} ${educationalStatusField} ${professionField}
-          </div>`}">
-        </app-accordion-item>
-      `,
-    ];
-    // console.log({contents});
 
       returnHtml = html`<form method="get" class="form" make-general-posts="submit_filter_form" filter-section-context="container" hidden>
           <div class="container">
@@ -595,7 +550,46 @@ export class PdbMembershipMembers extends LitElement {
             </div>
           </div>
           <div class="container">
-            <app-accordion accordionName="filter-areas" .contents=${contents} class="w-100"></app-accordion>
+            <accordion-component class="my-2">
+              <accordion-item title="Location Filter">
+                <div class="mt-1 mb-2 row">
+                  <div class="col-xl-6 col-md-6">
+                    <h4 class="font-semibold my-2">Select Country</h4>
+                    <select-input name="${filterNameId_country}" id="${filterNameId_country}" label="Select Country" .options="${countries}"
+                      outlined required>
+                    </select-input>
+                  </div>
+                  <div class="col-xl-6 col-md-6" show_ghana_locations>
+                    <h4 class="font-semibold my-2">Select Region</h4>
+                    <select-input name="${filterNameId_region}" id="${filterNameId_region}" label="Select Region" .options="${regions}"
+                      outlined required>
+                    </select-input>
+                  </div>
+                  <div class="col-xl-6 col-md-6" show_ghana_locations>
+                    <h4 class="font-semibold my-2">Select District</h4>
+                    <select-input name="${filterNameId_district}" id="${filterNameId_district}" label="Select District" .options="${districts}"
+                      outlined required>
+                    </select-input>
+                  </div>
+                  <div class="col-xl-6 col-md-6" show_ghana_locations>
+                    <h4 class="font-semibold my-2">Select Constituency</h4>
+                    <select-input name="${filterNameId_constituency}" id="${filterNameId_constituency}" label="Select Constituency" .options="${constituencies}"
+                      outlined required>
+                    </select-input>
+                  </div>
+                </div>
+              </accordion-item>
+              <accordion-item title="Group Filter">
+                <div class="mt-1 mb-2 row">
+                  ${groupField} ${subGroupField}
+                </div>
+              </accordion-item>
+              <accordion-item title="Status Filter">
+                <div class="mt-1 mb-2 row">
+                  ${maritalStatusField} ${occupationalStatusField} ${educationalStatusField} ${professionField}
+                </div>
+              </accordion-item>
+            </accordion-component>
           </div>
           <div class="container">
             <div class="row">
@@ -1160,8 +1154,8 @@ export class PdbMembershipMembers extends LitElement {
   }
 
   private countryChanged(e: any) {
-    // console.log(e)
-    const countryNodes: NodeListOf<HTMLSelectElement> = document.querySelectorAll('select[name="country"]');
+    console.log(e)
+    const countryNodes: NodeListOf<HTMLSelectElement> = document.querySelectorAll('select[name="filter_country"]');
     const _urlQueryParams = urlQueryParams(),
       filterNameId_country = "filter_country",
       filterNameId_region = "filter_region",
@@ -1228,7 +1222,7 @@ export class PdbMembershipMembers extends LitElement {
   }
 
   private async regionChanged(e: Event) {
-    const regionNodes: NodeListOf<HTMLSelectElement> = document.querySelectorAll('select[name="region"]');
+    const regionNodes: NodeListOf<HTMLSelectElement> = document.querySelectorAll('select[name="filter_region"]');
     regionNodes.forEach(regionNode => {
       // console.log({ "regionNode": regionNode })
       // console.log({ "regionNode.currentValue": regionNode.getAttribute("currentValue") })
@@ -1243,7 +1237,7 @@ export class PdbMembershipMembers extends LitElement {
   }
 
   private districtChanged(e: Event) {
-    const districtNodes: NodeListOf<HTMLSelectElement> = document.querySelectorAll('select[name="district"]');
+    const districtNodes: NodeListOf<HTMLSelectElement> = document.querySelectorAll('select[name="filter_district"]');
     districtNodes.forEach(districtNode => {
       // console.log({ "districtNode": districtNode })
       // console.log({ "districtNode.currentValue": districtNode.getAttribute("currentValue") })
@@ -1258,6 +1252,7 @@ export class PdbMembershipMembers extends LitElement {
 
   private constituencyChanged(e: Event) {
     // this.selectedRegion, this.selectedDistrict
+    // filter_constituency
   }
 
   private async getLocationCountry() {

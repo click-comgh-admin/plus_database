@@ -2,7 +2,8 @@ import "@@assets/styles/views/admin/register/main.scss";
 import { LitElement, html, css, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import './location';
-import "@@addons/widgets/accordion/main"
+import "@@addons/widgets/accordion/component/item";
+import "@@addons/widgets/accordion/component/main";
 
 @customElement('membership-registration-excel-instruction')
 export class MembershipRegistrationExcelInstruction extends LitElement {
@@ -28,22 +29,14 @@ export class MembershipRegistrationExcelInstruction extends LitElement {
   ];
 
   render() {
-    const contents: Array<TemplateResult> = [
-      html`<app-accordion-item accordion_class_name="excel-instructions" class="mb-1"
-        .buttonHtml="${html`<b>Location Data</b>`}"
-        .contentHtml=${html`<membership-registration-excel-location></membership-registration-excel-location>`}>
-        </app-accordion-item>
-      `,
-    ];
-    // console.log({contents});
-    
-    // accordion_class_name
-    // buttonHtml
-    // contentHtml
     return html`
       <div class="shadow-sm border bg-white p-2 m-2">
         <h1 class="text-[#ca8a04] text-[1.5rem] font-bold">Instructions</h1>
-        <app-accordion accordionName="excel-instructions" .contents=${contents}></app-accordion>
+        <accordion-component class="my-2">
+          <accordion-item title="Location Data">
+            <membership-registration-excel-location></membership-registration-excel-location>
+          </accordion-item>
+        </accordion-component>
       </div>
     `;
   }

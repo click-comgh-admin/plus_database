@@ -2,7 +2,8 @@ import "@@assets/styles/views/admin/register/main.scss";
 import { LitElement, html, css, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import '../location';
-import "@@addons/widgets/accordion/main"
+import "@@addons/widgets/accordion/component/item";
+import "@@addons/widgets/accordion/component/main";
 
 @customElement('membership-registration-organization-excel-instruction')
 export class MembershipRegistrationOrganizationExcelInstruction extends LitElement {
@@ -28,48 +29,32 @@ export class MembershipRegistrationOrganizationExcelInstruction extends LitEleme
   ];
 
   render() {
-    const contents: Array<TemplateResult> = [
-      html`<app-accordion-item accordion_class_name="excel-instructions" class="mb-1"
-        .buttonHtml="${html`<b>Location Data</b>`}"
-        .contentHtml=${html`<membership-registration-excel-location></membership-registration-excel-location>`}>
-        </app-accordion-item>
-      `,
-      html`<app-accordion-item accordion_class_name="excel-instructions" class="mb-1"
-        .buttonHtml="${html`<b>Organization Type</b>`}"
-        .contentHtml=${html`
-          <div class="p-2">
-            <p>For <span>Organization Type</span> enter below</p>
-            <h3 class="text-[1.05rem] font-medium">Default Values</h3>
-            <ul>
-              <li>Enter <b>1</b>/ <b>Non-Profit</b></li>
-              <li>Enter <b>2</b>/ <b>Religious</b></li>
-              <li>Enter <b>3</b>/ <b>Business</b></li>
-            </ul>
-            <h3 class="text-[1.05rem] font-medium">Custom Value</h3>
-            <p>Enter Custom Organization Type</p>
-          </div>
-        `}>
-        </app-accordion-item>
-      `,
-      html`<app-accordion-item accordion_class_name="excel-instructions" class="mb-1"
-        .buttonHtml="${html`<b>Business Registered</b>`}"
-        .contentHtml=${html`
-          <div class="p-2">
-            <p>Requires "True"/ "False" as values</p>
-          </div>
-        `}>
-        </app-accordion-item>
-      `,
-    ];
-    // console.log({contents});
-    
-    // accordion_class_name
-    // buttonHtml
-    // contentHtml
     return html`
       <div class="shadow-sm border bg-white p-2 m-2">
         <h1 class="text-[#ca8a04] text-[1.5rem] font-bold">Instructions</h1>
-        <app-accordion accordionName="excel-instructions" .contents=${contents}></app-accordion>
+            <accordion-component class="my-2">
+              <accordion-item title="Location Data">
+                <membership-registration-excel-location></membership-registration-excel-location>
+              </accordion-item>
+              <accordion-item title="Organization Type">
+                <div class="p-2">
+                  <p>For <span>Organization Type</span> enter below</p>
+                  <h3 class="text-[1.05rem] font-medium">Default Values</h3>
+                  <ul>
+                    <li>Enter <b>1</b>/ <b>Non-Profit</b></li>
+                    <li>Enter <b>2</b>/ <b>Religious</b></li>
+                    <li>Enter <b>3</b>/ <b>Business</b></li>
+                  </ul>
+                  <h3 class="text-[1.05rem] font-medium">Custom Value</h3>
+                  <p>Enter Custom Organization Type</p>
+                </div>
+              </accordion-item>
+              <accordion-item title="Business Registered">
+                <div class="mt-1 mb-2">
+                  <p>Requires "True"/ "False" as values</p>
+                </div>
+              </accordion-item>
+            </accordion-component>
       </div>
     `;
   }

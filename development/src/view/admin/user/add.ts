@@ -9,6 +9,9 @@ import { AppSettingsExtraUserAccess } from '@@addons/functions/app_settings/extr
 import { PAGE__IDS } from './page__id';
 import '@@views/no_access/account_expired';
 import '@@views/no_access/no_page_entry';
+import { ClientUserAccess_I, ClientUserAccess_S } from '@@addons/interfaces/clients/users/access';
+import { GET_ClientUserAccess } from '@@addons/network/clients/users/access';
+import { getUserLoginInfoCookie } from '@@addons/functions/login';
 
 
 @customElement("pdb-admin-user-add-form")
@@ -18,6 +21,12 @@ export class PdbAdminUserAddForm extends LitElement {
   @property({ type: Array })
   private _activeBranchId?: ClientBranchShort_I[] = null;
 
+  @property({ type: Number })
+  private loggedUserId?: number = 0;
+
+  @property({ type: Boolean })
+  private editAccess?: boolean = false;
+
   @property({ type: Boolean })
   private _hasSetup: boolean = false;
 
@@ -26,6 +35,10 @@ export class PdbAdminUserAddForm extends LitElement {
     AppSetup().then(() => this._hasSetup = true);
     const activeBranchId = getActiveBranchIdCookie();
     this._activeBranchId = (activeBranchId === null) ? null : [activeBranchId];
+    
+    this.loggedUserId = getUserLoginInfoCookie().user.id;
+
+    await this.getLoggedUserAccess();
   }
 
   disconnectedCallback() { }
@@ -45,11 +58,32 @@ export class PdbAdminUserAddForm extends LitElement {
       }
     }
     return html`
-      <pdb-admin-user-form class=""></pdb-admin-user-form>
+      <pdb-admin-user-form class="" ?editAccess="${this.editAccess}"></pdb-admin-user-form>
     `;
   }
 
   firstUpdated() { }
+
+  private async getLoggedUserAccess() {
+    const _networkResponse = await GET_ClientUserAccess<ClientUserAccess_I>(null, "?logged_user_this&userId=" + this.loggedUserId);
+    if (_networkResponse !== null) {
+      if (_networkResponse.response.success) {
+        const datas = _networkResponse.response.data;
+        if (Array.isArray(datas)) {
+          datas.forEach((data: ClientUserAccess_I) => {
+            data = ClientUserAccess_S(data);
+            console.log({data});
+            
+            if (data.page.id === PAGE__IDS.create) {
+              // "id": 14,
+              // "page": "Account Users"
+              this.editAccess = true;
+            }
+          });
+        }
+      }
+    }
+  }
 
   createRenderRoot() {
     return this;

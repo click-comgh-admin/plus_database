@@ -34,7 +34,9 @@ import { SubGroupModel, Convert as sgmConvert } from '@@addons/interfaces/member
 import { GET_MemberGroupingsGroups } from '@@addons/network/members/groupings/group';
 import { GET_MemberGroupingsSubGroups } from '@@addons/network/members/groupings/subgroup';
 import { GET_MembershipOrganizationUserDownload } from '@@addons/network/members/membership/users/organization/download';
-import "@@addons/widgets/accordion/main";
+// import "@@addons/widgets/accordion/main";
+import "@@addons/widgets/accordion/component/item";
+import "@@addons/widgets/accordion/component/main";
 import { LocationCountryModel, Convert as lcmConvert } from "@@addons/interfaces/location/country_model";
 import { LocationRegionModel, Convert as lrmConvert } from "@@addons/interfaces/location/region_model";
 import { LocationConstituencyModel, Convert as lcymConvert } from "@@addons/interfaces/location/constituency_model";
@@ -379,47 +381,6 @@ export class PdbMembershipMemberOrganizations extends LitElement {
         selected: filterNameId_constituencyVal == constituency.id,
       }
     });
-    
-    const contents: Array<TemplateResult> = [
-      html`<app-accordion-item accordion_class_name="filter-areas" class="w-100"
-        .buttonHtml="${html`<b>Location Filter</b>`}"
-        .contentHtml="${html`
-          <div class="mt-1 mb-2 row">
-            <div class="col-xl-6 col-md-6">
-              <h4 class="font-semibold my-2">Select Country</h4>
-              <select-input name="${filterNameId_country}" id="${filterNameId_country}" label="Select Country" .options="${countries}"
-                outlined required>
-              </select-input>
-            </div>
-            <div class="col-xl-6 col-md-6" show_ghana_locations>
-              <h4 class="font-semibold my-2">Select Region</h4>
-              <select-input name="${filterNameId_region}" id="${filterNameId_region}" label="Select Region" .options="${regions}"
-                outlined required>
-              </select-input>
-            </div>
-            <div class="col-xl-6 col-md-6" show_ghana_locations>
-              <h4 class="font-semibold my-2">Select District</h4>
-              <select-input name="${filterNameId_district}" id="${filterNameId_district}" label="Select District" .options="${districts}"
-                outlined required>
-              </select-input>
-            </div>
-            <div class="col-xl-6 col-md-6" show_ghana_locations>
-              <h4 class="font-semibold my-2">Select Constituency</h4>
-              <select-input name="${filterNameId_constituency}" id="${filterNameId_constituency}" label="Select Constituency" .options="${constituencies}"
-                outlined required>
-              </select-input>
-            </div>
-          </div>`}">
-        </app-accordion-item>
-      `,
-      html`<app-accordion-item accordion_class_name="filter-areas" class="w-100"
-        .buttonHtml="${html`<b>Group Filter</b>`}"
-        .contentHtml="${html`<div class="mt-1 mb-2 row">
-            ${groupField} ${subGroupField}
-          </div>`}">
-        </app-accordion-item>
-      `,
-    ];
 
       returnHtml = html`<form method="get" class="form" make-general-posts="submit_filter_form" filter-section-context="container" hidden>
           <div class="container">
@@ -429,7 +390,41 @@ export class PdbMembershipMemberOrganizations extends LitElement {
             </div>
           </div>
           <div class="container">
-            <app-accordion accordionName="filter-areas" .contents=${contents} class="w-100"></app-accordion>
+            <accordion-component class="my-2">
+              <accordion-item title="Location Filter">
+                <div class="mt-1 mb-2 row">
+                  <div class="col-xl-6 col-md-6">
+                    <h4 class="font-semibold my-2">Select Country</h4>
+                    <select-input name="${filterNameId_country}" id="${filterNameId_country}" label="Select Country" .options="${countries}"
+                      outlined required>
+                    </select-input>
+                  </div>
+                  <div class="col-xl-6 col-md-6" show_ghana_locations>
+                    <h4 class="font-semibold my-2">Select Region</h4>
+                    <select-input name="${filterNameId_region}" id="${filterNameId_region}" label="Select Region" .options="${regions}"
+                      outlined required>
+                    </select-input>
+                  </div>
+                  <div class="col-xl-6 col-md-6" show_ghana_locations>
+                    <h4 class="font-semibold my-2">Select District</h4>
+                    <select-input name="${filterNameId_district}" id="${filterNameId_district}" label="Select District" .options="${districts}"
+                      outlined required>
+                    </select-input>
+                  </div>
+                  <div class="col-xl-6 col-md-6" show_ghana_locations>
+                    <h4 class="font-semibold my-2">Select Constituency</h4>
+                    <select-input name="${filterNameId_constituency}" id="${filterNameId_constituency}" label="Select Constituency" .options="${constituencies}"
+                      outlined required>
+                    </select-input>
+                  </div>
+                </div>
+              </accordion-item>
+              <accordion-item title="Group Filter">
+                <div class="mt-1 mb-2 row">
+                  ${groupField} ${subGroupField}
+                </div>
+              </accordion-item>
+            </accordion-component>
           </div>
           <div class="container">
             <div class="row">
