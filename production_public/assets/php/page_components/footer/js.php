@@ -12,6 +12,8 @@
 	<!-- <script type="text/javascript" src="<?=CLIENT_BASE_URL;?>assets/js/date_time_picker.min.js"></script> -->
 	<script type="text/javascript" src="<?=CLIENT_BASE_URL;?>assets/js/dtp.js"></script>
 	<script type="text/javascript" src="<?=CLIENT_BASE_URL;?>assets/js/croppr.min.js"></script>
+	<script type="text/javascript" src="<?=CLIENT_BASE_URL;?>assets/js/cropper.min.js"></script>
+	<script type="text/javascript" src="<?=CLIENT_BASE_URL;?>assets/js/logo_uploader.js"></script>
 	<script type="text/javascript" src="<?=CLIENT_BASE_URL;?>assets/js/moment.min.js"></script>
         <script type="text/javascript" src="<?=CLIENT_BASE_URL;?>assets/js/locale.js"></script>
         <script type="text/javascript" src="<?=CLIENT_BASE_URL;?>assets/js/--workers--.js"></script>

@@ -33,6 +33,23 @@ export class MembershipRegistrationOrganizationExcelInstruction extends LitEleme
       <div class="shadow-sm border bg-white p-2 m-2">
         <h1 class="text-[#ca8a04] text-[1.5rem] font-bold">Instructions</h1>
             <accordion-component class="my-2">
+              <accordion-item title="General">
+                <ul class="list-disc list-inside mx-4 my-8">
+                  <li class="mb-1">Do not edit the first row of the template file</li>
+                  <li class="mb-1">Do not add new columns to the first row of the template file</li>
+                  <li class="mb-1">Do not remove any column from the first row of the template file</li>
+                  <li class="mb-1">If data does not exist for a column leave it blank</li>
+                </ul>
+              </accordion-item>
+              <accordion-item title="Madatory Fields">
+                <ul class="list-disc list-inside mx-4 my-8">
+                  <li class="mb-1">Organization Name</li>
+                  <li class="mb-1">Organization Phone</li>
+                  <li class="mb-1">Country</li>
+                  <li class="mb-1">Branch</li>
+                  <li class="mb-1">Category</li>
+                </ul>
+              </accordion-item>
               <accordion-item title="Location Data">
                 <membership-registration-excel-location></membership-registration-excel-location>
               </accordion-item>
@@ -40,10 +57,10 @@ export class MembershipRegistrationOrganizationExcelInstruction extends LitEleme
                 <div class="p-2">
                   <p>For <span>Organization Type</span> enter below</p>
                   <h3 class="text-[1.05rem] font-medium">Default Values</h3>
-                  <ul>
-                    <li>Enter <b>1</b>/ <b>Non-Profit</b></li>
-                    <li>Enter <b>2</b>/ <b>Religious</b></li>
-                    <li>Enter <b>3</b>/ <b>Business</b></li>
+                  <ul class="list-disc list-inside mx-4 my-8">
+                    <li class="mb-1">Enter <b>1</b>/ <b>Non-Profit</b></li>
+                    <li class="mb-1">Enter <b>2</b>/ <b>Religious</b></li>
+                    <li class="mb-1">Enter <b>3</b>/ <b>Business</b></li>
                   </ul>
                   <h3 class="text-[1.05rem] font-medium">Custom Value</h3>
                   <p>Enter Custom Organization Type</p>

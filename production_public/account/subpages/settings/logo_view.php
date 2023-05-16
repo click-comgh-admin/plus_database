@@ -1,7 +1,9 @@
 <?php
     // print_r($account_info);
     $logoUrl = strtolower($account_info['pdc_logo']);
-    $logoUrl = ($logoUrl == "logo.png") ? "files/$logoUrl" : "files/clients/logo/$account_id/$logoUrl";
+    // print_r(['$logoUrl'=> $logoUrl]);
+    $logoUrl = "files/$logoUrl";
+    // $logoUrl = ($logoUrl == "logo.png") ? "files/$logoUrl" : "files/clients/logo/$account_id/$logoUrl";
 ?>
 <div class="row justify-content-center">
     <?php require_once BASE_DIRECTORY."/account/subpages/settings/logo_edit.php"; ?>

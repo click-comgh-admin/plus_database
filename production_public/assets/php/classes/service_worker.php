@@ -198,6 +198,11 @@ class View
             'http://127.0.0.1:9000/api/',
             'https://db-api.akwaabasoftware.com/',
             'https://db-api-v2.akwaabasoftware.com/',
+            '/account/settings/settings',
+            '/account/settings/logo',
+            '/account/settings/leaders',
+            '/account/settings/status-indicator',
+            '/account/subscription',
         ];
 
         $allUrls = "";

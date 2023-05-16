@@ -5,9 +5,17 @@
         </div>
         <div class="card-body py-0">
             <div class="collapse <?= (isset($_POST['add-form']) && ($_POST['add-form'] == "update_logo"))? "show": ""; ?> py-2" id="update_logo">
-                <div class="row justify-content-center p-0 m-0" upload-preview-crop--preview="profile-picture" upload-preview-crop--preview---aspectRatio="0">
+                <?php /* <div class="row justify-content-center p-0 m-0" upload-preview-crop--preview="profile-picture" upload-preview-crop--preview---aspectRatio="0">
+                    <img class="container img-fluid" no-popup="true" src="<?= FILE_BUCKET_BASE_URL; ?><?= @$logoUrl; ?>"/>
+                </div>  */ ?>
+                <div class="row justify-content-center p-0 m-0" id="profile-picture">
                     <img class="container img-fluid" no-popup="true" src="<?= FILE_BUCKET_BASE_URL; ?><?= @$logoUrl; ?>"/>
                 </div>
+                <?php /* <div class="row justify-content-center p-0 m-0" id="cropped-profile-picture">
+                </div>
+                <div class="row justify-content-center p-0 m-0" id="cropped-profile-picture-2">
+                </div>  */ ?>
+  
                 <?php require_once(BASE_DIRECTORY."/account/forms/settings/edit_photo.php"); ?>
             </div>
         </div>

@@ -31,8 +31,28 @@ export class MembershipRegistrationExcelInstruction extends LitElement {
   render() {
     return html`
       <div class="shadow-sm border bg-white p-2 m-2">
-        <h1 class="text-[#ca8a04] text-[1.5rem] font-bold">Instructions</h1>
+        <h1 class="text-[#ca8a04] text-[1.5rem] font-bold">Instructions 
+        </h1>
         <accordion-component class="my-2">
+          <accordion-item title="General">
+            <ul class="list-disc list-inside mx-4 my-8">
+              <li class="mb-1">Do not edit the first row of the template file</li>
+              <li class="mb-1">Do not add new columns to the first row of the template file</li>
+              <li class="mb-1">Do not remove any column from the first row of the template file</li>
+              <li class="mb-1">If data does not exist for a column leave it blank</li>
+            </ul>
+          </accordion-item>
+          <accordion-item title="Madatory Fields">
+            <ul class="list-disc list-inside mx-4 my-8">
+              <li class="mb-1">First Name</li>
+              <li class="mb-1">Surname</li>
+              <li class="mb-1">Gender</li>
+              <li class="mb-1">Phone Number</li>
+              <li class="mb-1">Branch</li>
+              <li class="mb-1">Category</li>
+              <li class="mb-1">Country</li>
+            </ul>
+          </accordion-item>
           <accordion-item title="Location Data">
             <membership-registration-excel-location></membership-registration-excel-location>
           </accordion-item>

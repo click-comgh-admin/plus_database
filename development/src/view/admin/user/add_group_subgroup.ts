@@ -11,6 +11,9 @@ import { AppSetup } from '@@addons/functions/app_settings';
 import { getAppSettingsExtraSettings } from '@@addons/functions/app_settings/extra_settings';
 import { AppSettingsExtraUserAccess } from '@@addons/functions/app_settings/extra_settings/user_access';
 import { PAGE__IDS } from './page__id';
+import { ClientUserAccess_I, ClientUserAccess_S } from '@@addons/interfaces/clients/users/access';
+import { GET_ClientUserAccess } from '@@addons/network/clients/users/access';
+import { getUserLoginInfoCookie } from '@@addons/functions/login';
 
 
 @customElement("pdb-admin-user-add-group-subgroup-form")
@@ -26,6 +29,12 @@ export class PdbAdminUserAddGroupSubgroupForm extends LitElement {
   @property({ type: Boolean })
   private _hasSetup: boolean = false;
 
+  @property({ type: Number })
+  private loggedUserId?: number = 0;
+
+  @property({ type: Boolean })
+  private editAccess?: boolean = false;
+
   async connectedCallback() {
     super.connectedCallback();
     AppSetup().then(() => this._hasSetup = true);
@@ -33,6 +42,10 @@ export class PdbAdminUserAddGroupSubgroupForm extends LitElement {
     this.getUserId();
     const activeBranchId = getActiveBranchIdCookie();
     this._activeBranchId = (activeBranchId === null) ? null : [activeBranchId];
+    
+    this.loggedUserId = getUserLoginInfoCookie().user.id;
+
+    await this.getLoggedUserAccess();
   }
 
   disconnectedCallback() { }
@@ -53,7 +66,7 @@ export class PdbAdminUserAddGroupSubgroupForm extends LitElement {
     }
     return html`
       <div class="shadow bg-white p-2 my-2">
-        <pdb-admin-user-group-subgroup-form .userId="${this.userId}"></pdb-admin-user-group-subgroup-form>
+        <pdb-admin-user-group-subgroup-form .userId="${this.userId}" class="" ?editAccess="${this.editAccess}"></pdb-admin-user-group-subgroup-form>
       </div>
     `;
   }
@@ -66,6 +79,27 @@ export class PdbAdminUserAddGroupSubgroupForm extends LitElement {
     let _userId = userId !== null ? base64Decode(userId) : null;
     this.userId = Number.isNaN(_userId) ? null : Number(_userId);
     // console.log({ "this.userId": this.userId });
+  }
+
+  private async getLoggedUserAccess() {
+    const _networkResponse = await GET_ClientUserAccess<ClientUserAccess_I>(null, "?logged_user_this&userId=" + this.loggedUserId);
+    if (_networkResponse !== null) {
+      if (_networkResponse.response.success) {
+        const datas = _networkResponse.response.data;
+        if (Array.isArray(datas)) {
+          datas.forEach((data: ClientUserAccess_I) => {
+            data = ClientUserAccess_S(data);
+            console.log({data});
+            
+            if (data.page.id === PAGE__IDS.create) {
+              // "id": 14,
+              // "page": "Account Users"
+              this.editAccess = true;
+            }
+          });
+        }
+      }
+    }
   }
 
   createRenderRoot() {

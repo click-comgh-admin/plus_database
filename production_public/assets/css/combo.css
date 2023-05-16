@@ -19,6 +19,7 @@
 @import url('textarea.min.css');
 @import url('tooltip.min.css');
 @import url('popupwindow.min.css');
+@import url('cropper.min.css');
 [select-show] {
     display: none;
 }

@@ -5,13 +5,15 @@ let _BASE_URL: string, _API_BASE_URL: string,
   _HOME_PAGE_BASE_URL: string, _LOGIN_PAGE_BASE_URL: string,
   _PUBLIC_BASE_URL: string, _PUBLIC_PAGE_BASE_URL: string,
   _PUBLIC_LOGIN_PAGE_BASE_URL: string, _REGISTRATION_BASE_URL: string,
-  __clientIdentifier: string, _pdb_client: string;
+  _REG_CONNECTION_BASE_URL: string, __clientIdentifier: string,
+  _pdb_client: string;
 
 if (APP_SETTINGS.production) {
   const BaseUrl = "akwaabasoftware.com/";
   _API_BASE_URL = "https://db-api.akwaabasoftware.com/";
   _AKWAABA_API_BASE_URL = "https://db-api-v2." + BaseUrl;
   _REGISTRATION_BASE_URL = "https://register." + BaseUrl;
+  _REG_CONNECTION_BASE_URL = "https://connect." + BaseUrl;
 
   __clientIdentifier = "akwaabaclients." + BaseUrl;
   _BASE_URL = "https://" + __clientIdentifier;
@@ -36,7 +38,8 @@ if (APP_SETTINGS.production) {
   _HOME_PAGE_BASE_URL = _BASE_URL + __clientIdentifier;
   _PUBLIC_PAGE_BASE_URL = _BASE_URL + "akwaaba-forms-public/";
   _LOGIN_PAGE_BASE_URL = _pdb_client + "login";
-  _REGISTRATION_BASE_URL = _pdb_client + "register-member";
+  _REGISTRATION_BASE_URL = "http://localhost:3000/";
+  _REG_CONNECTION_BASE_URL = "http://localhost:3001/";
 }
 
 export const URLS = {
@@ -50,6 +53,7 @@ export const URLS = {
   LOGIN_PAGE_BASE_URL: _LOGIN_PAGE_BASE_URL,
   PUBLIC_LOGIN_PAGE_BASE_URL: _PUBLIC_LOGIN_PAGE_BASE_URL,
   REGISTRATION_BASE_URL: _REGISTRATION_BASE_URL,
+  REG_CONNECTION_BASE_URL: _REG_CONNECTION_BASE_URL,
   FORGOT_PASSWORD_URL: "https://password-reset.akwaabasoftware.com/client-user/forgot-password",
   PUBLIC_BASE_URL: "https://akwaabasoftware.com/",
   CLICK_COM_BASE_URL: "https://clickcomgh.com/",
