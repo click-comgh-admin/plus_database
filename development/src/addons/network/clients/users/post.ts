@@ -33,14 +33,14 @@ export async function POST_ClientUser(): Promise<any> {
         method: "POST",
         body: formData,
         headers: {
-        Authorization: "Token " + _get_cookie.token
+          Authorization: "Token " + _get_cookie.token
         }
       }, false).then((HTTP) => {
         // console.log({ HTTP });
 
         const networkCallRes = new NetWorkCallResponses("post", HTTP, false, formContainer);
         const _RESPONSE = networkCallRes.response;
-        // console.log({"_RESPONSE": _RESPONSE});
+        console.log({ "_RESPONSE": _RESPONSE });
         if ('nameError' in _RESPONSE && 'unknownError' in _RESPONSE) {
           if (_RESPONSE.unknownError.length > 0) {
             // console.log({ "_RESPONSE.unknownError": _RESPONSE.unknownError });
@@ -56,7 +56,7 @@ export async function POST_ClientUser(): Promise<any> {
                   if (e.id === "non_field_errors") {
                     errormsg = { error: err };
                   }
-  
+
                   errors.push(errormsg);
                 });
               } else {
@@ -69,10 +69,49 @@ export async function POST_ClientUser(): Promise<any> {
                       _error.forEach(_err => {
                         // console.log({ _err, "_err_err": typeof _err, });
                         let errormsg2 = { error: _errors_name + ": " + _err };
-  
+
                         errors.push(errormsg2);
                       })
                       // console.log({key,  "_RESPONSE.unknownError--e.errors--error": typeof _error, _error });
+                    }
+                  }
+                }
+              }
+            });
+
+            const res = https_swal_error_format(errors);
+            Swal.showValidationMessage(
+              `${res}`
+            );
+          }
+
+          if (_RESPONSE.nameError.length > 0) {
+            let errors: Array<{ error: string }> = [];
+            _RESPONSE.nameError.forEach(e => {
+              const _errors = e.errors;
+              const _errors_name = e.id;
+
+              if (['limitations', 'pageId'].includes(_errors_name)) {
+                console.log({ _errors_name });
+
+                if (Array.isArray(_errors)) {
+                  let errormsg = { error: "Select Access Levels" };
+                  errors.push(errormsg);
+                } else {
+                  // console.log({ "_RESPONSE.unknownError--e.errors": e.errors, "typeof e.errors": typeof e.errors });
+                  for (const key in e.errors) {
+                    if (Object.prototype.hasOwnProperty.call(e.errors, key)) {
+                      const _error = e.errors[key];
+
+                      if (Array.isArray(_error)) {
+                        _error.forEach(_err => {
+                          // console.log({ _err, "_err_err": typeof _err, });
+                          let errormsg2 = { error: _errors_name + ": " + _err };
+
+                          errors.push(errormsg2);
+                        })
+                        // console.log({key,  "_RESPONSE.unknownError--e.errors--error": typeof _error, _error });
+                      }
                     }
                   }
                 }

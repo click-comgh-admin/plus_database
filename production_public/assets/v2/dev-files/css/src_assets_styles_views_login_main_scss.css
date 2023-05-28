@@ -683,6 +683,11 @@ img, video {
   margin-right: 0.25rem !important;
 }
 
+.my-8 {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
 .mb-32 {
   margin-bottom: 8rem;
 }
@@ -1020,6 +1025,10 @@ img, video {
 
 .resize {
   resize: both;
+}
+
+.list-inside {
+  list-style-position: inside;
 }
 
 .list-disc {
