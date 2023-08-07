@@ -4,9 +4,9 @@
 		// define('CLOCK_BASE_URL', "https://clock.akwaabasoftware.com/");
 
 		if (strpos($_SERVER['HTTP_HOST'], "-2.akwaabasoftware.com") !== false) {
-			define('CLIENT_BASE_URL', "https://clock-2.akwaabasoftware.com/");
+			define('CLOCK_BASE_URL', "https://clock-2.akwaabasoftware.com/");
 		} else {
-			define('CLIENT_BASE_URL', "https://clock.akwaabasoftware.com/");
+			define('CLOCK_BASE_URL', "https://clock.akwaabasoftware.com/");
 		}
 		
 	} else {
