@@ -11,9 +11,6 @@
 		} else {
 			define('API_V2_BASE_URL', "https://db-api-v2.akwaabasoftware.com/");
 		}
-		print_r(['$_SERVER[HTTP_HOST]'=>$_SERVER['HTTP_HOST']]);
-		print_r(['strpos($_SERVER[HTTP_HOST], "-2.akwaabasoftware.com")'=>strpos($_SERVER['HTTP_HOST'], "-2.akwaabasoftware.com")]);
-		print_r(['CLIENT_BASE_URL'=>CLIENT_BASE_URL]);
 	} else {
 		define('API_BASE_URL', "http://$actual_host/AMG/plus_db/api/");
 		define('API_V2_BASE_URL', "http://127.0.0.1:9001/api/");
