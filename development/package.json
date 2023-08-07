@@ -5,6 +5,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack --config webpack/webpack.config.js",
+        "build-test": "webpack --config webpack/webpack.test.js",
         "watch": "webpack --config webpack/webpack.dev.js --watch",
         "start": "webpack serve --open",
         "serve": "webpack serve --config webpack/webpack.dev.js",

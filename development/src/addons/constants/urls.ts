@@ -1,6 +1,6 @@
 import { APP_SETTINGS } from "./settings";
 
-let _BASE_URL: string, _API_BASE_URL: string, 
+let _BASE_URL: string, _API_BASE_URL: string,
   _AKWAABA_API_BASE_URL: string, _FILE_BUCKET_BASE_URL: string,
   _HOME_PAGE_BASE_URL: string, _LOGIN_PAGE_BASE_URL: string,
   _PUBLIC_BASE_URL: string, _PUBLIC_PAGE_BASE_URL: string,
@@ -9,9 +9,14 @@ let _BASE_URL: string, _API_BASE_URL: string,
   _pdb_client: string;
 
 if (APP_SETTINGS.production) {
+  const DOMAIN_ADDRESS = window.location.origin.replace(/^https?:\/\//, '');
+  console.log({DOMAIN_ADDRESS, 'DOMAIN_ADDRESS.includes("-2.akwaabasoftware.com")': DOMAIN_ADDRESS.includes("-2.akwaabasoftware.com")})
+
   const BaseUrl = "akwaabasoftware.com/";
   _API_BASE_URL = "https://db-api.akwaabasoftware.com/";
-  _AKWAABA_API_BASE_URL = "https://db-api-v2." + BaseUrl;
+  _AKWAABA_API_BASE_URL = DOMAIN_ADDRESS.includes("-2.akwaabasoftware.com")
+    ? "https://db-api-v2-2." + BaseUrl : "https://db-api-v2." + BaseUrl;
+
   _REGISTRATION_BASE_URL = "https://register." + BaseUrl;
   _REG_CONNECTION_BASE_URL = "https://connect." + BaseUrl;
 
@@ -21,7 +26,10 @@ if (APP_SETTINGS.production) {
   _FILE_BUCKET_BASE_URL = "https://file-bucket.akwaabasoftware.com/";
   _HOME_PAGE_BASE_URL = _BASE_URL + "";
   _PUBLIC_PAGE_BASE_URL = _PUBLIC_BASE_URL + "";
-  _pdb_client = "https://database.akwaabasoftware.com/";
+
+  _pdb_client = DOMAIN_ADDRESS.includes("-2.akwaabasoftware.com")
+    ? "https://database-2.akwaabasoftware.com/" : "https://database.akwaabasoftware.com/";
+
   _LOGIN_PAGE_BASE_URL = _pdb_client + "login";
 } else {
   __clientIdentifier = "akwaaba-forms/";
