@@ -4,7 +4,16 @@
 	// print_r(['$actual_host' => $actual_host, '$_SERVER[HTTP_HOST]' => $_SERVER['HTTP_HOST']]);
 	if (IN_PRODUCTION_MODE) {
 		define('API_BASE_URL', "https://db-api.akwaabasoftware.com/");
-		define('API_V2_BASE_URL', "https://db-api-v2.akwaabasoftware.com/");
+		// define('API_V2_BASE_URL', "https://db-api-v2.akwaabasoftware.com/");
+
+		if (strpos($_SERVER['HTTP_HOST'], "-2.akwaabasoftware.com") !== false) {
+			define('API_V2_BASE_URL', "https://db-api-v2-2.akwaabasoftware.com/");
+		} else {
+			define('API_V2_BASE_URL', "https://db-api-v2.akwaabasoftware.com/");
+		}
+		print_r(['$_SERVER[HTTP_HOST]'=>$_SERVER['HTTP_HOST']]);
+		print_r(['strpos($_SERVER[HTTP_HOST], "-2.akwaabasoftware.com")'=>strpos($_SERVER['HTTP_HOST'], "-2.akwaabasoftware.com")]);
+		print_r(['CLIENT_BASE_URL'=>CLIENT_BASE_URL]);
 	} else {
 		define('API_BASE_URL', "http://$actual_host/AMG/plus_db/api/");
 		define('API_V2_BASE_URL', "http://127.0.0.1:9001/api/");

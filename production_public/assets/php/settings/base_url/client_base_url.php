@@ -1,7 +1,13 @@
 <?php
 	$actual_host = $_SERVER['SERVER_ADDR'];
 	if (IN_PRODUCTION_MODE) {
-		define('CLIENT_BASE_URL', "https://database.akwaabasoftware.com/");
+		// define('CLIENT_BASE_URL', "https://database.akwaabasoftware.com/");
+
+		if (strpos($_SERVER['HTTP_HOST'], "-2.akwaabasoftware.com") !== false) {
+			define('CLIENT_BASE_URL', "https://database-2.akwaabasoftware.com/");
+		} else {
+			define('CLIENT_BASE_URL', "https://database.akwaabasoftware.com/");
+		}
 	} else {
 		// define('CLIENT_BASE_URL', "http://$actual_host/AMG/plus_db/client_dashboard/");
 		define('CLIENT_BASE_URL', "http://$actual_host:84/");
