@@ -14,6 +14,7 @@ export interface ClientUserDashboardAttendanceMetricModel {
     branch?:             Branch;
     onGoing?:            OnGoing;
     previous?:           OnGoing;
+    nonExpiry?:          boolean;
     expirationDate?:     Date;
 }
 
@@ -184,6 +185,7 @@ export const typeMap: any = {
         { json: "branch", js: "branch", typ: u(null, r("Branch")) },
         { json: "on_going", js: "onGoing", typ: u(null, r("OnGoing")) },
         { json: "previous", js: "previous", typ: u(null, r("OnGoing")) },
+        { json: "non_expiry", js: "nonExpiry", typ: u(null, true) },
         { json: "expiration_date", js: "expirationDate", typ: u(null, Date) },
     ], false),
     "Branch": o([

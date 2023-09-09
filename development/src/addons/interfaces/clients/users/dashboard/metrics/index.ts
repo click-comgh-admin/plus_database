@@ -10,6 +10,7 @@
 export interface ClientUserDashboardMetricModel {
     type?:           Type;
     statistics?:     Statistics;
+    nonExpiry?:      boolean;
     expirationDate?: Date;
 }
 
@@ -178,6 +179,7 @@ export const typeMap: any = {
     "ClientUserDashboardMetricModel": o([
         { json: "type", js: "type", typ: u(null, r("Type")) },
         { json: "statistics", js: "statistics", typ: u(null, r("Statistics")) },
+        { json: "non_expiry", js: "nonExpiry", typ: u(null, true) },
         { json: "expiration_date", js: "expirationDate", typ: u(null, Date) },
     ], false),
     "Statistics": o([

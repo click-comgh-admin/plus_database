@@ -41,7 +41,7 @@ export const setAppSettingsExtraSettings = async (force = false) => {
             // console.log({
             //   access, "JSON.stringify(access)": JSON.stringify(access)
             // });
-            
+
             return cupamConvert.toClientUserPageAccessModel(
               JSON.stringify(access)
             );
@@ -55,16 +55,21 @@ export const setAppSettingsExtraSettings = async (force = false) => {
       // console.log({ "calling network_setter": true });
 
       const dashboardMetrics = await getDashboardMetrics(), userAccess = await getUserAccess(),
+        nonExpiry: boolean = dashboardMetrics === null ? false : dashboardMetrics.nonExpiry,
         expirationDate = dashboardMetrics === null ? null : dashboardMetrics.expirationDate;
 
       const settings: ExtraAppSettings_I = {
         expiration_date: {
           entryDate: new Date(),
           expiration: expirationDate,
-          expired: DateDifference(expirationDate, new Date()) < 24
+          nonExpiry: nonExpiry,
+          expired: nonExpiry == true ? false : DateDifference(expirationDate, new Date()) < 24
         },
         user_access: userAccess,
       }
+
+      // console.log({settings, nonExpiry, });
+      
 
       setter(settings);
     };
@@ -100,8 +105,10 @@ export const getAppSettingsExtraSettings = (): ExtraAppSettings_I => {
     const _settings = base64Decode(ASI.get_storage_item(AppSettingsExtraSettings)),
       settings = JSON.parse(_settings),
       xtraAppSettings = ExtraAppSettings_S(settings);
+      console.log({settings, _settings, xtraAppSettings});
 
-    xtraAppSettings.expiration_date.expired = DateDifference(xtraAppSettings.expiration_date.expiration, new Date()) < 24;
+    xtraAppSettings.expiration_date.expired = xtraAppSettings.expiration_date.nonExpiry == true
+      ? false : DateDifference(xtraAppSettings.expiration_date.expiration, new Date()) < 24;
     // console.log({ xtraAppSettings });
 
     return xtraAppSettings;

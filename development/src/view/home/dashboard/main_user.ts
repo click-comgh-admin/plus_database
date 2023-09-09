@@ -65,33 +65,7 @@ export class PdbDashboardMainUser extends LitElement {
                 </div>
               </div>
               <div class="flex-1 text-right md:text-center">
-                <div class="widget-content p-0">
-                  <div class="widget-content-outer">
-                    <div class="grid grid-cols-1 sm:grid-cols-1 grid-flow-row gap-1 p-1">
-                      <div class="text-muted flex justify-end items-center content-center">
-                        <input type="hidden" getClock__="${this.getDate(element.expirationDate)}" name="">
-                        <h5 class="font-bold uppercase text-gray-400 pr-2">Subscription Ends In</h5>
-                      </div>
-                      <ul class="countdown px-1 pt-1 flex justify-center items-center content-center">
-                        <li> <span style="background-color: #eee" class="days p-1">00</span>
-                          <p class="days_ref">days</p>
-                        </li>
-                        <li class="seperator !px-0">|</li>
-                        <li> <span style="background-color: #eee" class="hours p-1">00</span>
-                          <p class="hours_ref">hours</p>
-                        </li>
-                        <li class="seperator !px-0">|</li>
-                        <li> <span style="background-color: #eee" class="minutes p-1">00</span>
-                          <p class="minutes_ref">minutes</p>
-                        </li>
-                        <li class="seperator !px-0">|</li>
-                        <li> <span style="background-color: #eee" class="seconds p-1">00</span>
-                          <p class="seconds_ref">seconds</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                ${this.subscriptionCountDown(element)}
               </div>
             </div>
           </div>
@@ -100,6 +74,49 @@ export class PdbDashboardMainUser extends LitElement {
       `;
     });
     return metrics;
+  }
+
+  private subscriptionCountDown(element: ClientUserDashboardMetricModel) {
+    if (element.nonExpiry == true) return html`
+      <div class="widget-content p-0">
+        <div class="widget-content-outer">
+          <div class="grid grid-cols-1 sm:grid-cols-1 grid-flow-row gap-1 p-1">
+            <div class="text-muted flex justify-end items-center content-center">
+              <h5 class="font-bold uppercase text-gray-400 pr-2">Account Does Not Expire</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    return html`
+      <div class="widget-content p-0">
+        <div class="widget-content-outer">
+          <div class="grid grid-cols-1 sm:grid-cols-1 grid-flow-row gap-1 p-1">
+            <div class="text-muted flex justify-end items-center content-center">
+              <input type="hidden" getClock__="${this.getDate(element.expirationDate)}" name="">
+              <h5 class="font-bold uppercase text-gray-400 pr-2">Subscription Ends In</h5>
+            </div>
+            <ul class="countdown px-1 pt-1 flex justify-center items-center content-center">
+              <li> <span style="background-color: #eee" class="days p-1">00</span>
+                <p class="days_ref">days</p>
+              </li>
+              <li class="seperator !px-0">|</li>
+              <li> <span style="background-color: #eee" class="hours p-1">00</span>
+                <p class="hours_ref">hours</p>
+              </li>
+              <li class="seperator !px-0">|</li>
+              <li> <span style="background-color: #eee" class="minutes p-1">00</span>
+                <p class="minutes_ref">minutes</p>
+              </li>
+              <li class="seperator !px-0">|</li>
+              <li> <span style="background-color: #eee" class="seconds p-1">00</span>
+                <p class="seconds_ref">seconds</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
   private headers(title: string) {

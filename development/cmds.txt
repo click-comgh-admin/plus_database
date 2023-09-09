@@ -9,12 +9,13 @@ cd /c/xampp/htdocs/AMG/plus_db/client_dashboards/version_one/plus_database/devel
 cd /c/xampp/htdocs/AMG/plus_db/client_dashboards/version_one/plus_attendance/development
 npm run watch
 npm run build
+npm run build-test
 
 npm install --global pwa-asset-generator
 
 git add .
 
 git commit -m "From Server 16/02/2022 01"
-git commit -m "Dev Computer 07/08/2023 01"
+git commit -m "Dev Computer 09/09/2023 01"
 
 git push

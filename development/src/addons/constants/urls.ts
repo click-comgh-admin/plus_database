@@ -34,9 +34,10 @@ if (APP_SETTINGS.production) {
 } else {
   __clientIdentifier = "akwaaba-forms/";
   // const IP_ADDRESS = '192.168.43.161';
-  const IP_ADDRESS = '192.168.173.1';
-  // _BASE_URL = "http://127.0.0.1:9001/";
-  _BASE_URL = "http://192.168.173.172:9001/";
+  // const IP_ADDRESS = '192.168.173.1';
+  const IP_ADDRESS = '192.168.0.124';
+  _BASE_URL = "http://127.0.0.1:9001/";
+  // _BASE_URL = "http://192.168.173.172:9001/";
   _API_BASE_URL = "http://" + IP_ADDRESS + "/AMG/plus_db/api/";
   _AKWAABA_API_BASE_URL = _BASE_URL + "api/";
   // _pdb_client = "http://" + IP_ADDRESS + "/AMG/plus_db/client_dashboard/";

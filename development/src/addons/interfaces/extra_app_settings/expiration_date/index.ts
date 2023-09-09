@@ -10,6 +10,7 @@
 export interface EASExpirationDateInterface {
     expiration?: Date;
     expired?:    boolean;
+    nonExpiry?:  boolean;
     entryDate?:  Date;
 }
 
@@ -129,6 +130,7 @@ function transform(val: any, typ: any, getProps: any, key: any = ''): any {
 }
 
 function cast<T>(val: any, typ: any): T {
+    console.log({val, typ})
     return transform(val, typ, jsonToJSProps);
 }
 
@@ -161,6 +163,8 @@ export const typeMap: any = {
     "EASExpirationDateInterface": o([
         { json: "expiration", js: "expiration", typ: u(null, Date) },
         { json: "expired", js: "expired", typ: u(null, true) },
+        { json: "non_expiry", js: "nonExpiry", typ: u(null, true) },
+        { json: "nonExpiry", js: "nonExpiry", typ: u(null, true) },
         { json: "entryDate", js: "entryDate", typ: u(null, Date) },
     ], false),
 };
