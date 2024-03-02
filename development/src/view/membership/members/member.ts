@@ -240,6 +240,9 @@ export class PdbMembershipMember extends LitElement {
               </div>
               <div class="p-3 border-t-2 flex justify-end">
                 <link-button isblockcontent="false" aClass="" raised bClass="button warning mr-2"
+                  href="${CONSTANTS.URLS.PDB_CLIENT}additional-registration/members/member-additional-registration?view=${urlQueryParamsGet('view')}" target="_blank" label="Additional Registration">
+                </link-button>
+                <link-button isblockcontent="false" aClass="" raised bClass="button warning mr-2"
                   href="${this.memberPhotoUpdateBaseUrl}${ID}" label="Update">
                 </link-button>
               </div>

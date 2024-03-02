@@ -1,7 +1,7 @@
 // console.log({ "window.location.href": window.location.href });
 
-// const PRODUCTION = false;
-const PRODUCTION = true;
+const PRODUCTION = false;
+// const PRODUCTION = true;
 let _HOME_PAGE_BASE_URL: string;
 
 let _isClientApp: boolean;

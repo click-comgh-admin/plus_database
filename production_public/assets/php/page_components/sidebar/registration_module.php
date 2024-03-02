@@ -31,7 +31,26 @@
     </ul>
 </li>
 <li>
+    <a href="#" class="text-info" 
+        mm-active="creator-view|creator-form|creator-edit|member-additional-registration">
+        <i class="metismenu-icon pe-7s-note2"></i><i class="pe-7s-users"></i> Additional Registration
+        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+    </a>
+    <ul>
+        <li>
+            <a href="<?= CLIENT_BASE_URL; ?>additional-registration/creator/creator-view" mm-active="creator-view">
+                <i class="metismenu-icon"></i> View Questions
+            </a>
+        </li>
+        <li>
+            <a href="<?= CLIENT_BASE_URL; ?>additional-registration/creator/creator-form" mm-active="creator-form">
+                <i class="metismenu-icon"></i> Add Question(s)
+            </a>
+        </li>
+    </ul>
+</li>
+<?php /* <li>
     <a href="<?= CLIENT_BASE_URL; ?>additional-registration-questions/questions" mm-active="questions">
         <i class="metismenu-icon pe-7s-note2"></i> Additional Reg. Questions
     </a>
-</li>
+</li> */ ?>

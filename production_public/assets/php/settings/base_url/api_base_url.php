@@ -13,7 +13,7 @@
 		}
 	} else {
 		define('API_BASE_URL', "http://$actual_host/AMG/plus_db/api/");
-		define('API_V2_BASE_URL', "http://127.0.0.1:9001/api/");
+		define('API_V2_BASE_URL', "http://127.0.0.1:9002/api/");
 	}
 	// print_r($_SERVER);
 

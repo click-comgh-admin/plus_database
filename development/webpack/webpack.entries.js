@@ -288,6 +288,22 @@ module.exports = {
         import: './src/view/admin/user/edit_group_subgroup.ts',
         dependOn: 'shared',
     },
+    "additional-registration/creator/view": {
+        import: './src/view/additional-registration/creator/view.ts',
+        dependOn: 'shared',
+    },
+    "additional-registration/creator/form": {
+        import: './src/view/additional-registration/creator/form.ts',
+        dependOn: 'shared',
+    },
+    "additional-registration/creator/edit": {
+        import: './src/view/additional-registration/creator/edit.ts',
+        dependOn: 'shared',
+    },
+    "additional-registration/members/view": {
+        import: './src/view/additional-registration/members/view.ts',
+        dependOn: 'shared',
+    },
 
     shared: 'lodash',
 };

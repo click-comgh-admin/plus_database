@@ -53,7 +53,7 @@
 
       });
     </script>
-    <form method="post" enctype="multipart/form-data" action="http://127.0.0.1:9001/api/clients/account/4" id="myForm">
+    <form method="post" enctype="multipart/form-data" action="http://127.0.0.1:9002/api/clients/account/4" id="myForm">
       <input type="file" name="logo"><br><br>
       <input type="hidden" name="csrfmiddlewaretoken" value="E450QJaKJflqTe2lSqG69TMhb4478GhkeD1jnFEbZyUfjXpoidb3dATT9YyXgfkx">
       <input type="hidden" name="_method" value="PATCH">
